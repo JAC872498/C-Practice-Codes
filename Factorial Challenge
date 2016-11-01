@@ -4,21 +4,23 @@ For instance, 5! is 120, so it has one trailing zero. (How can you handle extrem
 The input format should be that the program asks the user to enter a number, minus the !. """
 
 #include <iostream>
-#include <string>
-#include <stdio.h>
 using namespace std;
 
 int main(){
 	int x=5;
 	int tot=1;
+	int divisa=1;
+	int divisaCount=0;
 	for(int n=x;n>0;n--){
 		tot=tot*n;
 	}
-	string s=to_string(tot);
-	int TempNumOne=s.size();
-	char arr[100];
-	for (int a=0;a<=TempNumOne;a++){
-		arr[a]=s[a];
-    }
+	while(true){
+		if(tot%divisa!=0){
+			break;
+		}
+		divisa=divisa*10;
+		divisaCount++;
+	}
+	cout<<divisaCount-1;
 	return 0;
 }
