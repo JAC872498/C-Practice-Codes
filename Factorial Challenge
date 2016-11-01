@@ -15,14 +15,10 @@ int main(){
 		tot=tot*n;
 	}
 	string s=to_string(tot);
-	
-	string FileMeasure="Hello FILE!";
-int TempNumOne=FileMeasure.size();
-char Filename[100];
-for (int a=0;a<=TempNumOne;a++)
-        {
-            Filename[a]=FileMeasure[a];
-        }
-        
+	int TempNumOne=s.size();
+	char arr[100];
+	for (int a=0;a<=TempNumOne;a++){
+		arr[a]=s[a];
+    }
 	return 0;
 }
