@@ -1,0 +1,28 @@
+"""Here's a challenge that's a bit more mathematical in nature.
+Write a program that determines the number of trailing zeros at the end of X! (X factorial), where X is an arbitrary number.
+For instance, 5! is 120, so it has one trailing zero. (How can you handle extremely values, such as 100!?) 
+The input format should be that the program asks the user to enter a number, minus the !. """
+
+#include <iostream>
+#include <string>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+	int x=5;
+	int tot=1;
+	for(int n=x;n>0;n--){
+		tot=tot*n;
+	}
+	string s=to_string(tot);
+	
+	string FileMeasure="Hello FILE!";
+int TempNumOne=FileMeasure.size();
+char Filename[100];
+for (int a=0;a<=TempNumOne;a++)
+        {
+            Filename[a]=FileMeasure[a];
+        }
+        
+	return 0;
+}
