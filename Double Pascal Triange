@@ -1,5 +1,5 @@
-/*Most of you are framiliar with the pascal triangle, the right tirange made of asterisk(*) that gets 1 bigger every row down.
-I decided to , as a hip frog would put it, amp it up by making it an isosceles triangle(getting mathmatical in here).*/
+	/*Most of you are framiliar with the pascal triangle, the right tirange made of asterisk(*) that gets 1 bigger every row down.
+I decided to , as a hip-hop frog would put it, amp it up by making it an isosceles triangle(getting mathmatical in here).*/
 
 #include <iostream>
 using namespace std;
