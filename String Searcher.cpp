@@ -5,7 +5,7 @@ Takes 2 string(a and b)searches for the smaller in the larger string.*/
 using namespace std
 
 int main() {
-	string a,b,newWrd;
+	string a,b,newWrd;///a and b are 
 	int tot;
 	cin>>a>>b;
 	string FileMeasure=a;
