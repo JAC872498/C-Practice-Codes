@@ -5,16 +5,16 @@ Takes 2 string(a and b)searches for the smaller in the larger string.*/
 using namespace std
 
 int main() {
-	string a,b,newWrd;///a and b are 
-	int tot;
+	string a,b,newWrd;///a and b are the strings given by user to search/be searched.
+	int tot;//amount of times one string shows up in the other.
 	cin>>a>>b;
-	string FileMeasure=a;
+	string FileMeasure=a;//turning string a into an array.
 	int TempNumOne=FileMeasure.size();
 	char Aarr[100];
 	for (int a=0;a<=TempNumOne;a++){
     	Aarr[a]=FileMeasure[a];
 	}
-	string FileMeasure2=b;
+	string FileMeasure2=b;//turning string b into an array.
 	int TempNumOne2=FileMeasure2.size();
 	char Barr[100];
 	for (int a=0;a<=TempNumOne2;a++){
