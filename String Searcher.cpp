@@ -4,7 +4,7 @@ Takes 2 string(a and b)searches for the smaller in the larger string.*/
 #include <iostream>
 using namespace std
 
-int main() {
+int main(){
 	string a,b,newWrd;///a and b are the strings given by user to search/be searched
 	int tot;//amount of times one string shows up in the other
 	cin>>a>>b;
