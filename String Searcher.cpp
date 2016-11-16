@@ -2,7 +2,7 @@
 Takes 2 string(a and b)searches for the smaller in the larger string.*/
 
 #include <iostream>
-using namespace std
+using namespace std;
 
 int main(){
 	string a,b,newWrd;///a and b are the strings given by user to search/be searched
