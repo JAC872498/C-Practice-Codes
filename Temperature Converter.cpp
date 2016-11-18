@@ -5,7 +5,7 @@ The end result is rounded to the hundredths*/
 using namespace std;
 
 int main(){
-  int deg;
+  double deg;
   string oldTemp,newTemp;
   cout<<"Enter the temperature amount(just the number).\n";
   cin>>deg;
@@ -15,7 +15,7 @@ int main(){
   cin>>newTemp;
   if(oldTemp=="C"||oldTemp=="c"){//If the original temp is in celcius
     if(newTemp=="K"||newTemp=="k"){//Celcius --> Kelvin
-      cout<<"C to K";
+      cout<<deg+273.15;
     }else if(newTemp=="F"||newTemp=="f"){//Celcius --> Fahrenheit
       cout<<"C to F";
     }else{//Neither of the two
@@ -31,7 +31,7 @@ int main(){
     }
   }else if(oldTemp=="K"||oldTemp=="k"){//If the original temp is in kelvin
     if(newTemp=="C"||newTemp=="c"){//Kelvin --> Celcius
-      cout<<"K to C";
+      cout<<deg-273.15;
     }else if(newTemp=="F"||newTemp=="f"){//Kelvin --> Fahrenheit
       cout<<"K to F";
     }else{//Neither of the two
