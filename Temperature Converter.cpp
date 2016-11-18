@@ -19,7 +19,7 @@ int main(){
     }else if(newTemp=="F"||newTemp=="f"){//Celcius --> Fahrenheit
       cout<<"C to F";
     }else{//Neither of the two
-      cout<<"C";
+      cout<<"Only enter F or K";
     }
   }else if(oldTemp=="F"||oldTemp=="f"){//If the original temp is if fahrenheit
     if(newTemp=="K"||newTemp=="k"){//Fahrenheit --> Kelvin
@@ -27,7 +27,7 @@ int main(){
     }else if(newTemp=="C"||newTemp=="c"){//Fahrenheit --> Celcius
       cout<<"F to C";
     }else{//Neither of the two
-      cout<<"F";
+      cout<<"Only enter C or K";
     }
   }else if(oldTemp=="K"||oldTemp=="k"){//If the original temp is in kelvin
     if(newTemp=="C"||newTemp=="c"){//Kelvin --> Celcius
@@ -35,7 +35,9 @@ int main(){
     }else if(newTemp=="F"||newTemp=="f"){//Kelvin --> Fahrenheit
       cout<<"K to F";
     }else{//Neither of the two
-      cout<<"K";
+      cout<<"Only enter C or F";
     }
+  }else{
+    cout<<"Only enter C, F, or K";
   }
 }
