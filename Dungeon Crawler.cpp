@@ -35,7 +35,7 @@ int main(){//Have enemys move around and have 'map' area changable
 			}
 			cout<<"\n";
 		}
-		cin>>move;//This is chunk is for movement
+		cin>>move;//This is chunk is for player movement
 		if(move=="left"&&player[0]!=1){
 			player[0]=player[0]-1;
 		}else if(move=="right"&&player[0]!=6){
