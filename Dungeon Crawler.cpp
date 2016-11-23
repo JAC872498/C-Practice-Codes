@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 	srand(time(NULL));
-	int xLen,yLen;//This is the range of the 'map' and the two cins below determin the size
+	int xLen,yLen;//This is the range of the 'map'
 	string move;
 	cout<<"Enter the graph x amount.\n";
 	cin>>xLen;
@@ -37,7 +37,7 @@ int main(){
 			}
 			cout<<"\n";
 		}
-		cin>>move;//This is chunk is for movement the player's move
+		cin>>move;//This is chunk is for movement
 		if(move=="left"&&player[0]!=1){
 			player[0]=player[0]-1;
 		}else if(move=="right"&&player[0]!=6){
@@ -47,6 +47,18 @@ int main(){
 		}else if(move=="down"&&player[1]!=6){
 			player[1]=player[1]+1;
 		}
+		int enemy1Movement=rand()%4+1);
+		int enemy2Movement=rand()%4+1;
+		if(enemy1Movement==1&&enemy[0]!=1){//Enemy 1 moving left
+			enemy[0]=enemy[0]-1;
+		}else if(enemy1Movement==2&&enemy[1]!=1){//Enemy 1 moving up
+			enemy[1]=enemy[1]-1;
+		}else if(enemy1Movement==3&&enemy[0]!=6){//Enemy 1 moding right
+			enemy[0]=enemy[0]+1;
+		}else if(enemy1Movement==4&&enemy[1]!=6){//Enemy 1 moving down
+			enemy[1]=enemy[1]+1;
+		}
+		//Enemy 2 movements
 	}
 	return 0;
 }
