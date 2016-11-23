@@ -47,7 +47,7 @@ int main(){
 		}else if(move=="down"&&player[1]!=6){
 			player[1]=player[1]+1;
 		}
-		int enemy1Movement=rand()%4+1);
+		int enemy1Movement=rand()%4+1;
 		int enemy2Movement=rand()%4+1;
 		if(enemy1Movement==1&&enemy[0]!=1){//Enemy 1 moving left
 			enemy[0]=enemy[0]-1;
@@ -58,7 +58,15 @@ int main(){
 		}else if(enemy1Movement==4&&enemy[1]!=6){//Enemy 1 moving down
 			enemy[1]=enemy[1]+1;
 		}
-		//Enemy 2 movements
+		if(enemy2Movement==1&&enemy[2]!=1){//Enemy 1 moving left
+			enemy[2]=enemy[2]-1;
+		}else if(enemy2Movement==2&&enemy[3]!=1){//Enemy 1 moving up
+			enemy[3]=enemy[3]-1;
+		}else if(enemy2Movement==3&&enemy[2]!=6){//Enemy 1 moding right
+			enemy[2]=enemy[2]+1;
+		}else if(enemy2Movement==4&&enemy[3]!=6){//Enemy 1 moving down
+			enemy[3]=enemy[3]+1;
+		}
 	}
 	return 0;
 }
