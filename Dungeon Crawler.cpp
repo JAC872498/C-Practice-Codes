@@ -1,18 +1,20 @@
-/*This is a game where players control 'P' and try to get to 'X' without running into 'E'*/
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
-int main(){//Have enemys move around and have 'map' area changable
+int main(){
+	srand(time(NULL));
 	int xLen,yLen;//This is the range of the 'map'
-	int player[]={3,3};//Represented as 'P', this is who the player controls
-	int goal[]={6,6};//Represented as 'X', this is where the player wants to get to
-	int enemy[]={1,1,2,2};//Represented as 'E', these are 2 enemys that kill the player
 	string move;
-	cout<<"Enter the graph x amount.\n";//Getting the area of the 'map'
+	cout<<"Enter the graph x amount.\n";
 	cin>>xLen;
 	cout<<"Enter the graph y amount.\n";
 	cin>>yLen;
+	int player[]={rand()%xLen+1,rand()%yLen+1};//Represented as 'P', this is who the player controls
+	int goal[]={rand()%xLen+1,rand()%yLen+1};//Represented as 'X', this is where the player wants to get to
+	int enemy[]={rand()%xLen+1,rand()%yLen+1,rand()%xLen+1,rand()%yLen+1};//Represented as 'E', these are 2 enemys that kill the player
 	while(true){
 		if(player[0]==goal[0]&&player[1]==goal[1]){//If the player reaches 'X'
 			cout<<"You Win!";
@@ -35,7 +37,7 @@ int main(){//Have enemys move around and have 'map' area changable
 			}
 			cout<<"\n";
 		}
-		cin>>move;//This is chunk is for player movement
+		cin>>move;//This is chunk is for movement
 		if(move=="left"&&player[0]!=1){
 			player[0]=player[0]-1;
 		}else if(move=="right"&&player[0]!=6){
