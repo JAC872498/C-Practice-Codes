@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 	srand(time(NULL));
-	int xLen,yLen;//This is the range of the 'map'
+	int xLen,yLen;//This is the range of the 'map' and the two cins below determin the size
 	string move;
 	cout<<"Enter the graph x amount.\n";
 	cin>>xLen;
