@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>//I made this 'game' mostly for the fun/challenge of it and not for gameplay value
 #include <ctime>
 #include <cstdlib>
 
