@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main(){
+int main(){//Going to add easy, medium, and hard mode and create a specific number of enemys depending on it
 	srand(time(NULL));
 	int xLen,yLen;//This is the range of the 'map'
 	string move;
