@@ -14,7 +14,7 @@ int main(){
 	cin>>yLen;
 	int player[]={rand()%xLen+1,rand()%yLen+1};//Represented as 'P', this is who the player controls
 	int goal[]={rand()%xLen+1,rand()%yLen+1};//Represented as 'X', this is where the player wants to get to
-	int easyEnemy[]={rand()%xLen+1,rand()%yLen+1,rand()%xLen+1,rand()%yLen+1};//Represented as 'E', these are 2 enemys that kill the player
+	int easyEnemy[]={rand()%xLen+1,rand()%yLen+1,rand()%xLen+1,rand()%yLen+1,rand()%xLen+1,rand()%yLen+1};//Represented as 'E', these are 2 enemys that kill the player
 	while(true){
 		if(player[0]==goal[0]&&player[1]==goal[1]){//If the player reaches 'X'
 			cout<<"You Win!";
@@ -29,7 +29,7 @@ int main(){
 				   	cout<<"P";
 				}else if(goal[0]==x&&goal[1]==y){
 					cout<<"X";
-				}else if((easyEnemy[0]==x&&easyEnemy[1]==y)||(easyEnemy[2]==x&&easyEnemy[3]==y)){
+				}else if((easyEnemy[0]==x&&easyEnemy[1]==y)||(easyEnemy[2]==x&&easyEnemy[3]==y)||(easyEnemy[4]==x&&easyEnemy[5]==y)){
 					cout<<"E";
 				}else{
 					cout<<"*";
@@ -49,6 +49,7 @@ int main(){
 		}
 		int easyEnemy1Movement=rand()%4+1;
 		int easyEnemy2Movement=rand()%4+1;
+		int easyEnemy3Movement=rand()%4+1;
 		if(easyEnemy1Movement==1&&easyEnemy[0]!=1){//Enemy 1 moving left
 			easyEnemy[0]=easyEnemy[0]-1;
 		}else if(easyEnemy1Movement==2&&easyEnemy[1]!=1){//Enemy 1 moving up
@@ -58,14 +59,23 @@ int main(){
 		}else if(easyEnemy1Movement==4&&easyEnemy[1]!=yLen){//Enemy 1 moving down
 			easyEnemy[1]=easyEnemy[1]+1;
 		}
-		if(easyEnemy2Movement==1&&easyEnemy[2]!=1){//Enemy 1 moving left
+		if(easyEnemy2Movement==1&&easyEnemy[2]!=1){//Enemy 2 moving left
 			easyEnemy[2]=easyEnemy[2]-1;
-		}else if(easyEnemy2Movement==2&&easyEnemy[3]!=1){//Enemy 1 moving up
+		}else if(easyEnemy2Movement==2&&easyEnemy[3]!=1){//Enemy 2 moving up
 			easyEnemy[3]=easyEnemy[3]-1;
-		}else if(easyEnemy2Movement==3&&easyEnemy[2]!=xLen){//Enemy 1 moding right
+		}else if(easyEnemy2Movement==3&&easyEnemy[2]!=xLen){//Enemy 2 moding right
 			easyEnemy[2]=easyEnemy[2]+1;
-		}else if(easyEnemy2Movement==4&&easyEnemy[3]!=yLen){//Enemy 1 moving down
+		}else if(easyEnemy2Movement==4&&easyEnemy[3]!=yLen){//Enemy 2 moving down
 			easyEnemy[3]=easyEnemy[3]+1;
+		}
+		if(easyEnemy3Movement==1&&easyEnemy[4]!=1){//Enemy 2 moving left
+			easyEnemy[4]=easyEnemy[4]-1;
+		}else if(easyEnemy2Movement==2&&easyEnemy[5]!=1){//Enemy 2 moving up
+			easyEnemy[5]=easyEnemy[5]-1;
+		}else if(easyEnemy2Movement==3&&easyEnemy[4]!=xLen){//Enemy 2 moding right
+			easyEnemy[4]=easyEnemy[4]+1;
+		}else if(easyEnemy2Movement==4&&easyEnemy[5]!=yLen){//Enemy 2 moving down
+			easyEnemy[5]=easyEnemy[5]+1;
 		}
 	}
 	return 0;
