@@ -25,8 +25,14 @@ int binary(int x){
 					newWrd[newWrd.length()-2]=((newWrd[newWrd.length()-2]-'0')+1) to string;
 					bin=newWrd to int;
 				}else{//2 in the middle
-					wrd=;
-					
+					for(int str1=0;str1<a;str1++){
+						newWrd[str1]=wrd[str1];
+					}
+					newWrd[a-1]++;
+					newWrd[a]="0";
+					for(int str2=a+1;str2<wrd.length();str2++){
+						newWrd[str2]=wrd[str2];
+					}
 					bin=newWrd to int;
 				}
 			}	
