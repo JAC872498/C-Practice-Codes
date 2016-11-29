@@ -16,14 +16,14 @@ int binary(int x){
 						newWrd[str-1]=wrd[str];
 					}
 					newWrd="10"+newWrd;
-					bin=newWrd to int;
+					bin=stoi(newWrd);
 				}else if(a-1==s.length()){//2 at the very back
 					for(int str=0;str<wrd.length()-1;str++){
 						newWrd[str]=wrd[str];
 					}
 					newWrd=newWrd="0";
 					newWrd[newWrd.length()-2]=((newWrd[newWrd.length()-2]-'0')+1) to string;
-					bin=newWrd to int;
+					bin=stoi(newWrd);
 				}else{//2 in the middle
 					for(int str1=0;str1<a;str1++){
 						newWrd[str1]=wrd[str1];
@@ -33,14 +33,16 @@ int binary(int x){
 					for(int str2=a+1;str2<wrd.length();str2++){
 						newWrd[str2]=wrd[str2];
 					}
-					bin=newWrd to int;
+					bin=stoi(newWrd);
 				}
 			}	
 		}
+		cout<<bin;
 	}
 	return bin;
 }
 
 int main(){
+	binary(2);
 	return 0;
 }
