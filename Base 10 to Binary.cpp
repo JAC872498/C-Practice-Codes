@@ -4,12 +4,11 @@ using namespace std;
 
 int binary(int x){
 	int	bin=0;
-	string wrd="";
-	string newWrd="";
-	for(int n=0;n<x;n++){//Creating the number
-		bin++;
-		wrd=to_string(bin);
-		for(int a=0;a<wrd.length();a++){//Going through each number 
+	string wrd="";//bin in a string
+	string newWrd="";//wrd turned into a binary string
+	for(int bin=0;bin<x;bin++){//Creating all binary numbers up to the entered number
+		wrd=to_string(bin);//Turning bin into a string
+		for(int a=0;a<wrd.length();a++){//Going through each number of bin
 			if((wrd[a]-'0')==2){//If any number is a 2
 				//Turn the 2 at s[a] into a 10
 				if(a==0){//2 at the very front
@@ -24,10 +23,11 @@ int binary(int x){
 					}
 					newWrd=newWrd="0";
 					newWrd[newWrd.length()-2]=((newWrd[newWrd.length()-2]-'0')+1) to string;
-					bin=;
+					bin=newWrd to int;
 				}else{//2 in the middle
 					wrd=;
-					bin=;
+					
+					bin=newWrd to int;
 				}
 			}	
 		}
