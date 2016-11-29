@@ -11,12 +11,9 @@ int binary(int x){
 		wrd=to_string(bin);//Turning bin into a string
 		for(int a=0;a<=wrd.length();a++){//Going through each number of bin
 			if((wrd[a]-'0')==2){//If any number is a 2
+			
+			
 				//Turn the 2 at wrd[a] into a 10
-				if(a==0){//2 at the very front
-					wrd.erase(0,1);
-					wrd="10"+wrd;
-					bin=stoi(wrd);
-				}
 				if(a==wrd.length()){//2 at the very back
 					for(int str=0;str<wrd.length()-1;str++){
 						newWrd[str]=wrd[str];
@@ -24,6 +21,10 @@ int binary(int x){
 					newWrd=newWrd="0";
 					newWrd[newWrd.length()-2]=((newWrd[newWrd.length()-2]-'0')+1);
 					bin=stoi(newWrd);
+					wrd=to_string(bin);
+					if((wrd[a-1]-'0')==2){//if number befor is 2 WORK ON
+						wrd=to_string(bin);
+					}
 				}
 				if(a!=0 && a!=wrd.length()){//2 in the middle
 					for(int str1=0;str1<a;str1++){
@@ -35,6 +36,15 @@ int binary(int x){
 						newWrd[str2]=wrd[str2];
 					}
 					bin=stoi(newWrd);
+					wrd=to_string(bin);
+					if((wrd[a-1]-'0')==2){//if number befor is 2 WORK ON
+						
+					}
+				}
+				if((wrd[0]-'0')==2){//2 at the very front
+					wrd.erase(0,1);
+					wrd="10"+wrd;
+					bin=stoi(wrd);
 				}
 				
 				
@@ -46,6 +56,6 @@ int binary(int x){
 }
 
 int main(){
-	binary(10);
+	binary(20);
 	return 0;
 }
