@@ -1,3 +1,4 @@
+/*This is a way too compicated way to turn a deciman number into a binary one that dosn't truly work*/
 #include <iostream>
 #include <string>
 using namespace std;
@@ -47,4 +48,19 @@ int binary(int x){
 int main(){
 	binary(30);
 	return 0;
+}
+
+
+/*And this is a much better and cleaner way to do the same thing*/
+#include <iostream>
+#include <bitset>
+using namespace std;
+
+int main(){
+    cout<<"Enter number.\n";
+    int dec;
+    cin>>dec;
+    string binary=bitset<8>(dec).to_string();
+    cout<<binary<<"\n";
+    return 0;
 }
