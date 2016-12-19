@@ -1,9 +1,14 @@
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
 bool stuff(int arr[],int x, int y){
-	return true;
+	int xPlayer=arr[0];
+	int yPlayer=arr[1];
+	if(abs(x-xPlayer)==1 || abs(y-yPlayer)==1){//WORK ON THIS
+		return true;
+	}return false;
 }
 
 int main(){
