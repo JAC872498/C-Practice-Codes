@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
@@ -12,24 +14,33 @@ bool stuff(int arr[],int x, int y){
 }
 
 int main(){
+	srand(time(NULL));
 	int player[]={0, 0};
+	int goal[]={rand()%11,rand()%11};
 	int xLen=10;
 	int yLen=10;
 	string move;
 	while(true){
+		if(player[0]==goal[0]&&player[1]==goal[1]){
+			cout<<"You win!";
+			break;
+		}
 		for(int y=0;y<yLen;y++){
 			for(int x=0;x<xLen;x++){
 				   	if(player[0]==x && player[1]==y){
-				   	cout<<"P";
-				   	}else if(stuff(player,x,y)){
-					  		cout<<"*";
-					}else{//Add E(end)
+				   		cout<<"P";
+					}else if(stuff(player,x,y)){
+				   		if(goal[0]==x && goal[1]==y){
+					  		cout<<"X";
+						}else{
+							cout<<"*";
+						}
+					}else{
 			 			cout<<"?";
 				  	}
 		  		}
 				cout<<"\n";
 	   		}
-		//break once player reaches E
 		cin>>move;//This is chunk is for movement
 		if(move=="left"&&player[0]!=0){//Player moving left
 			player[0]=player[0]-1;
