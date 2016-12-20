@@ -31,13 +31,13 @@ int main(){
 	   		}
 		//break once player reaches E
 		cin>>move;//This is chunk is for movement
-		if(move=="left"&&player[0]!=1){//Player moving left
+		if(move=="left"&&player[0]!=0){//Player moving left
 			player[0]=player[0]-1;
-		}else if(move=="right"&&player[0]!=xLen){//Player moving right
+		}else if(move=="right"&&player[0]!=9){//Player moving right
 			player[0]=player[0]+1;
-		}else if(move=="up"&&player[1]!=1){//Player moving up
+		}else if(move=="up"&&player[1]!=0){//Player moving up
 			player[1]=player[1]-1;
-		}else if(move=="down"&&player[1]!=yLen){//Player moving down
+		}else if(move=="down"&&player[1]!=9){//Player moving down
 			player[1]=player[1]+1;
 		}
 	}
