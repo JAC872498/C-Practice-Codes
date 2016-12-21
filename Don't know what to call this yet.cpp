@@ -8,7 +8,7 @@ using namespace std;
 bool stuff(int arr[],int x, int y){
 	int xPlayer=arr[0];
 	int yPlayer=arr[1];
-	if((abs(x-xPlayer)==1 && abs(y-yPlayer)<=1) || (abs(y-yPlayer)==1 && abs(x-xPlayer)<=1)){
+	if((abs(x-xPlayer)<=2 && abs(y-yPlayer)<=2) || (abs(y-yPlayer)<=2 && abs(x-xPlayer)<=2)){
 		return true;
 	}return false;//Have this permanently mark spaces as */E/P instead of ?
 }
