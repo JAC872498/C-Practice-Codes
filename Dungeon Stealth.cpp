@@ -12,9 +12,11 @@ bool canSee(int arr[],int x, int y){
 		return true;
 	}return false;
 }
-
-
-
+/*
+int enemyMovement(int enemy[]){
+WORK ON THIS	
+}
+*/
 int main(){
 	srand(time(NULL));
 	int player[]={0, 0};
