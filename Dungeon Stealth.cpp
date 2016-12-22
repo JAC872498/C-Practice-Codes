@@ -6,9 +6,7 @@
 using namespace std;
 
 bool canSee(int arr[],int x, int y){//This decides is the player can see the area around them
-	int xPlayer=arr[0];
-	int yPlayer=arr[1];
-	if((abs(x-xPlayer)<=2 && abs(y-yPlayer)<=2) || (abs(y-yPlayer)<=2 && abs(x-xPlayer)<=2)){
+	if((abs(x-arr[0])<=2 && abs(y-arr[1])<=2) || (abs(y-arr[1])<=2 && abs(x-arr[0])<=2)){
 		return true;
 	}return false;
 }
@@ -85,7 +83,7 @@ int main(){
 		}else if(move=="down"&&player[1]!=9){//Player moving down
 			player[1]=player[1]+1;
 		}
-		if(rand()%2==0){
+		if(rand()%2==0){//Determining enemy movement
 			enemy[0]=xMovement(enemy[0],xLen);
 		}else{
 			enemy[1]=yMovement(enemy[1],yLen);
