@@ -1,4 +1,4 @@
-#include <iostream>
+include <iostream>
 #include <stdlib.h>
 #include <ctime>
 #include <cstdlib>
@@ -18,7 +18,7 @@ int xMovement(int enemyX, int xLen){//If the enemy moves left/right
 			return (enemyX-1);
 		}return (enemyX+1);
 	}else{
-		if(enemyX!=xLen){
+		if(enemyX<xLen){
 			return (enemyX+1);
 		}return (enemyX-1);
 	}
@@ -30,38 +30,38 @@ int yMovement(int enemyY, int yLen){//If the enemy moves up/down
 			return (enemyY-1);
 		}return (enemyY+1);
 	}else{
-		if(enemyY!=yLen){
+		if(enemyY<yLen){
 			return (enemyY+1);
 		}return (enemyY-1);
 	}
 }
 
 int main(){
-	string playAgain="s";
-	while(toupper(playAgain)=="YES"||toupper(playAgain)=="Y"){
-	srand(time(NULL));
-	int player[]={0, 0};
-	int xLen=10;
-	int yLen=10;
-	cout<<"Enter the x length of the grid.\n";
-	cin>>xLen;
-	cout<<"Enter the y length of the grid.\n";
-	cin>>yLen;
-	string move;
-	int goal[]={rand()%xLen,rand()%yLen};
-	int enemy[]={rand()%xLen,rand()%yLen};
-	while(true){
-		if(player[0]==goal[0]&&player[1]==goal[1]){
-			cout<<"You Win!\nPlay again?";
-			cin>>playAgain;
-			break;
-		}else if(player[0]==enemy[0]&&player[1]==enemy[1]){
-			cout<<"You Lose!\nPlay again?";
-			cin>>playAgain;
-			break;
-		}
-		for(int y=0;y<yLen;y++){
-			for(int x=0;x<xLen;x++){
+	string playAgain="YES";
+	while(playAgain=="YES"||playAgain=="Y"){
+		srand(time(NULL));
+		int player[]={0, 0};
+		int xLen=10;
+		int yLen=10;
+		cout<<"Enter the x length of the grid.\n";
+		cin>>xLen;
+		cout<<"Enter the y length of the grid.\n";
+		cin>>yLen;
+		string move;
+		int goal[]={rand()%xLen,rand()%yLen};
+		int enemy[]={rand()%xLen,rand()%yLen};
+		while(true){
+			if(player[0]==goal[0]&&player[1]==goal[1]){
+				cout<<"You Win!\nPlay again?\n";
+				cin>>playAgain;
+				break;
+			}else if(player[0]==enemy[0]&&player[1]==enemy[1]){
+				cout<<"You Lose!\nPlay again?\n";
+				cin>>playAgain;
+				break;
+			}
+			for(int y=0;y<yLen;y++){
+				for(int x=0;x<xLen;x++){
 				   	if(player[0]==x && player[1]==y){
 				   		cout<<"P";
 					}else if(canSee(player,x,y)){
@@ -78,22 +78,22 @@ int main(){
 		  		}
 				cout<<"\n";
 	   		}
-		cin>>move;//This is chunk is for movement
-		if(move=="left"&&player[0]!=0){//Player moving left
-			player[0]=player[0]-1;
-		}else if(move=="right"&&player[0]!=9){//Player moving right
-			player[0]=player[0]+1;
-		}else if(move=="up"&&player[1]!=0){//Player moving up
-			player[1]=player[1]-1;
-		}else if(move=="down"&&player[1]!=9){//Player moving down
-			player[1]=player[1]+1;
+			cin>>move;//This is chunk is for movement
+			if(move=="left"&&player[0]!=0){//Player moving left
+				player[0]=player[0]-1;
+			}else if(move=="right"&&player[0]!=9){//Player moving right
+				player[0]=player[0]+1;
+			}else if(move=="up"&&player[1]!=0){//Player moving up
+				player[1]=player[1]-1;
+			}else if(move=="down"&&player[1]!=9){//Player moving down
+				player[1]=player[1]+1;
+			}
+			if(rand()%2==0){//Determining enemy movement
+				enemy[0]=xMovement(enemy[0],xLen);
+			}else{
+				enemy[1]=yMovement(enemy[1],yLen);
+			}
 		}
-		if(rand()%2==0){//Determining enemy movement
-			enemy[0]=xMovement(enemy[0],xLen);
-		}else{
-			enemy[1]=yMovement(enemy[1],yLen);
-		}
-	}
 	}
 	return 0;
 }
