@@ -5,18 +5,25 @@
 
 using namespace std;
 
-bool canSee(int arr[],int x, int y){
+bool canSee(int arr[],int x, int y){//This decides is the player can see the area around them
 	int xPlayer=arr[0];
 	int yPlayer=arr[1];
 	if((abs(x-xPlayer)<=2 && abs(y-yPlayer)<=2) || (abs(y-yPlayer)<=2 && abs(x-xPlayer)<=2)){
 		return true;
 	}return false;
 }
-/*
-int enemyMovement(int enemy[]){
-WORK ON THIS	
+
+/*int xMovement(){//If the enemy moves left/right
+	
 }
-*/
+int yMovement(){//If the enemy moves up/down
+	
+}
+
+int enemyMovement(int enemyX, int enemyY, int xLen, int xLen){//Determining the enemy's movement
+	
+}*/
+
 int main(){
 	srand(time(NULL));
 	int player[]={0, 0};
