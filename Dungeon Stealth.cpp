@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctime>
 #include <cstdlib>
+#include <ctype.h>
 
 using namespace std;
 
@@ -36,6 +37,8 @@ int yMovement(int enemyY, int yLen){//If the enemy moves up/down
 }
 
 int main(){
+	string playAgain="s";
+	while(toupper(playAgain)=="YES"||toupper(playAgain)=="Y"){
 	srand(time(NULL));
 	int player[]={0, 0};
 	int xLen=10;
@@ -50,9 +53,11 @@ int main(){
 	while(true){
 		if(player[0]==goal[0]&&player[1]==goal[1]){
 			cout<<"You Win!\nPlay again?";
+			cin>>playAgain;
 			break;
 		}else if(player[0]==enemy[0]&&player[1]==enemy[1]){
 			cout<<"You Lose!\nPlay again?";
+			cin>>playAgain;
 			break;
 		}
 		for(int y=0;y<yLen;y++){
@@ -88,6 +93,7 @@ int main(){
 		}else{
 			enemy[1]=yMovement(enemy[1],yLen);
 		}
+	}
 	}
 	return 0;
 }
