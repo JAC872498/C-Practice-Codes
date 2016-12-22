@@ -49,10 +49,10 @@ int main(){
 	int enemy[]={rand()%xLen,rand()%yLen};
 	while(true){
 		if(player[0]==goal[0]&&player[1]==goal[1]){
-			cout<<"You Win!";
+			cout<<"You Win!\nPlay again?";
 			break;
 		}else if(player[0]==enemy[0]&&player[1]==enemy[1]){
-			cout<<"You Lose!";
+			cout<<"You Lose!\nPlay again?";
 			break;
 		}
 		for(int y=0;y<yLen;y++){
