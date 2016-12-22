@@ -13,16 +13,29 @@ bool canSee(int arr[],int x, int y){//This decides is the player can see the are
 	}return false;
 }
 
-/*int xMovement(){//If the enemy moves left/right
-	
-}
-int yMovement(){//If the enemy moves up/down
-	
+int xMovement(int enemyX, int xLen){//If the enemy moves left/right
+	if(rand()%2==0){
+		if(enemyX!=0){
+			return (enemyX-1);
+		}return (enemyX+1);
+	}else{
+		if(enemyX!=xLen){
+			return (enemyX+1);
+		}return (enemyX-1);
+	}
 }
 
-int enemyMovement(int enemyX, int enemyY, int xLen, int xLen){//Determining the enemy's movement
-	
-}*/
+int yMovement(int enemyY, int yLen){//If the enemy moves up/down
+	if(rand()%2==0){
+		if(enemyY!=0){
+			return (enemyY-1);
+		}return (enemyY+1);
+	}else{
+		if(enemyY!=yLen){
+			return (enemyY+1);
+		}return (enemyY-1);
+	}
+}
 
 int main(){
 	srand(time(NULL));
@@ -38,10 +51,10 @@ int main(){
 	int enemy[]={rand()%xLen,rand()%yLen};
 	while(true){
 		if(player[0]==goal[0]&&player[1]==goal[1]){
-			cout<<"You win!";
+			cout<<"You Win!";
 			break;
 		}else if(player[0]==enemy[0]&&player[1]==enemy[1]){
-			cout<<"You lose!";
+			cout<<"You Lose!";
 			break;
 		}
 		for(int y=0;y<yLen;y++){
@@ -72,15 +85,10 @@ int main(){
 		}else if(move=="down"&&player[1]!=9){//Player moving down
 			player[1]=player[1]+1;
 		}
-		int enemy1Movement=rand()%4+1;
-		if(enemy1Movement==1&&enemy[0]!=0){//Enemy 1 moving left
-			enemy[0]=enemy[0]-1;
-		}else if(enemy1Movement==2&&enemy[1]!=0){//Enemy 1 moving up
-			enemy[1]=enemy[1]-1;
-		}else if(enemy1Movement==3&&enemy[0]!=xLen-1){//Enemy 1 moding right
-			enemy[0]=enemy[0]+1;
-		}else if(enemy1Movement==4&&enemy[1]!=yLen-1){//Enemy 1 moving down
-			enemy[1]=enemy[1]+1;
+		if(rand()%2==0){
+			enemy[0]=xMovement(enemy[0],xLen);
+		}else{
+			enemy[1]=yMovement(enemy[1],yLen);
 		}
 	}
 	return 0;
