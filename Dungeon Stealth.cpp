@@ -1,4 +1,4 @@
-include <iostream>
+#include <iostream>
 #include <stdlib.h>
 #include <ctime>
 #include <cstdlib>
@@ -37,8 +37,8 @@ int yMovement(int enemyY, int yLen){//If the enemy moves up/down
 }
 
 int main(){
-	string playAgain="YES";
-	while(playAgain=="YES"||playAgain=="Y"){
+	string playAgain="Y";
+	while(playAgain=="Y"||playAgain=="y"){
 		srand(time(NULL));
 		int player[]={0, 0};
 		int xLen=10;
@@ -52,11 +52,11 @@ int main(){
 		int enemy[]={rand()%xLen,rand()%yLen};
 		while(true){
 			if(player[0]==goal[0]&&player[1]==goal[1]){
-				cout<<"You Win!\nPlay again?\n";
+				cout<<"You Win!\nPlay again?(Y|N)\n";
 				cin>>playAgain;
 				break;
 			}else if(player[0]==enemy[0]&&player[1]==enemy[1]){
-				cout<<"You Lose!\nPlay again?\n";
+				cout<<"You Lose!\nPlay again?(Y|N)\n";
 				cin>>playAgain;
 				break;
 			}
