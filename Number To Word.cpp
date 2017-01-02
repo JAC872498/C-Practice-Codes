@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+string num(string){
+	return("");
+}
+
 int main() {
 	int starting=69;
 	cout<<"Enter your number.\n";
