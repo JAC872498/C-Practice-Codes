@@ -1,14 +1,8 @@
 #include <iostream>
 using namespace std;
 
-string num(string){
-	return("");
-}
-
-int main() {
-	int starting=69;
-	cout<<"Enter your number.\n";
-	cin>>starting;
+string num(starting){
+	string wrd="";
 	if(starting==0){
 		cout>>"zero";
 	}else if(starting==1){
@@ -20,15 +14,22 @@ int main() {
 	}else if(starting==4){
 		cout>>"four";
 	}else if(starting==5){
-		cout>>;
+		cout>>"five";
 	}else if(starting==6){
-		cout>>;
+		cout>>"six";
 	}else if(starting==7){
-		cout>>;
+		cout>>"seven";
 	}else if(starting==8){
-		cout>>;
+		cout>>"eight";
 	}else{
-		cout>>;
+		cout>>"nine";
 	}
 	return 0;
+}
+
+int main() {
+	int starting=69;
+	cout<<"Enter your number.\n";
+	cin>>starting;
+	cout<<num(starting);
 }
