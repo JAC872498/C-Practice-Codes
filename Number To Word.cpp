@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-	cout<<"Enter your number.\n";
 	int starting=69;
+	cout<<"Enter your number.\n";
 	cin>>starting;
 	if(starting==0){
 		cout>>"zero";
