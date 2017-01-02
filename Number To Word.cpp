@@ -23,7 +23,7 @@ int main() {
 		cout>>;
 	}else if(starting==8){
 		cout>>;
-	}else if(starting==9){
+	}else{
 		cout>>;
 	}
 	return 0;
