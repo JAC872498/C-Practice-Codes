@@ -16,15 +16,15 @@ int main() {
 	}else if(starting==4){
 		cout>>"four";
 	}else if(starting==5){
-		
+		cout>>;
 	}else if(starting==6){
-		
+		cout>>;
 	}else if(starting==7){
-		
+		cout>>;
 	}else if(starting==8){
-		
+		cout>>;
 	}else if(starting==9){
-		
+		cout>>;
 	}
 	return 0;
 }
