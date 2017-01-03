@@ -1,4 +1,4 @@
-//This takes a number up to 9,999,999,999 and returns it in word form
+//This takes a number up to 9,999,999,999 and returns it in word form, dosn't work when you go above the billions 
 #include <iostream>
 #include <string>
 using namespace std;
