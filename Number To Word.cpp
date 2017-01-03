@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-string num(starting){
+string num(int starting){
 	string ones[]={"zero","one","two","three","four","five","six","seven","eight","nine",};
 	string wrd="";
-	cout<<ones[starting];
-	return 0;
+	return ones[starting];
 }
 
 int main() {
-	int starting=69;
+	int starting=6;
 	cout<<"Enter your number.\n";
 	cin>>starting;
 	cout<<num(starting);
+	return 0;
 }
