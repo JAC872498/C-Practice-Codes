@@ -2,28 +2,9 @@
 using namespace std;
 
 string num(starting){
+	string ones[]={"zero","one","two","three","four","five","six","seven","eight","nine",};
 	string wrd="";
-	if(starting==0){
-		cout>>"zero";
-	}else if(starting==1){
-		cout>>"one";
-	}else if(starting==2){
-		cout>>"two";
-	}else if(starting==3){
-		cout>>"three";
-	}else if(starting==4){
-		cout>>"four";
-	}else if(starting==5){
-		cout>>"five";
-	}else if(starting==6){
-		cout>>"six";
-	}else if(starting==7){
-		cout>>"seven";
-	}else if(starting==8){
-		cout>>"eight";
-	}else{
-		cout>>"nine";
-	}
+	cout<<ones[starting];
 	return 0;
 }
 
