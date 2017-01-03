@@ -10,12 +10,12 @@ string num(int starting){
 	string tens[]={"","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty"};
 	string wrd="";
 	int arr[length];
-	for(int i=length-1;i>=0;i--){
-    	arr[i] = starting % 10;
-    	starting /= 10;
+	for(int i=length-1;i>=0;i--){//Turning the number into an array
+    		arr[i] = starting % 10;
+    		starting /= 10;
 	}
-	for(int i=length-1;i>=0;i--){
-		if(length-i-1==1||length-i-1==4||length-i-1==7){
+	for(int i=length-1;i>=0;i--){//replacing the # with a word
+		if(length-i-1==1||length-i-1==4||length-i-1==7){//This decideds if it should be in the ones or the tens
 			wrd=tens[arr[i]]+place[length-i-1]+wrd;
 		}else{
 			wrd=ones[arr[i]]+place[length-i-1]+wrd;
