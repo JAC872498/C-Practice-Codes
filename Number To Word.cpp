@@ -3,14 +3,18 @@
 using namespace std;
 
 string num(int starting){
-	string place[]={"ten million","million","hundred thousand","ten thousand",thousand","hundred","ten","one"};
+	int length=to_string(starting).length();
+	string place[]={" one"," ten"," hundred"," thousand"," ten thousand"," hundred thousand"," million"," ten million"," hundred million"," billion"};
 	string wrd="";
-	int arr[to_string(starting).length()];
-	for (int i=to_string(starting).length()-1;i>=0;i--) {
+	int arr[length];
+	for(int i=length-1;i>=0;i--){
     	arr[i] = starting % 10;
     	starting /= 10;
-	}.
-	return to_string(arr[0])+"a";
+	}
+	for(int i=length-1;i>=0;i--){
+		wrd=to_string(arr[i])+place[length-i-1]+"\n"+wrd;
+	}
+	return wrd;
 }
 
 int main() {
