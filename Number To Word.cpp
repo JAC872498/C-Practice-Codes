@@ -4,7 +4,7 @@ using namespace std;
 
 string num(int starting){
 	int length=to_string(starting).length();
-	string place[]={" "," "," hundred "," thousand "," ten thousand "," hundred thousand "," million "," ten million "," hundred million "," billion "};
+	string place[]={" "," "," hundred "," thousand "," thousand "," hundred thousand "," million "," million "," hundred million "," billion "};
 	string ones[]={"","one","two","three","four","five","six","seven","eight","nine"};
 	string tens[]={"","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty"};
 	string wrd="";
@@ -14,13 +14,17 @@ string num(int starting){
     	starting /= 10;
 	}
 	for(int i=length-1;i>=0;i--){
-		wrd=ones[arr[i]]+place[length-i-1]+wrd;
+		if(length-i-1==1||length-i-1==4||length-i-1==7){
+			wrd=tens[arr[i]]+place[length-i-1]+wrd;
+		}else{
+			wrd=ones[arr[i]]+place[length-i-1]+wrd;
+		}
 	}
 	return wrd;
 }
 
 int main(){
-	int starting=6969;
+	int starting=123456789;
 	cout<<"Enter your number.\n";
 	cin>>starting;
 	cout<<num(starting);
