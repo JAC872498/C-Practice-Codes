@@ -7,7 +7,7 @@ string num(int starting){
 	int length=to_string(starting).length();
 	string place[]={" "," "," hundred "," thousand "," thousand "," hundred thousand "," million "," million "," hundred million "," billion "};
 	string ones[]={"","one","two","three","four","five","six","seven","eight","nine"};
-	string tens[]={"","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty"};
+	string tens[]={"","onety","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty"};
 	string wrd="";
 	int arr[length];
 	for(int i=length-1;i>=0;i--){//Turning the number into an array
