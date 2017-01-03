@@ -1,3 +1,4 @@
+//This takes a number up to 9,999,999,999 and returns it in word form
 #include <iostream>
 #include <string>
 using namespace std;
@@ -24,7 +25,7 @@ string num(int starting){
 }
 
 int main(){
-	int starting=123456789;
+	int starting=696969;
 	cout<<"Enter your number.\n";
 	cin>>starting;
 	cout<<num(starting);
