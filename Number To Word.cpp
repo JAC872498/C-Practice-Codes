@@ -2,16 +2,15 @@
 #include <string>
 using namespace std;
 
-int num(int starting){
-	/*string ones[]={"zero","one","two","three","four","five","six","seven","eight","nine",};
+string num(int starting){
+	string place[]={"ten million","million","hundred thousand","ten thousand",thousand","hundred","ten","one"};
 	string wrd="";
-	return num[0];*/
 	int arr[to_string(starting).length()];
 	for (int i=to_string(starting).length()-1;i>=0;i--) {
     	arr[i] = starting % 10;
     	starting /= 10;
-	}
-	return arr[0];
+	}.
+	return to_string(arr[0])+"a";
 }
 
 int main() {
