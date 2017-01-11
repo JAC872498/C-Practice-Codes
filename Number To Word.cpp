@@ -5,7 +5,7 @@ using namespace std;
 
 string num(int starting){
 	int length=to_string(starting).length();
-	string place[]={" "," "," hundred "," thousand "," thousand "," hundred thousand "," million "," million "," hundred million "," billion "};
+	string place[]={" "," "," hundred "," thousand "," "," hundred "," million "," "," hundred "," billion "};
 	string ones[]={"","one","two","three","four","five","six","seven","eight","nine"};
 	string tens[]={"","onety","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty"};
 	string wrd="";
