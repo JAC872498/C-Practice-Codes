@@ -4,11 +4,13 @@
 #include <string>
 using namespace std;
 
-string hit(int guess[], int ship[],int x, int y, bool hit){
-    if((guess[0]-1==x && guess[1]-1==y)||hit){
-        return("E ");
+bool hit(int guess[], int ship[], bool hit){
+    if((guess[0]-1==ship[0] && guess[1]-1==ship[1])||hit){
+        cout<<("E ");
+        return true;
     }else{
-        return("S ");
+        cout<<("S ");
+        return false;
     }
 }
 
@@ -46,17 +48,13 @@ int main(){
         for(int y=0;y<yLen;y++){
             for(int x=0;x<xLen;x++){
                 if(ship1[0]==x && ship1[1]==y){
-                    cout<<hit(guess, ship1, x, y, ship1Hit);
-                    ship1Hit=true;
+                    ship1Hit=hit(guess, ship1, ship1Hit);
                 }else if(ship2[0]==x && ship2[1]==y){
-                    cout<<hit(guess, ship2, x, y, ship2Hit); 
-                    ship2Hit=true;
+                    ship2Hit=hit(guess, ship2, ship2Hit);
                 }else if(ship3[0]==x && ship3[1]==y){
-                    cout<<hit(guess, ship3, x, y, ship3Hit);
-                    ship3Hit=true;
+                    ship3Hit=hit(guess, ship3, ship3Hit);
                 }else if(ship4[0]==x && ship4[0]==y){
-                    cout<<hit(guess, ship4, x, y, ship4Hit);
-                    ship4Hit=true;
+                    ship4Hit=hit(guess, ship4, ship4Hit);
                 }else{
                     if(guess[0]-1==x && guess[1]-1==y){
                         cout<<"M ";
