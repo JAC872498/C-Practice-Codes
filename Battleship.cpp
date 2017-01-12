@@ -45,6 +45,8 @@ int main(){
     for(int n=0;n<5;n++){
         cout<<"Enter firing coordinates.\n";
         cin>>guess[0]>>guess[1];
+        guess[0]--;
+        guess[1]--;
         for(int y=0;y<10;y++){
             for(int x=0;x<10;x++){
                 cout<<myGrid[x][y];
