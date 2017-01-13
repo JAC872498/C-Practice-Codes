@@ -38,23 +38,24 @@ int main(){
     cin>>ship4[0]>>ship4[1];
     myGrid[ship4[0]-1][ship4[1]-1]="4";
     for(int n=0;n<5;n++){
-        guess[0]=rand()%11 + 1;
-        guess[1]=rand()%11 + 1;
+        //guess[0]=rand()%11 + 1;
+        //guess[1]=rand()%11 + 1;
+        guess[0]==n;
+        guess[1]==n;
         if(guess[0]==ship1[0]&&guess[1]==ship1[1]){
-            myGrid[ship1[0]-1][ship1[1]]=="H";
+            myGrid[ship1[0]-1][ship1[1]-1]="H";
         }else if(guess[0]==ship2[0]&&guess[1]==ship2[1]){
-            myGrid[ship2[0]-1][ship2[1]]=="H";
+            myGrid[ship2[0]-1][ship2[1]-1]="H";
         }else if(guess[0]==ship3[0]&&guess[1]==ship3[1]){
-            myGrid[ship3[0]-1][ship3[1]]=="H";
+            myGrid[ship3[0]-1][ship3[1]-1]="H";
         }else if(guess[0]==ship4[0]&&guess[1]==ship4[1]){
-            myGrid[ship4[0]-1][ship4[1]]=="H";
+            myGrid[ship4[0]-1][ship4[1]-1]="H";
         }else{
             myGrid[guess[0]-1][guess[1]-1]="M";
         }
         for(int y=0;y<10;y++){
             for(int x=0;x<10;x++){
                 cout<<myGrid[x][y];
-                //Mark as M or as H
             }
             cout<<"\n";
         }
