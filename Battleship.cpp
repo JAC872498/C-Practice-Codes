@@ -2,11 +2,12 @@
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
+#include <time.h> 
 using namespace std;
 
-
-
 int main(){
+    srand (time(NULL));
     string myGrid[10][10]={
         {"O","O","O","O","O","O","O","O","O","O"},
         {"O","O","O","O","O","O","O","O","O","O"},
@@ -37,9 +38,19 @@ int main(){
     cin>>ship4[0]>>ship4[1];
     myGrid[ship4[0]-1][ship4[1]-1]="4";
     for(int n=0;n<5;n++){
-        cout<<"Enter firing coordinates.\n";
-        cin>>guess[0]>>guess[1];
-        myGrid[guess[0]-1][guess[1]-1]="H";
+        guess[0]=rand()%11 + 1;
+        guess[1]=rand()%11 + 1;
+        if(guess[0]==ship1[0]&&guess[1]==ship1[1]){
+            myGrid[ship1[0]-1][ship1[1]]=="H";
+        }else if(guess[0]==ship2[0]&&guess[1]==ship2[1]){
+            myGrid[ship2[0]-1][ship2[1]]=="H";
+        }else if(guess[0]==ship3[0]&&guess[1]==ship3[1]){
+            myGrid[ship3[0]-1][ship3[1]]=="H";
+        }else if(guess[0]==ship4[0]&&guess[1]==ship4[1]){
+            myGrid[ship4[0]-1][ship4[1]]=="H";
+        }else{
+            myGrid[guess[0]-1][guess[1]-1]="M";
+        }
         for(int y=0;y<10;y++){
             for(int x=0;x<10;x++){
                 cout<<myGrid[x][y];
@@ -47,5 +58,6 @@ int main(){
             }
             cout<<"\n";
         }
+        cout<<"\n";
     }
 }
