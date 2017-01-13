@@ -18,6 +18,9 @@ int main(){
         {"O","O","O","O","O","O","O","O"},
         {"O","O","O","O","O","O","O","O"}, 
     };
+    /*string enemyGrid[8][8]={
+        
+    }*/
     bool ship1Hit=false;
     bool ship2Hit=false;
     bool ship3Hit=false;
@@ -29,7 +32,7 @@ int main(){
     int ship4[]={0,0};
     int ship5[]={0,0};
     int guess[]={0,0};
-    int turns=5;
+    int turns=8;
     cout<<"Enter the coordinates of ship 1.\n";
     cin>>ship1[0]>>ship1[1];
     myGrid[ship1[0]-1][ship1[1]-1]="S";
@@ -47,28 +50,29 @@ int main(){
     myGrid[ship5[0]-1][ship5[1]-1]="S";
     while(turns!=0&&(!ship1Hit || !ship2Hit || !ship3Hit || !ship4Hit || !ship5Hit)){
         turns--;
+        cout<<"Turn "<<8-turns<<"\n";
         guess[0]=rand()%8;
         guess[1]=rand()%8;
         if(guess[0]==ship1[0]-1&&guess[1]==ship1[1]-1){
             myGrid[ship1[0]-1][ship1[1]-1]="H";
             ship1Hit=true;
-            turn+=2;
+            turns+=2;
         }else if(guess[0]==ship2[0]-1&&guess[1]==ship2[1]-1){
             myGrid[ship2[0]-1][ship2[1]-1]="H";
             ship2Hit=true;
-            turn+=2;
+            turns+=2;
         }else if(guess[0]==ship3[0]-1&&guess[1]==ship3[1]-1){
             myGrid[ship3[0]-1][ship3[1]-1]="H";
             ship3Hit=true;
-            turn+=2;
+            turns+=2;
         }else if(guess[0]==ship4[0]-1&&guess[1]==ship4[1]-1){
             myGrid[ship4[0]-1][ship4[1]-1]="H";
             ship4Hit=true;
-            turn+=2;
+            turns+=2;
         }else if(guess[0]==ship5[0]-1&&guess[1]==ship5[1]-1){
             myGrid[ship5[0]-1][ship5[1]-1]="H";
             ship4Hit=true;
-            turn+=2;
+            turns+=2;
         }else{
             myGrid[guess[0]-1][guess[1]-1]="M";
         }
@@ -85,4 +89,5 @@ int main(){
     }else{
         cout<<"You Lose!";
     }
+    return 0;
 }
