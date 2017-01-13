@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
     srand (time(NULL));
-    string myGrid[10][10]={
+    string myGrid[10][10]={//CHANGE TO 8X8 INSTEAD OF 10X10
         {"O","O","O","O","O","O","O","O","O","O"},
         {"O","O","O","O","O","O","O","O","O","O"},
         {"O","O","O","O","O","O","O","O","O","O"},
