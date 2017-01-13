@@ -8,61 +8,72 @@ using namespace std;
 
 int main(){
     srand (time(NULL));
-    string myGrid[10][10]={//CHANGE TO 8X8 INSTEAD OF 10X10
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"}, 
-        {"O","O","O","O","O","O","O","O","O","O"},
-        {"O","O","O","O","O","O","O","O","O","O"},
+    string myGrid[8][8]={
+        {"O","O","O","O","O","O","O","O"},
+        {"O","O","O","O","O","O","O","O"},
+        {"O","O","O","O","O","O","O","O"},
+        {"O","O","O","O","O","O","O","O"},
+        {"O","O","O","O","O","O","O","O"},
+        {"O","O","O","O","O","O","O","O"},
+        {"O","O","O","O","O","O","O","O"},
+        {"O","O","O","O","O","O","O","O"}, 
     };
     bool ship1Hit=false;
     bool ship2Hit=false;
     bool ship3Hit=false;
     bool ship4Hit=false;
+    bool ship5Hit=false;
     int ship1[]={0,0};
     int ship2[]={0,0};
     int ship3[]={0,0};
     int ship4[]={0,0};
+    int ship5[]={0,0};
     int guess[]={0,0};
     int turns=5;
     cout<<"Enter the coordinates of ship 1.\n";
     cin>>ship1[0]>>ship1[1];
-    myGrid[ship1[0]-1][ship1[1]-1]="1";
+    myGrid[ship1[0]-1][ship1[1]-1]="S";
     cout<<"Enter the coordinates of ship 2.\n";
     cin>>ship2[0]>>ship2[1];
-    myGrid[ship2[0]-1][ship2[1]-1]="2";
+    myGrid[ship2[0]-1][ship2[1]-1]="S";
     cout<<"Enter the coordinates of ship 3.\n";
     cin>>ship3[0]>>ship3[1];
-    myGrid[ship3[0]-1][ship3[1]-1]="3";
+    myGrid[ship3[0]-1][ship3[1]-1]="S";
     cout<<"Enter the coordinates of ship 4.\n";
     cin>>ship4[0]>>ship4[1];
-    myGrid[ship4[0]-1][ship4[1]-1]="4";
-    while(turns!=0&&(!ship1Hit || !ship2Hit || !ship3Hit || !ship4Hit)){
+    myGrid[ship4[0]-1][ship4[1]-1]="S";
+    cout<<"Enter the coordinates of ship 5.\n";
+    cin>>ship5[0]>>ship5[1];
+    myGrid[ship5[0]-1][ship5[1]-1]="S";
+    while(turns!=0&&(!ship1Hit || !ship2Hit || !ship3Hit || !ship4Hit || !ship5Hit)){
         turns--;
-        guess[0]=rand()%10;
-        guess[1]=rand()%10;
+        guess[0]=rand()%8;
+        guess[1]=rand()%8;
         if(guess[0]==ship1[0]-1&&guess[1]==ship1[1]-1){
             myGrid[ship1[0]-1][ship1[1]-1]="H";
             ship1Hit=true;
+            turn+=2;
         }else if(guess[0]==ship2[0]-1&&guess[1]==ship2[1]-1){
             myGrid[ship2[0]-1][ship2[1]-1]="H";
             ship2Hit=true;
+            turn+=2;
         }else if(guess[0]==ship3[0]-1&&guess[1]==ship3[1]-1){
             myGrid[ship3[0]-1][ship3[1]-1]="H";
             ship3Hit=true;
+            turn+=2;
         }else if(guess[0]==ship4[0]-1&&guess[1]==ship4[1]-1){
             myGrid[ship4[0]-1][ship4[1]-1]="H";
             ship4Hit=true;
+            turn+=2;
+        }else if(guess[0]==ship5[0]-1&&guess[1]==ship5[1]-1){
+            myGrid[ship5[0]-1][ship5[1]-1]="H";
+            ship4Hit=true;
+            turn+=2;
         }else{
             myGrid[guess[0]-1][guess[1]-1]="M";
         }
-        for(int y=0;y<10;y++){
-            for(int x=0;x<10;x++){
+        for(int y=0;y<8;y++){
+            for(int x=0;x<8;x++){
                 cout<<myGrid[x][y];
             }
             cout<<"\n";
