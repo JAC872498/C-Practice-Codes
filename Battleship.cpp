@@ -38,6 +38,7 @@ int main(){
     int ship3[]={0,0};
     int ship4[]={0,0};
     int ship5[]={0,0};
+    int enemyGuess[]={0,0};
     int guess[]={0,0};
     int turns=8;
     cout<<"Enter the coordinates of ship 1.\n";
@@ -58,30 +59,30 @@ int main(){
     while(turns!=0&&(!ship1Hit || !ship2Hit || !ship3Hit || !ship4Hit || !ship5Hit)){
         turns--;
         cout<<"Turn "<<8-turns<<".\n";
-        guess[0]=rand()%8;
-        guess[1]=rand()%8;
-        if(guess[0]==ship1[0]-1&&guess[1]==ship1[1]-1){
+        enemyGuess[0]=rand()%8;
+        enemyGuess[1]=rand()%8;
+        if(enemyGuess[0]==ship1[0]-1&&enemyGuess[1]==ship1[1]-1){
             myGrid[ship1[0]-1][ship1[1]-1]="H";
             ship1Hit=true;
             turns+=2;
-        }else if(guess[0]==ship2[0]-1&&guess[1]==ship2[1]-1){
+        }else if(enemyGuess[0]==ship2[0]-1&&enemyGuess[1]==ship2[1]-1){
             myGrid[ship2[0]-1][ship2[1]-1]="H";
             ship2Hit=true;
             turns+=2;
-        }else if(guess[0]==ship3[0]-1&&guess[1]==ship3[1]-1){
+        }else if(enemyGuess[0]==ship3[0]-1&&enemyGuess[1]==ship3[1]-1){
             myGrid[ship3[0]-1][ship3[1]-1]="H";
             ship3Hit=true;
             turns+=2;
-        }else if(guess[0]==ship4[0]-1&&guess[1]==ship4[1]-1){
+        }else if(enemyGuess[0]==ship4[0]-1&&enemyGuess[1]==ship4[1]-1){
             myGrid[ship4[0]-1][ship4[1]-1]="H";
             ship4Hit=true;
             turns+=2;
-        }else if(guess[0]==ship5[0]-1&&guess[1]==ship5[1]-1){
+        }else if(enemyGuess[0]==ship5[0]-1&&enemyGuess[1]==ship5[1]-1){
             myGrid[ship5[0]-1][ship5[1]-1]="H";
             ship4Hit=true;
             turns+=2;
         }else{
-            myGrid[guess[0]-1][guess[1]-1]="M";
+            myGrid[enemyGuess[0]-1][enemyGuess[1]-1]="M";
         }
         cout<<"Your grid:\n";
         for(int y=0;y<8;y++){
@@ -97,7 +98,9 @@ int main(){
             }
             cout<<"\n";
         }
-        cout<<"\n";
+        cout<<"\nEnter firing coordinates.\n";
+        cin>>guess[0]>>guess[1];
+        enemyGrid[guess[0]-1][guess[1]-1]="H";
     }
     if(turns==0){
         cout<<"You Win!";
