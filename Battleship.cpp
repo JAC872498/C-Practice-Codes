@@ -38,9 +38,24 @@ int main(){
     int ship3[]={0,0};
     int ship4[]={0,0};
     int ship5[]={0,0};
-    int enemyGuess[]={0,0};
     int guess[]={0,0};
+    bool eShip1Hit=false;
+    bool eShip2Hit=false;
+    bool eShip3Hit=false;
+    bool eShip4Hit=false;
+    bool eShip5Hit=false;
+    int eShip1[]={rand()%8,rand()%8};
+    int eShip2[]={rand()%8,rand()%8};
+    int eShip3[]={rand()%8,rand()%8};
+    int eShip4[]={rand()%8,rand()%8};
+    int eShip5[]={rand()%8,rand()%8};
+    int enemyGuess[]={0,0};
     int turns=8;
+    enemyGrid
+    enemyGrid
+    enemyGrid
+    enemyGrid
+    enemyGrid
     cout<<"Enter the coordinates of ship 1.\n";
     cin>>ship1[0]>>ship1[1];
     myGrid[ship1[0]-1][ship1[1]-1]="S";
