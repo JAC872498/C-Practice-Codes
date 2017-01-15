@@ -45,6 +45,7 @@ int main(){
     int eShip3[]={rand()%6,rand()%6};
     int eShip4[]={rand()%6,rand()%6};
     int eShip5[]={rand()%6,rand()%6};
+    while(){
     int enemyGuess[]={0,0};
     cout<<"Enter the coordinates of ship 1.\n";
     cin>>ship1[0]>>ship1[1];
@@ -61,6 +62,7 @@ int main(){
     cout<<"Enter the coordinates of ship 5.\n";
     cin>>ship5[0]>>ship5[1];
     myGrid[ship5[0]-1][ship5[1]-1]="S";
+    }
     while((!ship1Hit || !ship2Hit || !ship3Hit || !ship4Hit || !ship5Hit)&&(!eShip1Hit || !eShip2Hit || !eShip3Hit || !eShip4Hit || !eShip5Hit)){
         enemyGuess[0]=rand()%6;
         enemyGuess[1]=rand()%6;
