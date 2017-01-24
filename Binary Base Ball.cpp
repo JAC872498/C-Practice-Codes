@@ -16,10 +16,16 @@ int main(){
   if(playing){
       while(outs!=3){
           hit=rand()%5;
+          if(hit==0){
+            outs+=1;
+          }
       }
   }else{
       while(outs!=3){
           hit=rand()%5;
+          if(hit==0){
+            outs+=1;
+          }
       }
   }
   return 0;
