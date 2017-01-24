@@ -10,8 +10,17 @@ int main(){
   int myScore=0;
   int enemyScore=0;
   int outs=0;
-  int hit=rand()%5;//0=out,1=single,2=double,3=triple,and 4=home run
+  int hit=rand()%5;
   srand(time(NULL));
   bool playing=false;//true if you're batting, false if enemy is batting
+  if(playing){
+      while(outs!=3){
+          hit=rand()%5;
+      }
+  }else{
+      while(outs!=3){
+          hit=rand()%5;
+      }
+  }
   return 0;
 }
