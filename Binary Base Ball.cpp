@@ -3,10 +3,15 @@
 #include <time.h>
 using namespace std;
 
+int single(int base[]){
+    base[0]+=1;
+    while(base[0]==2||base[1]==3||base[2]==2){
+        
+    }
+}
+
 int main(){
-  int onFirst=0;
-  int onSecond=0;
-  int onThird=0;
+  int bases[3]={0,0,0};
   int myScore=0;
   int enemyScore=0;
   int outs=0;
