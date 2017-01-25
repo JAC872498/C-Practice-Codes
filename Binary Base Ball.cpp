@@ -43,10 +43,32 @@ int* hitDouble(int base[]){
     }
     return base;
 }
-/*int* hitTriple(int base[]){ TODO: finish these
-    
+int* hitTriple(int base[]){
+    base[2]+=1;
+    if(base[0]==1){
+        base[0]=0;
+        base[3]+=1;
+    }
+    if(base[1]==1){
+        base[1]=0;
+        base[3]+=1;
+    }
+    while(base[0]>=2||base[1]>=2||base[2]>=2){
+        if(base[0]>=2){
+            base[0]=1;
+            base[3]+=1;
+        }
+        if(base[1]>=2){
+            base[1]=1;
+            base[3]+=1;
+        }
+        if(base[2]>=2){
+            base[2]=1;
+            base[3]+=1;
+        }
+    }
     return base;
-}*/
+}
 int* hitHomeRun(int base[]){
     base[3]+=base[0]+base[1]+base[2]+1;
     base[0]=0;
