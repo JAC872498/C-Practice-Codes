@@ -110,10 +110,10 @@ int main(){
                     bases=hitDouble(b);
                     cout<<"You got a double.\n";
                 }else if(hit>=5){
-                    //triple  
+                    bases=hitTriple(b);
                     cout<<"You got a triple.\n";
                 }else if(hit>=0){
-                    //home run
+                    bases=hitHomeRun(b);
                     cout<<"You got a home run.\n";
                 }
             }
@@ -131,10 +131,10 @@ int main(){
                     bases=hitDouble(b);
                     cout<<"Opposing team got a double.\n";
                 }else if(hit>=5){
-                    //triple  
+                    bases=hitTriple(b); 
                     cout<<"Opposing team got a triple.\n";
                 }else if(hit>=0){
-                    //home run  
+                    bases=hitHomeRun(b);
                     cout<<"Opposing team got a home run.\n";
                 }
             }
