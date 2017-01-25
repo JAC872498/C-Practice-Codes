@@ -79,25 +79,21 @@ int* hitHomeRun(int base[]){
 
 int main(){
     int b[4]={0,0,0,0};//b[3]==home
+    string inn[9]={"1st","2nd","3rd","4th","5th","6th","7th","8th","9th"};
     int *bases;
     int myScore=0;
     int enemyScore=0;
     int outs=0;
     int hit=rand()%100;//50-100=out, 50-30=single, 30-15=double, 15-5=triple, 5-0=home run
     srand(time(NULL));
-    bool playing=false;//true if you're batting, false if enemy is batting
-    for(int inning=0;inning<18;inning++){
+    bool playing;//true if you're batting, false if enemy is batting
+    for(int inning=0;inning<9;inning++){
         b[0]=0;
         b[1]=0;
         b[2]=0;
         b[3]=0;
         outs=0;
-        if((inning+1)%2==0){
-            playing=true;
-        }else{
-            playing=false;
-        }
-        if(playing){
+            cout<<"Top of the "<<inn[inning]<<"\n";
             while(outs!=3){
                 hit=rand()%100;
                 if(hit>=50){
@@ -118,7 +114,8 @@ int main(){
                 }
             }
             myScore+=bases[3];
-        }else{
+            cout<<"\nBottom of the "<<inn[inning]<<"\n";
+            outs=0;
             while(outs!=3){
                 hit=rand()%100;
                 if(hit>=50){
@@ -139,7 +136,7 @@ int main(){
                 }
             }
             enemyScore+=bases[3];
-        }
+        
     cout<<"Scorer is "<<myScore<<" for you and "<<enemyScore<<" for the opposing team.\n";
     cin.ignore();
     }
