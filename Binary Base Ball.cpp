@@ -46,11 +46,14 @@ int* hitDouble(int base[]){
 /*int* hitTriple(int base[]){ TODO: finish these
     
     return base;
-}
-int* hitHome(int base[]){
-    
-    return base;
 }*/
+int* hitHome(int base[]){
+    base[3]=base[0]+base[1]+base[2]+1;
+    base[0]=0;
+    base[1]=0;
+    base[2]=0;
+    return base;
+}
 
 int main(){
     int b[4]={0,0,0,0};//b[3]==home
@@ -66,6 +69,7 @@ int main(){
         b[1]=0;
         b[2]=0;
         b[3]=0;
+        outs=0;
         if((inning+1)%2==0){
             playing=true;
         }else{
