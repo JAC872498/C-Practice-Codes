@@ -141,6 +141,7 @@ int main(){
             enemyScore+=bases[3];
         }
     cout<<"Scorer is "<<myScore<<" for you and "<<enemyScore<<" for the opposing team.\n";
+    cin.ignore();
     }
     if(myScore>enemyScore){
         cout<<"You win!";
