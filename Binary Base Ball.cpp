@@ -47,8 +47,8 @@ int* hitDouble(int base[]){
     
     return base;
 }*/
-int* hitHome(int base[]){
-    base[3]=base[0]+base[1]+base[2]+1;
+int* hitHomeRun(int base[]){
+    base[3]+=base[0]+base[1]+base[2]+1;
     base[0]=0;
     base[1]=0;
     base[2]=0;
