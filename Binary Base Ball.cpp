@@ -142,5 +142,12 @@ int main(){
         }
     cout<<"Scorer is "<<myScore<<" for you and "<<enemyScore<<" for the opposing team.\n";
     }
+    if(myScore>enemyScore){
+        cout<<"You win!";
+    }else if(enemyScore>myScore){
+        cout<<"You lose!";
+    }else{
+        cout<<"It's a tie!";
+    }
     return 0;
 }
