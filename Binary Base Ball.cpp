@@ -76,14 +76,19 @@ int main(){
                 hit=rand()%100;
                 if(hit>=50){
                     outs+=1;
+                    cout<<"You struck out.\n";
                 }else if(hit>=30){
                     bases=hitSingle(b);
+                    cout<<"You got a single.\n";
                 }else if(hit>=15){
                     bases=hitDouble(b);
+                    cout<<"You got a double.\n";
                 }else if(hit>=5){
                     //triple  
+                    cout<<"You got a triple.\n";
                 }else if(hit>=0){
                     //home run
+                    cout<<"You got a home run.\n";
                 }
             }
             myScore+=bases[3];
@@ -92,18 +97,24 @@ int main(){
                 hit=rand()%100;
                 if(hit>=50){
                     outs+=1;
+                    cout<<"Opposing team stuck out.\n";
                 }else if(hit>=30){
                     bases=hitSingle(b);
+                    cout<<"Opposing team got a single.\n";
                 }else if(hit>=15){
                     bases=hitDouble(b);
+                    cout<<"Opposing team got a double.\n";
                 }else if(hit>=5){
                     //triple  
+                    cout<<"Opposing team got a triple.\n";
                 }else if(hit>=0){
                     //home run  
+                    cout<<"Opposing team got a home run.\n";
                 }
             }
             enemyScore+=bases[3];
         }
+    cout<<"Scorer is "<<myScore<<" for you and "<<enemyScore<<" for the opposing team.\n";
     }
     return 0;
 }
