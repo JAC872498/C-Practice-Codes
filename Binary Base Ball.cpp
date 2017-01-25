@@ -21,18 +21,39 @@ int* hitSingle(int base[]){
     }
     return base;
 }
-/*int* hitDouble(int base[]){
+int* hitDouble(int base[]){
+    base[1]+=1;
+    if(base[0]==1){
+        base[0]=0;
+        base[2]+=1;
+    }
+    while(base[0]>=2||base[1]>=2||base[2]>=2){
+        if(base[0]>=2){
+            base[0]=1;
+            base[2]+=1;
+        }
+        if(base[1]>=2){
+            base[1]=1;
+            base[3]+=1;
+        }
+        if(base[2]>=2){
+            base[2]=1;
+            base[3]+=1;
+        }
+    }
     return base;
 }
-int* hitTriple(int base[]){ TODO: finish these
+/*int* hitTriple(int base[]){ TODO: finish these
+    
     return base;
 }
 int* hitHome(int base[]){
+    
     return base;
 }*/
 
 int main(){
-    int b[4]={0,0,0,0};
+    int b[4]={0,0,0,0};//b[3]==home
     int *bases;
     int myScore=0;
     int enemyScore=0;
@@ -40,11 +61,11 @@ int main(){
     int hit=rand()%100;//50-100=out, 50-30=single, 30-15=double, 15-5=triple, 5-0=home run
     srand(time(NULL));
     bool playing=false;//true if you're batting, false if enemy is batting
-    //TODO:
-    //add for loop determining innings
-    //change playing each turn
-    //revert 'b' to all 0
     for(int inning=0;inning<18;inning++){
+        b[0]=0;
+        b[1]=0;
+        b[2]=0;
+        b[3]=0;
         if((inning+1)%2==0){
             playing=true;
         }else{
@@ -58,7 +79,7 @@ int main(){
                 }else if(hit>=30){
                     bases=hitSingle(b);
                 }else if(hit>=15){
-                    //double
+                    bases=hitDouble(b);
                 }else if(hit>=5){
                     //triple  
                 }else if(hit>=0){
@@ -74,7 +95,7 @@ int main(){
                 }else if(hit>=30){
                     bases=hitSingle(b);
                 }else if(hit>=15){
-                    //double
+                    bases=hitDouble(b);
                 }else if(hit>=5){
                     //triple  
                 }else if(hit>=0){
