@@ -1,3 +1,4 @@
+//This is like Dungeon Crawler but actualy semi-fun to play
 #include <iostream>
 #include <stdlib.h>
 #include <ctime>
