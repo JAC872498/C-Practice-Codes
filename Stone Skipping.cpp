@@ -16,6 +16,7 @@ int main(){
 	double jumps[river*2];
 	double total=0;
 	double currentJump;
+	int jumpNum=0;
 	for(int x=0;x<river*2;x++){//starting off with all .5 meter jumps
 		jumps[x]=0.5;
 	}
@@ -23,9 +24,19 @@ int main(){
 		if(full(jumps[])){//stops when full of 1 meter jumps
 			goto stop;
 		}else{//replaces .5 meter jumps with 1 meter jumps
-			currentJump=jumps[0];
-			while(currentJump!=1){
-			
+			count+=1;
+			currentJump=jumps[jumpNum];
+			for(int x=0;x<jumps.length;x++){
+				for(int y=x;y<jumps.length;y++){
+					count+=1;
+					if(y==0||y+1==x){
+						jumps[y]=1;
+					}else{
+						jumps[y]=1;
+						jumps[y-1]=0;
+					}
+					jumps[x]=1;
+				}
 			}
 		}
 	}
