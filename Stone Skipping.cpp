@@ -62,3 +62,43 @@ int main(){//for(int z=0;z<(sizeof(jumps)/sizeof(jumps[0]));z++){cout<<jumps[z]<
 	std::cout<<count;
 	return 0;
 }
+
+
+
+
+#include <iostream>
+#include <vector>
+
+bool has5(std::vector<double> arr){
+	for(int x=0;x<=arr.size();x++){
+		if(arr[x]==0.5){
+			return true;
+		}
+	}
+	return false;
+}
+
+int main(){//for(int z=0;z<river*2;z++){std::cout<<jumps[z]<<"\n";}std::cout<<"\n";
+	int river=3;//river length
+	int count=0;
+	std::vector<double> jumps;
+	for(int x=0;x<=river*2;x++){
+		jumps.assign(x,0.5);
+	}
+	for(int n=0;n<river;n++){
+		for(int x=0;x<jumps.size();x++){
+			count++;
+			if(x==1){
+				 jumps[x-1]=0;
+				jumps[x]=1;
+			}else if(x>=2){
+				jumps[x-2]=0.5;
+				jumps[x-1]=0;
+				jumps[x]=1;
+			}
+			for(int z=0;z<river*2;z++){std::cout<<jumps[z]<<"\n";}std::cout<<"\n";
+		}
+	}
+	std::cout<<count;
+	return 0;
+}
