@@ -1,5 +1,9 @@
 #include <iostream>
 
+int name(int number){
+	return (2*number)-1;	
+}
+
 int main(){
 	int total=2;
 	int river=2;
@@ -9,7 +13,7 @@ int main(){
 		}else if(x==1){
 		    total+=((2*river)-1);
 		}else if(x==2){
-		    total+=((river*river)-river);
+		    total+=((river*river)-river);//TODO: USE REOCURISON STUFF ON PAPER
 		}else if(x==3){
 		    
 		}else if(x==4){
