@@ -11,8 +11,19 @@ bool is5(std::vector<double> arr){
 	return false;
 }
 
+std::vector<double> stuff(std::vector<double> arr, int curr){
+	for(int x=0;x<arr.size();x++){
+		arr.assign(x,0.5);
+	}
+	for(int x=0;x<=curr;x++){
+		arr.assign(x,1);
+		arr.assign(arr.size()-x-1,0);
+	}
+	return arr;
+}
+
 int main(){//for(int z=0;z<(sizeof(jumps)/sizeof(jumps[0]));z++){cout<<jumps[z]<<"\n";}cout<<"\n";
-	int river=2;//river length
+	int river=3;//river length
 	int rocks=(river*2)+1;
 	std::vector<double> jumps;
 	double total=0;
@@ -43,6 +54,8 @@ int main(){//for(int z=0;z<(sizeof(jumps)/sizeof(jumps[0]));z++){cout<<jumps[z]<
 		}
 		jumps[curr]=1;
 		curr++;
+		//jumps=stuff(jumps,curr);
+		jumps.assign(jumps.size()-1,0);
 		if(!is5(jumps)) goto stop;
 	}
 	stop:
