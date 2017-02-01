@@ -1,7 +1,9 @@
 #include <iostream>
 
-int name(int number){
-	return (2*number)-1;	
+int power(int number){
+	int z=0;
+	for(int x=0;x<=number;x++) z+=x;
+	return z;
 }
 
 int main(){
@@ -11,7 +13,7 @@ int main(){
 		if(x==0||x==river){
 			total+=1;
 		}else if(x==1){
-		    total+=(name(river));
+		    total+=((2*number)-1);
 		}else if(x==2){
 		    total+=(((2*(river-1))-1)*river);//TODO: USE REOCURISON STUFF ON PAPER
 		}else if(x==3){			 //TODO EXPLAINED: find out function using paper stuff and keep going down function untill you reach all 0.5
@@ -20,6 +22,6 @@ int main(){
 		    
 		}
 	}
-	std::cout<<total;
+	//std::cout<<total;
 	return 0;
 }
