@@ -14,7 +14,7 @@ int main(){
 		    total+=((2*river)-1);
 		}else if(x==2){
 		    total+=((river*river)-river);//TODO: USE REOCURISON STUFF ON PAPER
-		}else if(x==3){
+		}else if(x==3){			 //TODO EXPLAINED: find out function using paper stuff and keep going down function untill you reach all 0.5
 		    
 		}else if(x==4){
 		    
