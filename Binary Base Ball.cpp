@@ -1,3 +1,4 @@
+//This is just a text-only baseball game
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
