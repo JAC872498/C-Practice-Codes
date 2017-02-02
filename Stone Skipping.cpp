@@ -1,3 +1,5 @@
+//a river is x meters wide, 2x+1 rocks are placed in a straight line, each 0.5 meters across. How many possible ways could someone cross the
+//stream taking either 0.5 meter jumps of 1 meter jumps
 #include <iostream>
 
 int power(int number){
