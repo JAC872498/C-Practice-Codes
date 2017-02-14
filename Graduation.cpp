@@ -9,11 +9,11 @@ class Bunny{
     std::string color=colors[rand()%4];
     std::string name=names[rand()%10];
     public:
-    bool getSex(){return sex;}
-    bool getRad(){return rad;}
-    int getAge(){return age;}
-    std::string getColor(){return color;}
-    std::string getName(){return name;}
+        bool getSex(){return sex;}
+        bool getRad(){return rad;}
+        int getAge(){return age;}
+        std::string getColor(){return color;}
+        std::string getName(){return name;}
 };
 
 int main(){
