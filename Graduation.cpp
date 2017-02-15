@@ -12,6 +12,7 @@ class Bunny{
     std::string name=names[rand()%10];
     public:
         void setAll(int num1, int num2, int num3, int num4){sex=(num1==0);rad=(num2==0);color=colors[num3];name=names[num4];}
+        void getAll(){std::cout<<"Sex "<<sex<<"\nRadioactive "<<rad<<"\nAge "<<age<<"\nColor "<<color<<"\nName "<<name<<"\n";}
         bool getSex(){return sex;}
         bool getRad(){return rad;}
         int getAge(){return age;}
@@ -25,6 +26,6 @@ int main(){
    Bunny bun;
    srand(time(0));
    bun.setAll(rand()%2,rand()%50,rand()%4,rand()%10);
-   std::cout<<"Sex "<<bun.getSex()<<"\nRadioactive "<<bun.getRad()<<"\nAge "<<bun.getAge()<<"\nColor "<<bun.getColor()<<"\nName "<<bun.getName();
+   bun.getAll();
    return 0;
 }
