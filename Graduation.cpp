@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 class Bunny{
     private:
@@ -18,10 +19,10 @@ class Bunny{
 };
 
 int main(){
-   Bunny test[5];
-   srand(time(0));
-   for(int x=0;x<5;x++){
-       test[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
-   }
-   return 0;
+    srand(time(0));
+    std::vector<Bunny>test(5);
+    for(int x=0;x<5;x++){
+        test[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+    }
+    return 0;
 }
