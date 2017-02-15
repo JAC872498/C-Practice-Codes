@@ -15,15 +15,19 @@ class Bunny{
         std::string name=names[rand()%10];
         void setAll(int num1, int num2, int num3, int num4){sex=num1;rad=(num2==0);color=colors[num3];name=names[num4];}
         void description(){std::cout<<"Sex "<<sex<<"\nRadioactive "<<rad<<"\nAge "<<age<<"\nColor "<<color<<"\nName "<<name<<"\n";}
+
 };
 
 int main(){
     srand(time(0));
     std::vector<Bunny>bunny(5);
-    for(int x=0;x<5;x++){
+    for(int x=0;x<vecsize;x++){
         bunny[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
         /*bunny[x].description();
         std::cout<<"\n";*/
+    }
+    for(int x=0;x<3;x++){
+        for(int x=0;x<vecsize;x++){bunny[x].age=bunny[x].age+1;}
     }
     return 0;
 }
