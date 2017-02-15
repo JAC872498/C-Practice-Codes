@@ -1,16 +1,17 @@
 #include <iostream>
-#include <random>
-#include <chrono> 
+#include <cstdlib>
+#include <ctime>
 
 class Bunny{
-    bool sex=std::uniform_int_distribution<>(0,1)(eng);==0;//0\true==female; 1\false==male
-    bool rad=std::uniform_int_distribution<>(0,49)(eng);==0;//0\true==rad; 1-49\false=not rad
+    bool sex=rand()%2==0;//0\true==female; 1\false==male
+    bool rad=rand()%50==0;//0\true==rad; 1-49\false=not rad
     int age=1;
     std::string colors[4]={"White","Brown","Black","Spotted"};
     std::string names[10]={"Bob","Crigg","Doorknob","Oil","Slam","Skellet0n","Jew","Emo Chick","T3mmi","3l1t3 hax0r"};
-    std::string color=colors[std::uniform_int_distribution<>(0,3)(eng)];
-    std::string name=names[std::uniform_int_distribution<>(0,9)(eng)];
+    std::string color=colors[rand()%4];
+    std::string name=names[rand()%10];
     public:
+        void setAll(int num1, int num2, int num3, int num4){sex=(num1==0);rad=(num2==0);color=colors[num3];name=names[num4];}
         bool getSex(){return sex;}
         bool getRad(){return rad;}
         int getAge(){return age;}
@@ -22,6 +23,8 @@ class Bunny{
 
 int main(){
    Bunny bun;
+   srand(time(0));
+   bun.setAll(rand()%2,rand()%50,rand()%4,rand()%10);
    std::cout<<"Sex "<<bun.getSex()<<"\nRadioactive "<<bun.getRad()<<"\nAge "<<bun.getAge()<<"\nColor "<<bun.getColor()<<"\nName "<<bun.getName();
    return 0;
 }
