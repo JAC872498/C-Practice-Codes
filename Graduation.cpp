@@ -20,9 +20,11 @@ class Bunny{
 
 int main(){
     srand(time(0));
-    std::vector<Bunny>test(5);
+    std::vector<Bunny>bunny(5);
     for(int x=0;x<5;x++){
-        test[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+        bunny[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+        /*bunny[x].description();
+        std::cout<<"\n";*/
     }
     return 0;
 }
