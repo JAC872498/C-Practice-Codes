@@ -56,7 +56,7 @@ int main(){
                 //bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
                 //std::cout<<bunny[bunny.size()-1].name<<" was born!";
             }
-            if(bunny[x].age==10){
+            if(bunny[x].age==11){
                 bunny[x].alive=0;
                 std::cout<<bunny[x].name<<" has died!\n";
             }
