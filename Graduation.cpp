@@ -41,7 +41,7 @@ int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==n
     }return 0;
 }
 
-int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies when pop>=1000, add delay between turns
+int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies when pop>=1000
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
@@ -53,13 +53,13 @@ int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies wh
     while(mul(bunny)!=0){
         year+=1;
         std::cout<<"year "<<year<<"\n";
+        if(mul(bunny)==2){
+            bunny.push_back(Bunny());
+            bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+            std::cout<<bunny[bunny.size()-1].name<<" was born!\n";
+        }
         for(int x=0;x<bunny.size();x++){
             bunny[x].age=bunny[x].age+1;
-            if(mul(bunny)==2){
-                //add new bunny; TODO
-                //bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
-                //std::cout<<bunny[bunny.size()-1].name<<" was born!";
-            }
             if(bunny[x].age==11 && bunny[x].rad==0){
                 bunny[x].alive=0;
                 std::cout<<bunny[x].name<<" has died!\n";
