@@ -47,12 +47,18 @@ int main(){
         /*bunny[x].description();
         std::cout<<"\n";*/
     }
+    std::cout<<bunny[bunny.size()-1].name;
     while(mul(bunny)!=0){
-        std::cout<<bunny[0].age;
         for(int x=0;x<bunny.size();x++){
             bunny[x].age=bunny[x].age+1;
-            if(bunny[x].age==11){
+            if(mul(bunny)==2){
+                //add new bunny;
+                //bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+                //std::cout<<bunny[bunny.size()-1].name<<" was born!";
+            }
+            if(bunny[x].age==10){
                 bunny[x].alive=0;
+                std::cout<<bunny[x].name<<" has died!\n";
             }
         }
     }
