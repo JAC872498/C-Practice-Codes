@@ -44,17 +44,15 @@ int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==n
 int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies when pop>=1000, add delay between turns
     srand(time(0));
     std::vector<Bunny>bunny(5);
-    
-    std::cout<<"A"<<std::endl;
-    std::this_thread::sleep_for (std::chrono::seconds(1));//USE FOR DELAY
-    std::cout<<"B";
-    
     for(int x=0;x<bunny.size();x++){
         bunny[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
         /*bunny[x].description();
         std::cout<<"\n";*/
     }
+    int year=0;
     while(mul(bunny)!=0){
+        year+=1;
+        std::cout<<"year "<<year<<"\n";
         for(int x=0;x<bunny.size();x++){
             bunny[x].age=bunny[x].age+1;
             if(mul(bunny)==2){
@@ -70,6 +68,7 @@ int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies wh
                 std::cout<<bunny[x].name<<" has dies!\n";
             }
         }
+        std::this_thread::sleep_for (std::chrono::seconds(1));
     }
     return 0;
 }
