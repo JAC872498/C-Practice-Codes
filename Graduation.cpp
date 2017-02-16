@@ -22,17 +22,20 @@ class Bunny{
 int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==new bunnies
     bool male=0;
     bool female=0;
+    bool al=0;
     for(int x=0;x<stuff.size();x++){
         if(stuff[x].sex==1 && stuff[x].alive==1 && stuff[x].age>=2){
             female=1;
+            al=1;
         }else if(stuff[x].sex==0 && stuff[x].alive==1 && stuff[x].age>=2){
             male=1;
+            al=1;
+        }else if(stuff[x].alive==1){
+            al=1;
         }
     }
-    if(male && female){
-        return 2;
-    }else if(male || female){
-        return 1;
+    if(male && female){return 2;
+    }else if(al){return 1;
     }return 0;
 }
 
@@ -44,9 +47,14 @@ int main(){
         /*bunny[x].description();
         std::cout<<"\n";*/
     }
-    for(int x=0;x<3;x++){
-        for(int x=0;x<bunny.size();x++){bunny[x].age=bunny[x].age+1;}
-        //std::cout<<bunny[0].age;
+    while(mul(bunny)!=0){
+        std::cout<<bunny[0].age;
+        for(int x=0;x<bunny.size();x++){
+            bunny[x].age=bunny[x].age+1;
+            if(bunny[x].age==11){
+                bunny[x].alive=0;
+            }
+        }
     }
     return 0;
 }
