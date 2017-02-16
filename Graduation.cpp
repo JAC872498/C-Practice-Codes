@@ -23,9 +23,9 @@ int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==n
     bool male=0;
     bool female=0;
     for(int x=0;x<stuff.size();x++){
-        if(stuff[x].sex==1 && stuff[x].alive==1){
+        if(stuff[x].sex==1 && stuff[x].alive==1 && stuff[x].age>=2){
             female=1;
-        }else if(stuff[x].sex==0 && stuff[x].alive==1){
+        }else if(stuff[x].sex==0 && stuff[x].alive==1 && stuff[x].age>=2){
             male=1;
         }
     }
