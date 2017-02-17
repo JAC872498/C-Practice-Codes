@@ -53,6 +53,14 @@ int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies wh
     while(mul(bunny)!=0){
         year+=1;
         std::cout<<"year "<<year<<"\n";
+        for(int x=0;x<bunny.size();x++){//infecting other bunnies
+            if(bunny[x].rad==1){
+                for(int y=0;y<bunny.size();y++){
+                    if(bunny[y].rad==0){bunny[y].rad=1;}
+                    break;
+                }
+            }
+        }
         if(mul(bunny)==2){
             bunny.push_back(Bunny());
             bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
