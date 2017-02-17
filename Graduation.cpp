@@ -41,11 +41,11 @@ int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==n
     }return 0;
 }
 
-int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies when pop>=1000
+int main(){//TODO: kill 1/2 of bunnies when pop>=1000
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
-        bunny[x].setAll(rand()%2,0/*rand()%50*/,rand()%4,rand()%10);
+        bunny[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
         /*bunny[x].description();
         std::cout<<"\n";*/
     }
@@ -57,7 +57,8 @@ int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies wh
             if(bunny[x].rad==1){
                 for(int y=0;y<bunny.size();y++){
                     if(bunny[y].rad==0){bunny[y].rad=1;}
-                    break;
+                    std::cout<<bunny[y].name<<" was infected by "<<bunny[x].name<<"\n";
+                    //TODO: find way to stop loop
                 }
             }
         }
