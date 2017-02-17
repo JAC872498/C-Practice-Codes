@@ -42,6 +42,10 @@ int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==n
 }
 
 int main(){//TODO: kill 1/2 of bunnies when pop>=1000
+    int inf=-1;
+    int reg=-1;
+    int male=-1;
+    int female=-1;
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
@@ -54,15 +58,19 @@ int main(){//TODO: kill 1/2 of bunnies when pop>=1000
         year+=1;
         std::cout<<"year "<<year<<"\n";
         for(int x=0;x<bunny.size();x++){//infecting other bunnies
-            if(bunny[x].rad==1){
-                for(int y=0;y<bunny.size();y++){
-                    if(bunny[y].rad==0){bunny[y].rad=1;}
-                    std::cout<<bunny[y].name<<" was infected by "<<bunny[x].name<<"\n";
-                    //TODO: find way to stop loop
-                }
+            if(bunny[x].rad==1){inf=x;}
+            else if(bunny[x].rad==0){reg=x;}
+            if(reg!=-1&&inf!=-1){    
+                bunny[reg].rad=1;
+                std::cout<<bunny[reg].name<<" was infected by "<<bunny[inf].name<<".\n";
+                reg=-1;
+                inf=-1;
             }
         }
         if(mul(bunny)==2){
+            for(int x=0;x<bunny.size();x++){
+                //male&&female stuff
+            }
             bunny.push_back(Bunny());
             bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
             if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
