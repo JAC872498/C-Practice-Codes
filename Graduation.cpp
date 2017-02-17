@@ -45,7 +45,7 @@ int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies wh
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
-        bunny[x].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+        bunny[x].setAll(rand()%2,0/*rand()%50*/,rand()%4,rand()%10);
         /*bunny[x].description();
         std::cout<<"\n";*/
     }
@@ -56,8 +56,9 @@ int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies wh
         if(mul(bunny)==2){
             bunny.push_back(Bunny());
             bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
-            std::cout<<bunny[bunny.size()-1].name<<" was born!\n";
-        }
+            if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
+            else{std::cout<<bunny[bunny.size()-1].name<<" was born!\n";}
+            }
         for(int x=0;x<bunny.size();x++){
             bunny[x].age=bunny[x].age+1;
             if(bunny[x].age==11 && bunny[x].rad==0){
@@ -65,10 +66,11 @@ int main(){//TODO: make rad bunnies infect ofthe bunnies, kill 1/2 of bunnies wh
                 std::cout<<bunny[x].name<<" has died!\n";
             }else if (bunny[x].age==51 && bunny[x].rad==1){
                 bunny[x].alive=0;
-                std::cout<<bunny[x].name<<" has dies!\n";
+                std::cout<<bunny[x].name<<" has died!\n";
             }
         }
         std::this_thread::sleep_for (std::chrono::seconds(1));
     }
+    std::cout<<"Your bunny colony survived for "<<year<<" years.";
     return 0;
 }
