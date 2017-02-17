@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-//#include <ctime>
 #include <vector>
 #include <thread>       
 #include <chrono> 
@@ -41,7 +40,7 @@ int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==n
     }return 0;
 }
 
-int main(){//TODO: kill 1/2 of bunnies when pop>=1000
+int main(){
     int inf=-1;
     int reg=-1;
     int male=-1;
@@ -69,13 +68,18 @@ int main(){//TODO: kill 1/2 of bunnies when pop>=1000
         }
         if(mul(bunny)==2){
             for(int x=0;x<bunny.size();x++){
-                //male&&female stuff
+                if(bunny[x].sex==1){female=x;}
+                else if(bunny[x].sex==0){male=x;}
+                if(male!=-1&&female!=-1){
+                    bunny.push_back(Bunny());
+                    bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+                    if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
+                    else{std::cout<<bunny[bunny.size()-1].name<<" was born!\n";}
+                    male=-1;
+                    female=-1;
+                }
             }
-            bunny.push_back(Bunny());
-            bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
-            if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
-            else{std::cout<<bunny[bunny.size()-1].name<<" was born!\n";}
-            }
+        }
         for(int x=0;x<bunny.size();x++){
             bunny[x].age=bunny[x].age+1;
             if(bunny[x].age==11 && bunny[x].rad==0){
@@ -86,6 +90,7 @@ int main(){//TODO: kill 1/2 of bunnies when pop>=1000
                 std::cout<<bunny[x].name<<" has died!\n";
             }
         }
+        
         std::this_thread::sleep_for (std::chrono::seconds(1));
     }
     std::cout<<"Your bunny colony survived for "<<year<<" years.";
