@@ -43,8 +43,8 @@ int mul(std::vector<Bunny> stuff){//0==all bunnies dead, 1==no new bunnies, 2==n
 int main(){
     int inf=-1;
     int reg=-1;
-    int male=-1;
-    int female=-1;
+    bool male=false;
+    bool female=false;
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
@@ -68,16 +68,24 @@ int main(){
         }
         if(mul(bunny)==2){
             for(int x=0;x<bunny.size();x++){
-                if(bunny[x].sex==1){female=x;}
-                else if(bunny[x].sex==0){male=x;}
-                if(male!=-1&&female!=-1){
+                if(bunny[x].sex==1){female=true;}
+                else if(bunny[x].sex==0){male=true;}
+                /*if(male!=-1&&female!=-1){
                     bunny.push_back(Bunny());
                     bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
                     if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
                     else{std::cout<<bunny[bunny.size()-1].name<<" was born!\n";}
                     male=-1;
                     female=-1;
-                }
+                }*/
+            }
+            if(male==true&&female==true){
+                bunny.push_back(Bunny());
+                bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
+                if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
+                else{std::cout<<bunny[bunny.size()-1].name<<" was born!\n";}
+                male=false;
+                female=false;
             }
         }
         for(int x=0;x<bunny.size();x++){
