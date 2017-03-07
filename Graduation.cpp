@@ -45,8 +45,6 @@ int main(){
     int reg=-1;
     bool male=false;
     bool female=false;
-    bool allRad=true;
-    bool noNorm=true;
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
@@ -56,17 +54,12 @@ int main(){
     }
     int year=0;
     while(mul(bunny)!=0){
+        normies=0;
         year+=1;
         std::cout<<"year "<<year<<"\n";
         for(int x=0;x<bunny.size();x++){//infecting other bunnies
-            if(bunny[x].rad==1){
-                inf=x;
-                noNorm=false;
-            }
-            else if(bunny[x].rad==0){
-                reg=x;
-                allRad=false;;
-            }
+            if(bunny[x].rad==1){inf=x;}
+            else if(bunny[x].rad==0){reg=x;}
             if(reg!=-1&&inf!=-1){    
                 bunny[reg].rad=1;
                 std::cout<<bunny[reg].name<<" was infected by "<<bunny[inf].name<<".\n";
@@ -103,10 +96,6 @@ int main(){
             }
         }
         std::this_thread::sleep_for (std::chrono::seconds(2));
-        if(allRad&&noNorm){
-            std::cout<<"Your bunny colony survived for "<<year<<" years befor all becoming radioactive.";
-            return 0;
-        }
     }
     std::cout<<"Your bunny colony survived for "<<year<<" years befor all dying out.";
     return 0;
