@@ -45,6 +45,7 @@ int main(){
     int reg=-1;
     bool male=false;
     bool female=false;
+    bool allRad=true;
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
@@ -58,7 +59,10 @@ int main(){
         std::cout<<"year "<<year<<"\n";
         for(int x=0;x<bunny.size();x++){//infecting other bunnies
             if(bunny[x].rad==1){inf=x;}
-            else if(bunny[x].rad==0){reg=x;}
+            else if(bunny[x].rad==0){
+                reg=x;
+                allRad=false;
+            }
             if(reg!=-1&&inf!=-1){    
                 bunny[reg].rad=1;
                 std::cout<<bunny[reg].name<<" was infected by "<<bunny[inf].name<<".\n";
@@ -70,14 +74,6 @@ int main(){
             for(int x=0;x<bunny.size();x++){
                 if(bunny[x].sex==1){female=true;}
                 else if(bunny[x].sex==0){male=true;}
-                /*if(male!=-1&&female!=-1){
-                    bunny.push_back(Bunny());
-                    bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
-                    if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
-                    else{std::cout<<bunny[bunny.size()-1].name<<" was born!\n";}
-                    male=-1;
-                    female=-1;
-                }*/
             }
             if(male==true&&female==true){
                 bunny.push_back(Bunny());
@@ -98,9 +94,12 @@ int main(){
                 std::cout<<bunny[x].name<<" has died!\n";
             }
         }
-        
-        std::this_thread::sleep_for (std::chrono::seconds(1));
+        std::this_thread::sleep_for (std::chrono::seconds(2));
+        if(allRad){
+            std::cout<<"Your bunny colony survived for "<<years<<" years befor all becoming radioactive.";
+            return 0;
+        }
     }
-    std::cout<<"Your bunny colony survived for "<<year<<" years.";
+    std::cout<<"Your bunny colony survived for "<<year<<" years befor all dying out.";
     return 0;
 }
