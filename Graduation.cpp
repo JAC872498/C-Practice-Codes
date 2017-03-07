@@ -46,6 +46,7 @@ int main(){
     bool male=false;
     bool female=false;
     bool allRad=true;
+    bool noNorm=true;
     srand(time(0));
     std::vector<Bunny>bunny(5);
     for(int x=0;x<bunny.size();x++){
@@ -58,10 +59,13 @@ int main(){
         year+=1;
         std::cout<<"year "<<year<<"\n";
         for(int x=0;x<bunny.size();x++){//infecting other bunnies
-            if(bunny[x].rad==1){inf=x;}
+            if(bunny[x].rad==1){
+                inf=x;
+                noNorm=false;
+            }
             else if(bunny[x].rad==0){
                 reg=x;
-                allRad=false;
+                allRad=false;;
             }
             if(reg!=-1&&inf!=-1){    
                 bunny[reg].rad=1;
@@ -79,7 +83,11 @@ int main(){
                 bunny.push_back(Bunny());
                 bunny[bunny.size()-1].setAll(rand()%2,rand()%50,rand()%4,rand()%10);
                 if(bunny[bunny.size()-1].rad==1){std::cout<<"Mutant bunnny "<<bunny[bunny.size()-1].name<<" was born!\n";}
-                else{std::cout<<bunny[bunny.size()-1].name<<" was born!\n";}
+                else{
+                    std::cout<<bunny[bunny.size()-1].name<<" was born!\n";
+                    allRad=false;
+                    noNorm=false;
+                }
                 male=false;
                 female=false;
             }
@@ -95,8 +103,8 @@ int main(){
             }
         }
         std::this_thread::sleep_for (std::chrono::seconds(2));
-        if(allRad){
-            std::cout<<"Your bunny colony survived for "<<years<<" years befor all becoming radioactive.";
+        if(allRad&&noNorm){
+            std::cout<<"Your bunny colony survived for "<<year<<" years befor all becoming radioactive.";
             return 0;
         }
     }
