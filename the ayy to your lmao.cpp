@@ -4,23 +4,23 @@
 #include <time.h>
 
 int win(std::string grid, char myChoice, char comChoice){
-    if(grid[0][0]){//You winning
-    }else{
-    }else{
-    }else{
-    }else{
-    }else{
-    }else{
-    }else{
+    if(grid[0][0]==myChoice&&&&){//You winning
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
     }
     if(grid[0][0]){//Computer winning
-    }else{
-    }else{
-    }else{
-    }else{
-    }else{
-    }else{
-    }else{
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
+    }else if(&&&&){
     }
     return 0;
 }
