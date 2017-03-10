@@ -3,8 +3,30 @@
 #include <string>
 #include <time.h>
 
+int win(std::string grid, char myChoice, char comChoice){
+    if(grid[0][0]){//You winning
+    }else{
+    }else{
+    }else{
+    }else{
+    }else{
+    }else{
+    }else{
+    }
+    if(grid[0][0]){//Computer winning
+    }else{
+    }else{
+    }else{
+    }else{
+    }else{
+    }else{
+    }else{
+    }
+    return 0;
+}
+
 int main(){
-  srand (time(NULL));
+  srand(time(NULL));
   int myX=0;
   int myY=0;
   char myChoice;
@@ -23,5 +45,8 @@ int main(){
       myChoice='O';
       comChoice='X';
   }
+  //while(win(grid, myChoice, comChoce)!=0){
+      
+  //}
   return 0;
 }
