@@ -52,8 +52,14 @@ int main(){
    while(win(grid, myChoice, comChoice)!=0){
       if(turns%2==0&&myChoice.compare("X")){
 		  std::cout<<"Enemy goes\n";
+		  comX=rand()%3;
+		  comY=rand()%3;
 	  }else{
 		  std::cout<<"You go\n";
+		  std::cout<<"Enter X\n";
+		  std::cin>>myX;
+		  std::cout<<"Enter Y\n";
+		  std::cin>>myY;
 	  }
   }
   	//std::cout<<grid[0][0].compare(myChoice);
