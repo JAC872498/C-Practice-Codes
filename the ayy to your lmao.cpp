@@ -2,8 +2,9 @@
 #include <iostream>
 #include <string>
 #include <time.h>
+#include <stdlib.h>
 
-int win(std::string grid, char myChoice, char comChoice, int turns){//0==no win, 1==you win, 2== computer win
+int win(char grid, char myChoice, char comChoice, int turns){//0==no win, 1==you win, 2== computer win
     if(turns>5){return 1;}
 	if(grid[0][0]==myChoice&&grid[1][0]==myChoice&&grid[2][0]==myChoice){return 1;}//You winning
     else if(grid[0][1]==myChoice&&grid[1][1]==myChoice&&grid[2][1]==myChoice){return 1;}
@@ -34,10 +35,10 @@ int main(){
   int comY=0;
   int turns=0; 
   char comChoice;
-  std::string grid[3][3]={
-    {"-","-","-"},
-    {"-","-","-"},
-    {"-","-","-"}
+  char grid[3][3]={
+    {'-','-','-'},
+    {'-','-','-'},
+    {'-','-','-'}
   };
   if(rand()%2==0){//You start first
       myChoice='X';
@@ -56,5 +57,6 @@ int main(){
 		  std::cout<<"You go\n";
 	  }
   }
+  	std::cout<<grid[0][0];
   return 0;
 }
