@@ -49,19 +49,19 @@ int main(){
       std::cout<<"Enemy go\n";
   }
   turns++;
-   while(win(grid, myChoice, comChoice)!=0){
-      if(turns%2==0&&myChoice.compare("X")){
-		  std::cout<<"Enemy goes\n";
+   while(win(grid, myChoice, comChoice, turns)!=0){
+      if((turns%2==0&&myChoice.compare("X"))||(turns%2!=0&&myChoice.compare("O"))){
+		  std::cout<<"Enemy goes "<<comChoice<<"\n";
 		  comX=rand()%3;
 		  comY=rand()%3;
 	  }else{
-		  std::cout<<"You go\n";
+		  std::cout<<"You go "<<myChoice<<"\n";
 		  std::cout<<"Enter X\n";
 		  std::cin>>myX;
 		  std::cout<<"Enter Y\n";
 		  std::cin>>myY;
 	  }
   }
-  	//std::cout<<grid[0][0].compare(myChoice);
+	std::cout<<grid[0][0].compare(myChoice);
   return 0;
 }
