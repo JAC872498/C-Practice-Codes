@@ -39,7 +39,6 @@ int main(){
     {"-","-","-"},
     {"-","-","-"}
   };
-  std::cout<<win(grid, myChoice, comChoice);
   if(rand()%2==0){//You start first
       std::cout<<"You start\nEnter X\n";
 	  std::cin>>myX;
