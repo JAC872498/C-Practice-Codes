@@ -1,4 +1,5 @@
 //Tic-tak-toe because I'm incredibly bored and have nothing else to do
+//It's actualy fun to make
 #include <iostream>
 #include <string>
 #include <time.h>
