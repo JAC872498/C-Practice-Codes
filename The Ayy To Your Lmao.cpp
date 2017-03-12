@@ -27,11 +27,11 @@ int win(std::string grid[][3], std::string myChoice, std::string comChoice){//0=
 
 int main(){
   srand(time(NULL));
-  int myX=0;
-  int myY=0;
+  int myX=3;
+  int myY=3;
   std::string myChoice;
-  int comX=0;
-  int comY=0;
+  int comX=3;
+  int comY=3;
   int turns=0; 
   std::string comChoice;
   std::string grid[3][3]={
@@ -58,14 +58,19 @@ int main(){
       for(int x=0;x<3;x++){for(int y=0;y<3;y++){std::cout<<grid[x][y];}std::cout<<"\n";}
 	  if((turns%2==0&&myChoice.compare("X"))||(turns%2!=0&&myChoice.compare("O"))){
 		  std::cout<<"Enemy goes\n";
-		  comX=rand()%3;
-		  comY=rand()%3;
+		  while(grid[comY][comX]!="-"){
+		  	  comX=rand()%3;
+		  	  comY=rand()%3;
+		  }
 		  grid[comY][comX]=comChoice;
 	  }else{
-		  std::cout<<"You go\nEnter X\n";
-		  std::cin>>myX;
-		  std::cout<<"Enter Y\n";
-		  std::cin>>myY;
+		  std::cout<<"You go\n";
+		  while(grid[myX-1][myY-1]!="-"){
+		  	  std::cout<<"Enter X\n";
+		  	  std::cin>>myX;
+		  	  std::cout<<"Enter Y\n";
+		  	  std::cin>>myY;
+	  	  }
 		  grid[myX-1][myY-1]=myChoice;
 	  }
 	  turns++;
