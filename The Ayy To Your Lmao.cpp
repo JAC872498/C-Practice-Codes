@@ -55,11 +55,11 @@ int main(){
   }
   turns++;
    while(win(grid, myChoice, comChoice)==0){
-	  if(turns==9){
+	  if(turns==10){
 		  break;
 	  }
 	  //std::this_thread::sleep_for (std::chrono::seconds(2));
-      for(int x=0;x<3;x++){for(int y=0;y<3;y++){std::cout<<grid[y][x];}std::cout<<"\n";}std::cout<<"\n";
+      if(turns%2!=0){for(int x=0;x<3;x++){for(int y=0;y<3;y++){std::cout<<grid[y][x];}std::cout<<"\n";}std::cout<<"\n";}
 	  if((turns%2==0&&myChoice==("X"))||(turns%2!=0&&myChoice==("O"))){
 		  comX=rand()%3;
  	  	  comY=rand()%3;
