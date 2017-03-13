@@ -4,6 +4,8 @@
 #include <string>
 #include <time.h>
 #include <stdlib.h>
+
+
 int win(std::string grid[][3], std::string myChoice, std::string comChoice){//0==no win, 1==you win, 2==computer win
     if(grid[0][0]==(myChoice)&&grid[1][0]==(myChoice)&&grid[2][0]==(myChoice)){return 1;}//You winning
     else if(grid[0][1]==(myChoice)&&grid[1][1]==(myChoice)&&grid[2][1]==(myChoice)){return 1;}
@@ -32,7 +34,7 @@ int main(){
   std::string myChoice="X";
   int comX=rand()%3;
   int comY=rand()%3;
-  int turns=0; 
+  int turns=1;
   std::string comChoice="O";
   std::string grid[3][3]={
     {"-","-","-"},
@@ -56,9 +58,9 @@ int main(){
 	  if(turns==9){
 		  break;
 	  }
-      for(int x=0;x<3;x++){for(int y=0;y<3;y++){std::cout<<grid[y][x];}std::cout<<"\n";}
+	  //std::this_thread::sleep_for (std::chrono::seconds(2));
+      for(int x=0;x<3;x++){for(int y=0;y<3;y++){std::cout<<grid[y][x];}std::cout<<"\n";}std::cout<<"\n";
 	  if((turns%2==0&&myChoice==("X"))||(turns%2!=0&&myChoice==("O"))){
-		  std::cout<<"Enemy goes\n";
 		  comX=rand()%3;
  	  	  comY=rand()%3;
 		  while(grid[comX][comY]!="-"){
@@ -67,8 +69,7 @@ int main(){
 		  }
 		  grid[comX][comY]=comChoice;
 	  }else{
-		  std::cout<<"You go\n";
- 	  	  std::cout<<"Enter X\n";
+		  std::cout<<"Enter X\n";
   	  	  std::cin>>myX;
 		  std::cout<<"Enter Y\n";
 	  	  std::cin>>myY;
@@ -83,9 +84,9 @@ int main(){
 	  turns++;
   }
   if(win(grid, myChoice, comChoice)==1){
-	  std::cout<<"You win";
+	  std::cout<<"You won in "<<turns-1<<" turns";
   }else if(win(grid, myChoice, comChoice)==2){
-	  std::cout<<"Enemy wins";
+	  std::cout<<"Enemy won in "<<turns-1<<" turns";
   }else{
 	  std::cout<<"Nobody wins";
   }
