@@ -1,4 +1,4 @@
-//Tic-tak-toe because I'm incredibly bored and have nothing else to do
+//Tic-tac-toe because I'm incredibly bored and have nothing else to do
 //It's actualy fun to make
 #include <iostream>
 #include <string>
@@ -28,7 +28,7 @@ int win(std::string grid[][3], std::string myChoice, std::string comChoice){//0=
 }
 
 int main(){
-  srand(time(NULL));
+  srand(time(0));
   int myX=5;
   int myY=2;
   std::string myChoice="X";
@@ -58,8 +58,7 @@ int main(){
 	  if(turns==10){
 		  break;
 	  }
-	  //std::this_thread::sleep_for (std::chrono::seconds(2));
-      if(turns%2!=0){for(int x=0;x<3;x++){for(int y=0;y<3;y++){std::cout<<grid[y][x];}std::cout<<"\n";}std::cout<<"\n";}
+      if((turns%2!=0&&myChoice==("X"))||(turns%2==0&&myChoice==("O"))){for(int x=0;x<3;x++){for(int y=0;y<3;y++){std::cout<<grid[y][x];}std::cout<<"\n";}std::cout<<"\n";}
 	  if((turns%2==0&&myChoice==("X"))||(turns%2!=0&&myChoice==("O"))){
 		  comX=rand()%3;
  	  	  comY=rand()%3;
