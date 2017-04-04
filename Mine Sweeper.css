@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int main(){
     int xLen, yLen;
@@ -12,9 +13,9 @@ int main(){
         //std::cout<<row.substr(0,1);
         for(int y=1;y<yLen;y++){
             //std::cout<<row.substr(y,y);
-            grid[x][y]=row.substr(y,y);
+            grid[x][y]=row.substr(y,1);
         }//std::cout<<"\n";
     }
-    //for(int x=0;x<xLen;x++){for(int y=0;y<yLen;y++){std::cout<<grid[x][y];}std::cout<<"\n";}
+    for(int x=0;x<xLen;x++){for(int y=0;y<yLen;y++){std::cout<<grid[x][y];}std::cout<<"\n";}
    return 0;
 }
