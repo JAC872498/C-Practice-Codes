@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main(){
+    int xLen, yLen;
+    std::string row;
+    std::cin>>xLen>>yLen;
+    std::string grid[xLen][yLen];
+    for(int x=0;x<xLen;x++){
+        cin>>row;
+        grid[x]=row.split;
+    }
+   return 0;
+}
+
