@@ -6,8 +6,10 @@ int main(){
     std::cin>>xLen>>yLen;
     std::string grid[xLen][yLen];
     for(int x=0;x<xLen;x++){
-        cin>>row;
-        grid[x]=row.split;
+        std::cin>>row;
+        for(int y=0;y<yLen;y++){
+            std::cout<<row.substr(y,y+1);
+        }
     }
    return 0;
 }
