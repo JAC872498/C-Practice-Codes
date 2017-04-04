@@ -5,12 +5,13 @@ int main(){
     std::string row;
     std::cin>>xLen>>yLen;
     std::string grid[xLen][yLen];
+    row="abc";
     for(int x=0;x<xLen;x++){
         std::cin>>row;
-        for(int y=0;y<yLen;y++){
-            std::cout<<row.substr(y,y+1);
-        }
+        std::cout<<row.substr(0,1);
+        for(int y=1;y<yLen;y++){
+            std::cout<<row.substr(y,y);
+        }std::cout<<"\n";
     }
    return 0;
 }
-
