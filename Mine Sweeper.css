@@ -16,6 +16,15 @@ int main(){
             grid[x][y]=row.substr(y,1);
         }//std::cout<<"\n";
     }
-    for(int x=0;x<xLen;x++){for(int y=0;y<yLen;y++){std::cout<<grid[x][y];}std::cout<<"\n";}
+    for(int x=0;x<xLen;x++){
+        for(int y=0;y<yLen;y++){
+            if(grid[x][y]=="."&&(1||2||3||4||5||6||7||8)){
+                grid[x][y]="1";
+            }else{
+                grid[x][y]="0";
+            }
+            std::cout<<grid[x][y];
+        }std::cout<<"\n";
+    }
    return 0;
 }
