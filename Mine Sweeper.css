@@ -29,8 +29,8 @@ int main(){
                 if(atoi(grid[x+1][y].c_str())>=0){grid[x+1][y]=std::to_string(atoi(grid[x+1][y].c_str())+1);}
                 if(atoi(grid[x+1][y+1].c_str())>=0){grid[x+1][y+1]=std::to_string(atoi(grid[x+1][y+1].c_str())+1);}//I don't think I could make this uglier if I wanted 
             }
-            std::cout<<grid[x][y];
-        }std::cout<<"\n";
+        }
     }
+    for(int x=0;x<xLen;x++){for(int y=0;y<yLen;y++){std::cout<<grid[x][y];}std::cout<<"\n";}
    return 0;
 }
