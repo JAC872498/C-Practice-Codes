@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h> 
 
 int main(){
     int xLen, yLen;
@@ -18,9 +19,19 @@ int main(){
     }
     for(int x=0;x<xLen;x++){
         for(int y=0;y<yLen;y++){
-            //if(grid[x][y]=="."){grid[x][y]="0";}
+            if(grid[x][y]=="*"){
+                if(atoi(grid[x-1][y-1].c_str())>=0){grid[x-1][y-1]=std::to_string(atoi(grid[x-1][y-1].c_str())+1)}
+                if(atoi(grid[x-1][y].c_str())>=0){grid[x-1][y]=std::to_string(atoi(grid[x-1][y].c_str())+1);}
+                if(atoi(grid[x-1][y+1].c_str())>=0){grid[x-1][y+1]=std::to_string(atoi(grid[x-1][y+1].c_str())+1);}
+                if(atoi(grid[x][y-1].c_str())>=0){grid[x][y-1]=std::to_string(atoi(grid[x][y-1].c_str())+1);}
+                if(atoi(grid[x][y+1].c_str())>=0){grid[x][y+1]=std::to_string(atoi(grid[x][y+1].c_str())+1);}
+                if(atoi(grid[x+1][y-1].c_str())>=0){grid[x+1][y-1]=std::to_string(atoi(grid[x+1][y-1].c_str())+1);}
+                if(atoi(grid[x+1][y].c_str())>=0){grid[x+1][y]=std::to_string(atoi(grid[x+1][y].c_str())+1);}
+                if(atoi(grid[x+1][y+1].c_str())>=0){grid[x+1][y+1]=std::to_string(atoi(grid[x+1][y+1].c_str())+1;}//I don't think I could make this uglier if I wanted 
+            }
             std::cout<<grid[x][y];
         }std::cout<<"\n";
     }
+    std::cout<<atoi(.c_str());
    return 0;
 }
