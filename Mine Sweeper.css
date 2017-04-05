@@ -20,14 +20,14 @@ int main(){
     for(int x=0;x<xLen;x++){
         for(int y=0;y<yLen;y++){
             if(grid[x][y]=="*"){
-                if(atoi(grid[x-1][y-1].c_str())>=0){grid[x-1][y-1]=std::to_string(atoi(grid[x-1][y-1].c_str())+1);}
-                if(atoi(grid[x-1][y].c_str())>=0){grid[x-1][y]=std::to_string(atoi(grid[x-1][y].c_str())+1);}
-                if(atoi(grid[x-1][y+1].c_str())>=0){grid[x-1][y+1]=std::to_string(atoi(grid[x-1][y+1].c_str())+1);}
-                if(atoi(grid[x][y-1].c_str())>=0){grid[x][y-1]=std::to_string(atoi(grid[x][y-1].c_str())+1);}
-                if(atoi(grid[x][y+1].c_str())>=0){grid[x][y+1]=std::to_string(atoi(grid[x][y+1].c_str())+1);}
-                if(atoi(grid[x+1][y-1].c_str())>=0){grid[x+1][y-1]=std::to_string(atoi(grid[x+1][y-1].c_str())+1);}
-                if(atoi(grid[x+1][y].c_str())>=0){grid[x+1][y]=std::to_string(atoi(grid[x+1][y].c_str())+1);}
-                if(atoi(grid[x+1][y+1].c_str())>=0){grid[x+1][y+1]=std::to_string(atoi(grid[x+1][y+1].c_str())+1);}//I don't think I could make this uglier if I wanted 
+                if(x-1>=0&&y-1>=0&&grid[x-1][y-1]!="*"){grid[x-1][y-1]=std::to_string(atoi(grid[x-1][y-1].c_str())+1);}
+                if(x-1>=0&&grid[x-1][y]!="*"){grid[x-1][y]=std::to_string(atoi(grid[x-1][y].c_str())+1);}
+                if(x-1>=0&&y+1<yLen&&grid[x-1][y+1]!="*"){grid[x-1][y+1]=std::to_string(atoi(grid[x-1][y+1].c_str())+1);}
+                if(y-1>=0&&grid[x][y-1]!="*"){grid[x][y-1]=std::to_string(atoi(grid[x][y-1].c_str())+1);}
+                if(y+1<yLen&&grid[x][y+1]!="*"){grid[x][y+1]=std::to_string(atoi(grid[x][y+1].c_str())+1);}
+                if(x+1<xLen&&y-1>=0&&grid[x+1][y-1]!="*"){grid[x+1][y-1]=std::to_string(atoi(grid[x+1][y-1].c_str())+1);}
+                if(x+1<xLen&&grid[x+1][y]!="*"){grid[x+1][y]=std::to_string(atoi(grid[x+1][y].c_str())+1);}
+                if(x+1<xLen&&y+1<yLen&&grid[x+1][y+1]!="*"){grid[x+1][y+1]=std::to_string(atoi(grid[x+1][y+1].c_str())+1);}//I don't think I could make this uglier if I wanted 
             }
         }
     }
