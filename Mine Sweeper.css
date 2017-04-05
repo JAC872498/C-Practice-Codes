@@ -10,15 +10,15 @@ int main(){
     for(int x=0;x<xLen;x++){
         std::cin>>row;
         grid[x][0]=row.substr(0,1);
-        //std::cout<<row.substr(0,1);
+        if(grid[x][0]=="."){grid[x][0]="0";}
         for(int y=1;y<yLen;y++){
-            //std::cout<<row.substr(y,y);
             grid[x][y]=row.substr(y,1);
-        }//std::cout<<"\n";
+            if(grid[x][y]=="."){grid[x][y]="0";}
+        }
     }
     for(int x=0;x<xLen;x++){
         for(int y=0;y<yLen;y++){
-            if(grid[x][y]=="."){grid[x][y]="0";}
+            //if(grid[x][y]=="."){grid[x][y]="0";}
             std::cout<<grid[x][y];
         }std::cout<<"\n";
     }
