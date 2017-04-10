@@ -1,21 +1,18 @@
 /**/
 
 #include <iostream>
+#include <math.h>
 
 int main(){
-    int students, biggest=0, smallest=0;
+    int students, tot=0;
+    double avr=0;
     std::cin>>students;
-    int costs[students-1];
+    double costs[students-1];
     for(int x=0;x<students;x++){
         std::cin>>costs[x];
-        if(costs[biggest]<=costs[x]){biggest=x;}
-        if(costs[smallest]>=costs[x]){smallest=x;}
+        avr+=costs[x];
     }
-    //std::cout<<costs[biggest]<<"\n"<<costs[smallest];
-    while(costs[biggest]!=costs[smallest]){
-        costs[biggest]-=0;
-        costs[smallest]+=1;
-    }
-    std::cout<<costs[biggest]<<"\n"<<costs[smallest];
+    avr=floor((avr/(double)students)*100+0.5)/100;
+    std::cout<<avr<<"\n";
     return 0;
 }
