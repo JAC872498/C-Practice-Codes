@@ -11,21 +11,14 @@ int main(){
     float costs[students-1];
     for(int x=0;x<students;x++){
         std::cin>>costs[x];
+        costs[x]=costs[x]*100;
         avr+=costs[x];
     }
     avr=floor((avr/(float)students)*100+0.5)/100;
     //std::cout<<avr<<"\n";
     for(int x=0;x<students;x++){
-        /*while(costs[x]>avr){
-            costs[x]=costs[x]-0.01;
-            tot+=0.01;
-        }
-        while(costs[x]<avr){
-            costs[x]=costs[x]+0.01;
-            tot+=0.01;
-        }*/
         tot+=std::abs(costs[x]-avr);
     }
-    std::cout<<(tot);
+    std::cout<<"$"<<(tot/200);
     return 0;
 }
