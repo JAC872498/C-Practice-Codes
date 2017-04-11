@@ -1,4 +1,8 @@
-/**/
+/*Each trip consists of a line containing a positive integer n denoting the number of students on the trip.
+This is followed by n lines of input, 
+each containing the amount spent by a student in dollars and cents.
+For each trip, output a line stating the total amount of money, in dollars and cents,
+that must be exchanged to equalize the students’ costs.*/
 
 #include <iostream>
 #include <math.h>
@@ -19,6 +23,6 @@ int main(){
     for(int x=0;x<students;x++){
         tot+=std::abs(costs[x]-avr);
     }
-    std::cout<<"$"<<(tot/200);
+    std::cout<<"$"<<(tot/(double)200);
     return 0;
 }
