@@ -6,23 +6,23 @@
 
 int main(){
     int students, tot=0;
-    double avr=0;
+    float avr=0;
     std::cin>>students;
-    double costs[students-1];
+    float costs[students-1];
     for(int x=0;x<students;x++){
         std::cin>>costs[x];
         avr+=costs[x];
     }
-    avr=floor((avr/(double)students)*100+0.5)/100;
+    avr=floor((avr/(float)students)*100+0.5)/100;
     //std::cout<<avr<<"\n";
     for(int x=0;x<students;x++){
         /*while(costs[x]>avr){
-            costs[x]=costs[x]-1;
-            tot+=1;
+            costs[x]=costs[x]-0.01;
+            tot+=0.01;
         }
         while(costs[x]<avr){
-            costs[x]=costs[x]+1;
-            tot+=1;
+            costs[x]=costs[x]+0.01;
+            tot+=0.01;
         }*/
         tot+=std::abs(costs[x]-avr);
     }
