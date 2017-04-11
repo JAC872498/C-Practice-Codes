@@ -15,13 +15,13 @@ int main(){
     avr=floor((avr/(double)students)*100+0.5)/100;
     //std::cout<<avr<<"\n";
     for(int x=0;x<students;x++){
-        while(costs[x]>avr+0.01){
-            costs[x]-=0.01;
-            tot+=0.01;
+        while(costs[x]>avr){
+            costs[x]=costs[x]-1;
+            tot+=1;
         }
-        while(costs[x]+0.01<avr){
-            costs[x]+=0.01;
-            tot+=0.01;
+        while(costs[x]<avr){
+            costs[x]=costs[x]+1;
+            tot+=1;
         }
     }
     std::cout<<(tot/2);
