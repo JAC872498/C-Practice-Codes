@@ -7,7 +7,7 @@ class Piece{//0=king, 1=queen, 2=rook, 3=knight, 4=bishop, 5=pawn
         int xPos, yPos;
         bool isWhite, isTaken;
         std::string type, types[12]={"K","Q","R","N","B","P","k","q","r","n","b","p"};
-    
+        
         void setAll(int setTypeNum, int setXPos, int setYPos, bool setIsWhite, bool setIsTaken){
             xPos=setXPos-1;
             yPos=setYPos-1;
@@ -18,6 +18,12 @@ class Piece{//0=king, 1=queen, 2=rook, 3=knight, 4=bishop, 5=pawn
             }else{
                 type=types[setTypeNum+6];
             }
+        }
+        
+        bool canMoveTo(int moveToX, int moveToY){
+            if((xPos==moveToX&&yPos==moveToY)||moveToX<0||moveToY<0||moveToX>=8||moveToY>=8){
+                return false;
+            }return true;
         }
 };
 
@@ -32,9 +38,10 @@ int main(){
         {".",".",".",".",".",".",".","."},
         {".",".",".",".",".",".",".","."}
     };
-    /*Piece testKing;
+    Piece testKing;
     testKing.setAll(0,1,1,true,false);
-    board[testKing.xPos][testKing.yPos]=testKing.type;*/
+    board[testKing.xPos][testKing.yPos]=testKing.type;
     for(int x=0;x<8;x++){for(int y=0;y<8;y++){std::cout<<board[x][y];}std::cout<<"\n";}
+    std::cout<<testKing.canMoveTo(10,-4);
     return 0;
 }
