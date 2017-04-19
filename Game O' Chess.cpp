@@ -7,6 +7,7 @@ class Piece{//0=king, 1=queen, 2=rook, 3=knight, 4=bishop, 5=pawn
         int xPos, yPos;
         bool isWhite, isTaken;
         std::string type, types[12]={"K","Q","R","N","B","P","k","q","r","n","b","p"};
+    
         void setAll(int setTypeNum, int setXPos, int setYPos, bool setIsWhite, bool setIsTaken){
             xPos=setXPos-1;
             yPos=setYPos-1;
