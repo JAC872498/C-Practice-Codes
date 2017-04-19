@@ -32,8 +32,5 @@ int main(){
         {".",".",".",".",".",".",".","."}
     };
     for(int x=0;x<8;x++){for(int y=0;y<8;y++){std::cout<<grid[x][y];}std::cout<<"\n";}
-    Piece test1;
-    test1.setAll(0,5,6,true,false);
-    std::cout<<test1.isWhite;
     return 0;
 }
