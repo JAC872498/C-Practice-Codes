@@ -13,6 +13,6 @@ int main(){
         {".",".",".",".",".",".",".","."},
         {".",".",".",".",".",".",".","."}
     };
-    for(int x=0;x<8;x++){for(int y=0;y<8;y++){std::cout<<grid[x][y]}std::cout<<"\n"};
+    for(int x=0;x<8;x++){for(int y=0;y<8;y++){std::cout<<grid[x][y];}std::cout<<"\n";}
     return 0;
 }
