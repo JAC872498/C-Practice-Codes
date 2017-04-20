@@ -52,10 +52,10 @@ int main(){
         {".",".",".",".",".",".",".","."},
         {".",".",".",".",".",".",".","."}
     };
-    Piece whiteKing,whiteQueen, whiteRook1, whiteRook2, whiteKnight1, whiteKnight2, whiteBishop1, whiteBisop2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6;
-    whiteKing.setAll(0,8,5,true,false);
-    board[whiteKing.row][whiteKing.column]=whiteKing.type;
+    /*White pieces*/Piece whiteKing, whiteQueen, whiteRook1, whiteRook2, whiteKnight1, whiteKnight2, whiteBishop1, whiteBishop2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8;
+    /*Black pieces*/Piece blakcKing, blackQueen, blackRook1, blackRook2, blackKnight1, blackKnight2, blackBishop1, blackBishop2, blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, balckPawn7, blackPawn8;
+    Piece whiteFleet[16]={whiteKing, whiteQueen, whiteRook1, whiteRook2, whiteKnight1, whiteKnight2, whiteBishop1, whiteBishop2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8};
+    Piece blakcFleet[16]={blakcKing, blackQueen, blackRook1, blackRook2, blackKnight1, blackKnight2, blackBishop1, blackBishop2, blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, balckPawn7, blackPawn8};
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
-    //std::cout<<testKing.canMoveTo(3,4);
     return 0;
 }
