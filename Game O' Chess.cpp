@@ -4,13 +4,13 @@
 
 class Piece{//0=king, 1=queen, 2=rook, 3=knight, 4=bishop, 5=pawn
     public:
-        int xPos, yPos;
+        int row, column;
         bool isWhite, isTaken;
         std::string type, types[12]={"K","Q","R","N","B","P","k","q","r","n","b","p"};
         
-        void setAll(int setTypeNum, int setXPos, int setYPos, bool setIsWhite, bool setIsTaken){
-            xPos=setXPos-1;
-            yPos=setYPos-1;
+        void setAll(int setTypeNum, int setRow, int setColumn, bool setIsWhite, bool setIsTaken){
+            row=setRow-1;
+            column=setColumn-1;
             isWhite=setIsWhite;
             isTaken=setIsTaken;
             if(isWhite){
@@ -20,8 +20,8 @@ class Piece{//0=king, 1=queen, 2=rook, 3=knight, 4=bishop, 5=pawn
             }
         }
         
-        bool canMoveTo(int moveToX, int moveToY){
-            if((xPos==moveToX&&yPos==moveToY)||moveToX<0||moveToY<0||moveToX>=8||moveToY>=8){
+        bool canMoveTo(int moveToRow, int moveToColumn){
+            if((row==moveToRow&&column==moveToColumn)||moveToRow<0||moveToColumn<0||moveToRow>=8||moveToColumn>=8){
                 return false;
             }else if(type=="K"||type=="k"){
                 
@@ -43,8 +43,8 @@ class Piece{//0=king, 1=queen, 2=rook, 3=knight, 4=bishop, 5=pawn
 
 int main(){
     std::string board[8][8]={
-        {"1","3",".",".",".",".",".","."},
-        {"2",".",".",".",".",".",".","."},
+        {".",".",".",".",".",".",".","."},
+        {".",".",".",".",".",".",".","."},
         {".",".",".",".",".",".",".","."},
         {".",".",".",".",".",".",".","."},
         {".",".",".",".",".",".",".","."},
@@ -52,10 +52,10 @@ int main(){
         {".",".",".",".",".",".",".","."},
         {".",".",".",".",".",".",".","."}
     };
-    Piece testKing;
-    testKing.setAll(0,1,1,true,false);
-    board[testKing.xPos][testKing.yPos]=testKing.type;
-    for(int y=0;y<8;y++){for(int x=0;x<8;x++){std::cout<<board[y][x];}std::cout<<"\n";}
-    std::cout<<testKing.canMoveTo(3,4);
+    Piece whiteKing,whiteQueen, whiteRook1, whiteRook2, whiteKnight1, whiteKnight2, whiteBishop1, whiteBisop2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6;
+    whiteKing.setAll(0,8,5,true,false);
+    board[whiteKing.row][whiteKing.column]=whiteKing.type;
+    for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
+    //std::cout<<testKing.canMoveTo(3,4);
     return 0;
 }
