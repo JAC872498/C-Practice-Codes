@@ -2,11 +2,11 @@
 
 #include <iostream>
 
-class Piece{//0=king, 1=queen, 2=bishop, 3=knight, 4=knight, 5=pawn
+class Piece{
     public:
         int row, column;
         bool isWhite, isTaken;
-        std::string type, types[12]={"K","Q","B","N","R","P","k","q","b","n","r","p"};
+        std::string type, types[12]={"Q","K","B","N","R","P","k","q","b","n","r","p"};
         
         void setAll(int setTypeNum, int setRow, int setColumn, bool setIsWhite, bool setIsTaken){
             row=setRow-1;
@@ -63,13 +63,13 @@ int main(){
         board[blackFleet[pawnNum].row][blackFleet[pawnNum].column]=blackFleet[pawnNum].type;
     }
     for(int pieceNum=0;pieceNum<5;pieceNum++){
-            whiteFleet[pieceNum].setAll(4-pieceNum, 8, pieceNum+1, true, false);
-            board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
-        if(pieceNum<3){//Knight, rook, and bishop
-            whiteFleet[5-pieceNum].setAll(5-pieceNum, 8, 5-pieceNum+1, true, false);//WORK ON THIS
-            board[whiteFleet[5-pieceNum].row][whiteFleet[5-pieceNum].column]=whiteFleet[5-pieceNum].type;//WORK ON THIS
-        }
+        whiteFleet[pieceNum].setAll(pieceNum, 8, pieceNum+4, true, false);
+        board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
     }
+    /*for(int pieceNum=0;pieceNum<3;pieceNum++){
+        whiteFleet[pieceNum+5].setAll(pieceNum+1, 8, pieceNum+6, true, false);
+        board[whiteFleet[pieceNum+5].row][whiteFleet[pieceNum+5].column]=whiteFleet[pieceNum].type;
+    }*/
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
     return 0;
 }
