@@ -63,12 +63,12 @@ int main(){
         board[blackFleet[pawnNum].row][blackFleet[pawnNum].column]=blackFleet[pawnNum].type;
     }
     for(int pieceNum=0;pieceNum<5;pieceNum++){
-        //if(pieceNum<3){//Knight, rook, and bishop
             whiteFleet[pieceNum].setAll(4-pieceNum, 8, pieceNum+1, true, false);
             board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
-        //}else{//King and queen
-            
-        //}
+        if(pieceNum<3){//Knight, rook, and bishop
+            whiteFleet[5-pieceNum].setAll(5-pieceNum, 8, 5-pieceNum+1, true, false);//WORK ON THIS
+            board[whiteFleet[5-pieceNum].row][whiteFleet[5-pieceNum].column]=whiteFleet[5-pieceNum].type;//WORK ON THIS
+        }
     }
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
     return 0;
