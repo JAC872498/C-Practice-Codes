@@ -54,7 +54,7 @@ int main(){
     };
     /*White pieces*/Piece whiteKing, whiteQueen, whiteRook1, whiteRook2, whiteKnight1, whiteKnight2, whiteBishop1, whiteBishop2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8;
     /*Black pieces*/Piece blakcKing, blackQueen, blackRook1, blackRook2, blackKnight1, blackKnight2, blackBishop1, blackBishop2, blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, balckPawn7, blackPawn8;
-    Piece whiteFleet[16]={whiteRook1, whiteKnight1, whiteBishop1, whiteQueen, whiteKing, whiteBishop2, whiteKnight2, whiteRook2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8};
+    Piece whiteFleet[16]={whiteRook1, whiteKnight1, whiteBishop1, whiteQueen, whiteKing, whiteRook2, whiteKnight2, whiteBishop2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8};
     Piece blackFleet[16]={blakcKing, blackQueen, blackRook1, blackRook2, blackKnight1, blackKnight2, blackBishop1, blackBishop2, blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, balckPawn7, blackPawn8};
     for(int pawnNum=8;pawnNum<16;pawnNum++){
         whiteFleet[pawnNum].setAll(5, 7, pawnNum-7, true, false);
@@ -66,10 +66,10 @@ int main(){
         whiteFleet[pieceNum].setAll(pieceNum, 8, pieceNum+4, true, false);
         board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
     }
-    /*for(int pieceNum=0;pieceNum<3;pieceNum++){
-        whiteFleet[pieceNum+5].setAll(pieceNum+1, 8, pieceNum+6, true, false);
-        board[whiteFleet[pieceNum+5].row][whiteFleet[pieceNum+5].column]=whiteFleet[pieceNum].type;
-    }*/
+    for(int pieceNum=5;pieceNum<8;pieceNum++){
+        whiteFleet[pieceNum].setAll(pieceNum-3, 8, pieceNum-4, true, false);//WORK ON THIS
+        board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;//WORK ON THIS
+    }
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
     return 0;
 }
