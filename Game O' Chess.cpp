@@ -32,11 +32,11 @@ class Piece{
             }else if(type=="N"||type=="n"){
                 
             }else if(type=="R"||type=="r"){
-                
+             
             }else if(type=="P"){//moves up
                 return(moveToRow>row&&moveToColumn==column);
             }else if(type=="p"){//moves down
-                
+                return(movetoRow<row&&moveToColumn==column);
             }return true;
         }
 };
