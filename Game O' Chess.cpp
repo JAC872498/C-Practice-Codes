@@ -75,7 +75,7 @@ int main(){
     }
     for(int pieceNum=0;pieceNum<8;pieceNum++){
         whiteFleet[pieceNum].setAll(pieceNum, 8, pieceNum+1, true, false, types);
-        blackFleet[pieceNum].setAll(pieceNum, 1, pieceNum+1, false, false, types]);
+        blackFleet[pieceNum].setAll(pieceNum, 1, pieceNum+1, false, false, types);
         board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
