@@ -34,9 +34,9 @@ class Piece{
             }else if(type=="R"||type=="r"){
              
             }else if(type=="P"){//moves up
-                return(moveToRow>row&&moveToColumn==column);
+                return(moveToRow==row-1&&moveToColumn==column);
             }else if(type=="p"){//moves down
-                return(movetoRow<row&&moveToColumn==column);
+                return(movetoRow==row+1&&moveToColumn==column);
             }return true;
         }
 };
