@@ -54,6 +54,14 @@ class Piece{
         }
 };
 
+int findPiece(Piece fleet[16], int givenRow, int givenColumn){
+    for(int x=0;x<16;x++){
+        if(fleet[x].row==givenRow&&fleet[x].column==givenColumn){
+            return x;
+        }
+    }
+}
+
 int main(){
     int turn=0, currentRow, currentColumn, movingRow, movingColumn;
     std::string winner;
@@ -93,7 +101,8 @@ int main(){
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
-            while((isupper(board[currentRow][currentColumn])!=0)||!(board[currentRow][currentColumn].canMoveTo(movingRow, movingColumn, board))){
+            currentRow++;currentColumn++;movingRow++;movingColumn++;
+            while((isupper(board[currentRow][currentColumn])!=0)||!(blackFleet[findPiece(blackFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
                 std::cout<<"Enter the row and column of where you want to move the piece\n";
@@ -110,7 +119,8 @@ int main(){
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
-            while((islower(board[currentRow][currentColumn])!=0)||!(board[currentRow][currentColumn].canMoveTo(movingRow, movingColumn, board))){
+            currentRow++;currentColumn++;movingRow++;movingColumn++;
+            while((islower(board[currentRow][currentColumn])!=0)||!(whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
                 std::cout<<"Enter the row and column of where you want to move the piece\n";
