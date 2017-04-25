@@ -8,9 +8,9 @@ class Piece{
     public:
         int row, column;
         bool isWhite, isTaken;
-        std::string type;//, types[18]={"R","N","B","Q","K","B","N","R","P","r","n","b","q","k","b","n","r","p"};
+        char type;//, types[18]={"R","N","B","Q","K","B","N","R","P","r","n","b","q","k","b","n","r","p"};
         
-        void setAll(int setTypeNum, int setRow, int setColumn, bool setIsWhite, bool setIsTaken, std::string types[18]){
+        void setAll(int setTypeNum, int setRow, int setColumn, bool setIsWhite, bool setIsTaken, char types[18]){
             row=setRow-1;
             column=setColumn-1;
             isWhite=setIsWhite;
@@ -22,7 +22,8 @@ class Piece{
             }
         }
         
-        bool canMoveTo(int moveToRow, int moveToColumn, std::string board[8][8]){
+        bool canMoveTo(int moveToRow, int moveToColumn, char board[8][8]){
+            char t=board[moveToRow][moveToColumn];
             if((row==moveToRow&&column==moveToColumn)||moveToRow<0||moveToColumn<0||moveToRow>=8||moveToColumn>=8){
                 return false;
             }else if(type=="K"||type=="k"){
@@ -36,13 +37,11 @@ class Piece{
             }else if(type=="R"||type=="r"){
              
             }else if(type=="P"){//moves up
-                std::string t=board[moveToRow][moveToColumn];
-                /*if(moveToRow==row-1&&(moveToColumn==column-1||moveToColumn==column+1)&&(board[moveToRow][moveToColumn].compare(std::transform(t.begin(), t.end(), t.begin(), ::tolower)))==0){
+                /*if(moveToRow==row-1&&(moveToColumn==column-1||moveToColumn==column+1)&&(t=="k"||t=="q"||t=="b"||t=="n"||t)){
                     return true;
                 }*/
                 return(moveToRow==row-1&&moveToColumn==column);
             }else if(type=="p"){//moves down
-                std::string t=board[moveToRow][moveToColumn];
                 /*if(moveToRow==row+1&&(moveToColumn==column-1||moveToColumn==column+1)&&){
                     return true;
                 }*/
@@ -52,17 +51,17 @@ class Piece{
 };
 
 int main(){
-    std::string board[8][8]={
-        {".",".",".",".",".",".",".","."},
-        {".",".",".",".",".",".",".","."},
-        {".",".",".",".",".",".",".","."},
-        {".",".",".",".",".",".",".","."},
-        {".",".",".",".",".",".",".","."},
-        {".",".",".",".",".",".",".","."},
-        {".",".",".",".",".",".",".","."},
-        {".",".",".",".",".",".",".","."}
+    char board[8][8]={
+        {'.','.','.','.','.','.','.','.'},
+        {'.','.','.','.','.','.','.','.'},
+        {'.','.','.','.','.','.','.','.'},
+        {'.','.','.','.','.','.','.','.'},
+        {'.','.','.','.','.','.','.','.'},
+        {'.','.','.','.','.','.','.','.'},
+        {'.','.','.','.','.','.','.','.'},
+        {'.','.','.','.','.','.','.','.'},
     };
-    std::string types[18]={"R","N","B","Q","K","B","N","R","P","r","n","b","q","k","b","n","r","p"};
+    char types[18]={'R','N','B','Q','K','B','N','R','P','r','n','b','q','k','b','n','r','p'};
     /*White pieces*/Piece whiteKing, whiteQueen, whiteRook1, whiteRook2, whiteKnight1, whiteKnight2, whiteBishop1, whiteBishop2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8;
     /*Black pieces*/Piece blackKing, blackQueen, blackRook1, blackRook2, blackKnight1, blackKnight2, blackBishop1, blackBishop2, blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, blackPawn7, blackPawn8;
     Piece whiteFleet[16]={whiteRook1, whiteKnight1, whiteBishop1, whiteQueen, whiteKing, whiteBishop2, whiteKnight2, whiteRook2, whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8};
@@ -80,9 +79,8 @@ int main(){
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
-    //std::cout<<whiteFleet[10].type<<whiteFleet[10].row<<whiteFleet[10].column<<"\n";
-    //std::cout<<whiteFleet[10].canMoveTo(4,2);
-    char t='p',s='P';
-    std::cout<<isupper(t)<<isupper(s);
+    std::cout<<whiteFleet[10].type<<whiteFleet[10].row<<whiteFleet[10].column<<"\n";
+    /*char t='p',s='P';
+    std::cout<<isupper(t)<<isupper(s);*/
     return 0;
 }
