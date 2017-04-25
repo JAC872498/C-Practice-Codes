@@ -1,3 +1,5 @@
+/*pg 43*/
+
 #include <iostream>
 #include <ctype.h>
 #include <stdlib.h>
@@ -91,11 +93,35 @@ int main(){
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
+            while((isupper(board[currentRow][currentColumn])!=0)||!(board[currentRow][currentColumn].canMoveTo(movingRow, movingColumn, board))){
+                std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
+                std::cin>>currentRow>>currentColumn;
+                std::cout<<"Enter the row and column of where you want to move the piece\n";
+                std::cin>>movingRow>>movingColumn;
+            }
+            if(board[movingRow][movingColumn]!='.'){
+                
+            }else{
+                board[movingRow][movingColumn]=board[currentRow][currentColumn];
+                board[currentRow][currentColumn]='.';
+            }
         }else{
             std::cout<<"White's turn.\nEnter the row and column of the piece you want to move\n";
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
+            while((islower(board[currentRow][currentColumn])!=0)||!(board[currentRow][currentColumn].canMoveTo(movingRow, movingColumn, board))){
+                std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
+                std::cin>>currentRow>>currentColumn;
+                std::cout<<"Enter the row and column of where you want to move the piece\n";
+                std::cin>>movingRow>>movingColumn;
+            }
+            if(board[movingRow][movingColumn]!='.'){
+                
+            }else{
+                board[movingRow][movingColumn]=board[currentRow][currentColumn];
+                board[currentRow][currentColumn]='.';
+            }
         }
     }
     std::cout<<winner<<" won in "<<turn<<" turns";
