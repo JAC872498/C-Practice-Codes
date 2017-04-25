@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <stdio.h>
+#include <ctype.h>
 
 class Piece{
     public:
@@ -80,8 +82,7 @@ int main(){
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
     //std::cout<<whiteFleet[10].type<<whiteFleet[10].row<<whiteFleet[10].column<<"\n";
     //std::cout<<whiteFleet[10].canMoveTo(4,2);
-    std::string t="p",s="p";
-    std::cout<<board[1][1];
-    std::cout<<(board[1][1].compare(s)==0);
+    char t='p',s='P';
+    std::cout<<isupper(t)<<isupper(s);
     return 0;
 }
