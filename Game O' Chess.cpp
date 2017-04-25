@@ -1,5 +1,3 @@
-/*pg 43*/
-
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -22,7 +20,7 @@ class Piece{
             }
         }
         
-        bool canMoveTo(int moveToRow, int moveToColumn){//, string board[][]){
+        bool canMoveTo(int moveToRow, int moveToColumn, std::string board[8][8]){
             if((row==moveToRow&&column==moveToColumn)||moveToRow<0||moveToColumn<0||moveToRow>=8||moveToColumn>=8){
                 return false;
             }else if(type=="K"||type=="k"){
@@ -36,14 +34,14 @@ class Piece{
             }else if(type=="R"||type=="r"){
              
             }else if(type=="P"){//moves up
-                /*std::string t=board[moveToRow][moveToColumn];
-                if(moveToRow==row-1&&(moveToColumn==column-1||moveToColumn=column+1)&&board[moveToRow][moveToColumn].compare(std::transform(t.begin(), t.end(), t.begin(), ::tolower))==0){
+                std::string t=board[moveToRow][moveToColumn];
+                /*if(moveToRow==row-1&&(moveToColumn==column-1||moveToColumn==column+1)&&(board[moveToRow][moveToColumn].compare(std::transform(t.begin(), t.end(), t.begin(), ::tolower)))==0){
                     return true;
                 }*/
                 return(moveToRow==row-1&&moveToColumn==column);
             }else if(type=="p"){//moves down
-                /*std::string t=board[moveToRow][moveToColumn];
-                if(moveToRow==row+1&&(moveToColumn==column-1||moveToColumn=column+1)&&board[moveToRow][moveToColumn].compare(std::transform(t.begin(), t.end(), t.begin(), ::tolower))!=0){
+                std::string t=board[moveToRow][moveToColumn];
+                /*if(moveToRow==row+1&&(moveToColumn==column-1||moveToColumn==column+1)&&board[moveToRow][moveToColumn].compare(std::transform(t.begin(), t.end(), t.begin(), ::tolower))!=0){
                     return true;
                 }*/
                 return(moveToRow==row+1&&moveToColumn==column);
@@ -82,5 +80,7 @@ int main(){
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
     //std::cout<<whiteFleet[10].type<<whiteFleet[10].row<<whiteFleet[10].column<<"\n";
     //std::cout<<whiteFleet[10].canMoveTo(4,2);
+    std::string a1="x", b1="x";
+    std::cout<<((a1.compare(b1))==0);
     return 0;
 }
