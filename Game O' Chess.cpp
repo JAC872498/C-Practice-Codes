@@ -1,7 +1,4 @@
 #include <iostream>
-#include <algorithm>
-#include <string>
-#include <stdio.h>
 #include <ctype.h>
 
 class Piece{
