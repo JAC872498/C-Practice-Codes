@@ -92,7 +92,7 @@ int main(){
         board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
-    std::cout<<whiteFleet[5].type<<whiteFleet[5].row<<whiteFleet[5].column<<"\n";
+    //std::cout<<whiteFleet[5].type<<whiteFleet[5].row<<whiteFleet[5].column<<"\n";
     while(true){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
@@ -101,7 +101,7 @@ int main(){
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
-            currentRow++;currentColumn++;movingRow++;movingColumn++;
+            currentRow--;currentColumn--;movingRow--;movingColumn--;
             while((isupper(board[currentRow][currentColumn])!=0)||!(blackFleet[findPiece(blackFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
@@ -119,7 +119,7 @@ int main(){
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
-            currentRow++;currentColumn++;movingRow++;movingColumn++;
+            currentRow--;currentColumn--;movingRow--;movingColumn--;
             while((islower(board[currentRow][currentColumn])!=0)||!(whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
