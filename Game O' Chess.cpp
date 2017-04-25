@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctype.h>
+#include <stdlib.h>
 
 class Piece{
     public:
@@ -24,13 +25,13 @@ class Piece{
             if((row==moveToRow&&column==moveToColumn)||moveToRow<0||moveToColumn<0||moveToRow>=8||moveToColumn>=8){
                 return false;
             }else if(type=='K'||type=='k'){
-                return(moveToRow-row<=1&&moveToRow>=-1&&moveToColumn-column<=1&&moveToColumn-column>=-1);
+                return(abs(moveToRow-row)<=1&&abs(moveToColumn-column)<=1);
             }else if(type=='Q'||type=='q'){
-                return((moveToRow-row==moveToColumn-column||moveToRow-row==(moveToColumn-column)*-1)||((moveToRow==row&&moveToColumn!=column)||(moveToRow!=row&&moveToColumn==column)));
+                return((abs(moveToRow-row)==abs(moveToColumn-column))||((moveToRow==row&&moveToColumn!=column)||(moveToRow!=row&&moveToColumn==column)));
             }else if(type=='B'||type=='b'){
-                return(moveToRow-row==moveToColumn-column||moveToRow-row==(moveToColumn-column)*-1);
+                return(abs(moveToRow-row)==abs(moveToColumn-column));
             }else if(type=='N'||type=='n'){
-                
+                return((abs(moveToRow-row)==2&&abs(moveToColumn-column)==1)||(abs(moveToRow-row)==1&&abs(moveToColumn-column)==2));
             }else if(type=='R'||type=='r'){
                 return((moveToRow==row&&moveToColumn!=column)||(moveToRow!=row&&moveToColumn==column));
             }else if(type=='P'){//moves up
