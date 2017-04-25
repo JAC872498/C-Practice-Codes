@@ -1,5 +1,3 @@
-/*pg 43*/
-
 #include <iostream>
 #include <ctype.h>
 #include <stdlib.h>
@@ -109,7 +107,9 @@ int main(){
                 std::cin>>movingRow>>movingColumn;
             }
             if(board[movingRow][movingColumn]!='.'){
-                
+                whiteFleet[findPiece(whiteFleet, movingRow, movingColumn)].isTaken=true;
+                board[movingRow][movingColumn]=board[currentRow][currentColumn];
+                board[currentRow][currentColumn]='.';
             }else{
                 board[movingRow][movingColumn]=board[currentRow][currentColumn];
                 board[currentRow][currentColumn]='.';
