@@ -24,7 +24,7 @@ class Piece{
             if((row==moveToRow&&column==moveToColumn)||moveToRow<0||moveToColumn<0||moveToRow>=8||moveToColumn>=8){
                 return false;
             }else if(type=='K'||type=='k'){
-                
+                return(moveToRow-row<=1&&moveToRow>=-1&&moveToColumn-column<=1&&moveToColumn-column>=-1);
             }else if(type=='Q'||type=='q'){
                 
             }else if(type=='B'||type=='b'){
@@ -76,6 +76,6 @@ int main(){
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
-    std::cout<<whiteFleet[10].type<<whiteFleet[10].row<<whiteFleet[10].column<<"\n";
+    std::cout<<whiteFleet[4].type<<whiteFleet[4].row<<whiteFleet[4].column<<"\n";
     return 0;
 }
