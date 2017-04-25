@@ -26,13 +26,13 @@ class Piece{
             }else if(type=='K'||type=='k'){
                 return(moveToRow-row<=1&&moveToRow>=-1&&moveToColumn-column<=1&&moveToColumn-column>=-1);
             }else if(type=='Q'||type=='q'){
-                
+                return((moveToRow-row==moveToColumn-column||moveToRow-row==(moveToColumn-column)*-1)||((moveToRow==row&&moveToColumn!=column)||(moveToRow!=row&&moveToColumn==column)));
             }else if(type=='B'||type=='b'){
-                
+                return(moveToRow-row==moveToColumn-column||moveToRow-row==(moveToColumn-column)*-1);
             }else if(type=='N'||type=='n'){
                 
             }else if(type=='R'||type=='r'){
-             
+                return((moveToRow==row&&moveToColumn!=column)||(moveToRow!=row&&moveToColumn==column));
             }else if(type=='P'){//moves up
                 if(moveToRow==row-1&&(moveToColumn==column-1||moveToColumn==column+1)&&(islower(t)!=0)){
                     return true;
@@ -76,6 +76,6 @@ int main(){
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
     for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
-    std::cout<<whiteFleet[4].type<<whiteFleet[4].row<<whiteFleet[4].column<<"\n";
+    std::cout<<whiteFleet[5].type<<whiteFleet[5].row<<whiteFleet[5].column<<"\n";
     return 0;
 }
