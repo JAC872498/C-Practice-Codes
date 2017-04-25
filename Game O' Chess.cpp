@@ -24,6 +24,10 @@ class Piece{
             char t=board[moveToRow][moveToColumn];
             if((row==moveToRow&&column==moveToColumn)||moveToRow<0||moveToColumn<0||moveToRow>=8||moveToColumn>=8){
                 return false;
+            }else if(t!='.'&&(islower(t)!=0)&&(islower(type)!=0)){
+                return false;
+            }else if(t!='.'&&(isupper(t)!=0)&&(isupper(type)!=0)){
+                return false;
             }else if(type=='K'||type=='k'){
                 return(abs(moveToRow-row)<=1&&abs(moveToColumn-column)<=1);
             }else if(type=='Q'||type=='q'){
@@ -44,7 +48,7 @@ class Piece{
                     return true;
                 }
                 return(moveToRow==row+1&&moveToColumn==column);
-            }return true;
+            }
         }
 };
 
