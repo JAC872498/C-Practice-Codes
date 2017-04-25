@@ -53,6 +53,8 @@ class Piece{
 };
 
 int main(){
+    int turn=0, currentRow, currentColumn, movingRow, movingColumn;
+    std::string winner;
     char board[8][8]={
         {'.','.','.','.','.','.','.','.'},
         {'.','.','.','.','.','.','.','.'},
@@ -80,7 +82,22 @@ int main(){
         board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
-    for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
     std::cout<<whiteFleet[5].type<<whiteFleet[5].row<<whiteFleet[5].column<<"\n";
+    while(true){
+        turn++;
+        for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
+        if(turn%2==0){
+            std::cout<<"Black's turn.\nEnter the row and column of the piece you want to move\n";
+            std::cin>>currentRow>>currentColumn;
+            std::cout<<"Enter the row and column of where you want to move the piece\n";
+            std::cin>>movingRow>>movingColumn;
+        }else{
+            std::cout<<"White's turn.\nEnter the row and column of the piece you want to move\n";
+            std::cin>>currentRow>>currentColumn;
+            std::cout<<"Enter the row and column of where you want to move the piece\n";
+            std::cin>>movingRow>>movingColumn;
+        }
+    }
+    std::cout<<winner<<" won in "<<turn<<" turns";
     return 0;
 }
