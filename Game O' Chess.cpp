@@ -61,6 +61,13 @@ int findPiece(Piece fleet[16], int givenRow, int givenColumn){
 }
 
 int check(Piece whiteFleet[16], Piece blackFleet[16], char board[8][8]){//0==no check, 1==black king is in check, 2==white king is in check
+    for(int x=0;x<16;x++){
+        if(whiteFleet[x].canMoveTo(blackFleet[4].row, blackFleet[4].column, board)){
+            return 1;
+        }else if(blackFleet[x].canMoveTo(whiteFleet[4].row, whiteFleet[4].column, board)){
+            return 2;
+        }
+    }
     return 0;
 }
 
@@ -94,7 +101,7 @@ int main(){
         board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
-    //std::cout<<whiteFleet[5].type<<whiteFleet[5].row<<whiteFleet[5].column<<"\n";
+    //std::cout<<whiteFleet[4].type<<whiteFleet[4].row<<whiteFleet[4].column<<"\n";
     while(giveUp!="Y"){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
@@ -112,12 +119,9 @@ int main(){
             }
             if(board[movingRow][movingColumn]!='.'){
                 whiteFleet[findPiece(whiteFleet, movingRow, movingColumn)].isTaken=true;
-                board[movingRow][movingColumn]=board[currentRow][currentColumn];
-                board[currentRow][currentColumn]='.';
-            }else{
-                board[movingRow][movingColumn]=board[currentRow][currentColumn];
-                board[currentRow][currentColumn]='.';
             }
+            board[movingRow][movingColumn]=board[currentRow][currentColumn];
+            board[currentRow][currentColumn]='.';
         }else{
             std::cout<<"White's turn.\nEnter the row and column of the piece you want to move\n";
             std::cin>>currentRow>>currentColumn;
@@ -132,12 +136,9 @@ int main(){
             }
             if(board[movingRow][movingColumn]!='.'){
                 blackFleet[findPiece(blackFleet, movingRow, movingColumn)].isTaken=true;
-                board[movingRow][movingColumn]=board[currentRow][currentColumn];
-                board[currentRow][currentColumn]='.';
-            }else{
-                board[movingRow][movingColumn]=board[currentRow][currentColumn];
-                board[currentRow][currentColumn]='.';
             }
+            board[movingRow][movingColumn]=board[currentRow][currentColumn];
+            board[currentRow][currentColumn]='.';
         }
         if(check(whiteFleet,blackFleet,board)==1){
             std::cout<<"The black king is in check, do you give up?(Y/N)";
