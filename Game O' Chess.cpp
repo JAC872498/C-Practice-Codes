@@ -60,8 +60,8 @@ int findPiece(Piece fleet[16], int givenRow, int givenColumn){
     }
 }
 
-int check(){//0==no check, 1==black king is in check, 2==white king is in check
-    
+int check(Piece whiteFleet[16], Piece blackFleet[16], char board[8][8]){//0==no check, 1==black king is in check, 2==white king is in check
+    return 0;
 }
 
 int main(){
@@ -139,13 +139,13 @@ int main(){
                 board[currentRow][currentColumn]='.';
             }
         }
-        if(check()==1){
+        if(check(whiteFleet,blackFleet,board)==1){
             std::cout<<"The black king is in check, do you give up?(Y/N)";
             std::cin>>giveUp;
             if(giveUp=="Y"){
                 winner="White";
             }
-        }else if(check()==2){
+        }else if(check(whiteFleet,blackFleet,board)==2){
             std::cout<<"The white king is in check, do you give up?(Y/N)";
             std::cin>>giveUp;
             if(giveUp=="Y"){
