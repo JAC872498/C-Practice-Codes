@@ -60,9 +60,13 @@ int findPiece(Piece fleet[16], int givenRow, int givenColumn){
     }
 }
 
+int check(){//0==no check, 1==black king is in check, 2==white king is in check
+    
+}
+
 int main(){
-    int turn=0, currentRow, currentColumn, movingRow, movingColumn;
-    std::string winner;
+    int turn=2, currentRow, currentColumn, movingRow, movingColumn;
+    std::string winner, giveUp="";
     char board[8][8]={
         {'.','.','.','.','.','.','.','.'},
         {'.','.','.','.','.','.','.','.'},
@@ -91,7 +95,7 @@ int main(){
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
     //std::cout<<whiteFleet[5].type<<whiteFleet[5].row<<whiteFleet[5].column<<"\n";
-    while(true){
+    while(giveUp!="Y"){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
         if(turn%2==0){
@@ -127,13 +131,28 @@ int main(){
                 std::cin>>movingRow>>movingColumn;
             }
             if(board[movingRow][movingColumn]!='.'){
-                
+                blackFleet[findPiece(blackFleet, movingRow, movingColumn)].isTaken=true;
+                board[movingRow][movingColumn]=board[currentRow][currentColumn];
+                board[currentRow][currentColumn]='.';
             }else{
                 board[movingRow][movingColumn]=board[currentRow][currentColumn];
                 board[currentRow][currentColumn]='.';
             }
         }
+        if(check()==1){
+            std::cout<<"The black king is in check, do you give up?(Y/N)";
+            std::cin>>giveUp;
+            if(giveUp=="Y"){
+                winner="White";
+            }
+        }else if(check()==2){
+            std::cout<<"The white king is in check, do you give up?(Y/N)";
+            std::cin>>giveUp;
+            if(giveUp=="Y"){
+                winner="Black";
+            }
+        }
     }
-    std::cout<<winner<<" won in "<<turn<<" turns";
+    std::cout<<winner<<" won in "<<turn-2<<" turns";
     return 0;
 }
