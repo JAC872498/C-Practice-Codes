@@ -141,13 +141,13 @@ int main(){
             board[currentRow][currentColumn]='.';
         }
         if(check(whiteFleet,blackFleet,board)==1){
-            std::cout<<"The black king is in check, do you give up?(Y/N)";
+            std::cout<<"The black king is in check, do you give up?(Y/N)\n";
             std::cin>>giveUp;
             if(giveUp=="Y"){
                 winner="White";
-            }
+            }   
         }else if(check(whiteFleet,blackFleet,board)==2){
-            std::cout<<"The white king is in check, do you give up?(Y/N)";
+            std::cout<<"The white king is in check, do you give up?(Y/N)\n";
             std::cin>>giveUp;
             if(giveUp=="Y"){
                 winner="Black";
