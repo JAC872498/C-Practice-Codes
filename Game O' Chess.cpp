@@ -100,7 +100,7 @@ int main(){
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
             currentRow--;currentColumn--;movingRow--;movingColumn--;
-            while((isupper(board[currentRow][currentColumn])!=0)||!(blackFleet[findPiece(blackFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))|||blackFleet[findPiece(blackFleet, currentRow, currentColumn)].isTaken){
+            while((isupper(board[currentRow][currentColumn])!=0)||!(blackFleet[findPiece(blackFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))||blackFleet[findPiece(blackFleet, currentRow, currentColumn)].isTaken){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
                 std::cout<<"Enter the row and column of where you want to move the piece\n";
