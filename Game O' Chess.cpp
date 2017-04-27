@@ -64,7 +64,8 @@ int check(Piece whiteFleet[16], Piece blackFleet[16], char board[8][8]){//0==no 
     for(int x=0;x<16;x++){
         if(whiteFleet[x].canMoveTo(blackFleet[4].row, blackFleet[4].column, board)){
             return 1;
-        }else if(blackFleet[x].canMoveTo(whiteFleet[4].row, whiteFleet[4].column, board)){
+        }
+        if(blackFleet[x].canMoveTo(whiteFleet[4].row, whiteFleet[4].column, board)){
             return 2;
         }
     }
