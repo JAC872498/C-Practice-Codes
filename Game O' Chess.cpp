@@ -20,6 +20,11 @@ class Piece{
             }
         }
         
+        void moveTo(int setRow, int setColumn){
+            row=setRow-1;
+            column=setColumn-1;
+        }
+        
         bool canMoveTo(int moveToRow, int moveToColumn, char board[8][8]){
             char t=board[moveToRow][moveToColumn];
             if((row==moveToRow&&column==moveToColumn)||moveToRow<0||moveToColumn<0||moveToRow>=8||moveToColumn>=8){
@@ -53,6 +58,7 @@ class Piece{
 };
 
 int findPiece(Piece fleet[16], int givenRow, int givenColumn){
+    
     for(int x=0;x<16;x++){
         if(fleet[x].row==givenRow&&fleet[x].column==givenColumn){
             return x;
@@ -106,23 +112,23 @@ int main(){
     while(giveUp!="Y"){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
+        std::cout<<whiteFleet[7].type<<whiteFleet[7].row<<whiteFleet[7].column<<"\n";
         if(turn%2==0){
             std::cout<<"Black's turn.\nEnter the row and column of the piece you want to move\n";
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
-            currentRow--;currentColumn--;movingRow--;movingColumn--;
-            while((isupper(board[currentRow][currentColumn])!=0)||!(blackFleet[findPiece(blackFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))||blackFleet[findPiece(blackFleet, currentRow, currentColumn)].isTaken){
+            while((isupper(board[currentRow-1][currentColumn-1])!=0)||!(blackFleet[findPiece(blackFleet, currentRow-1, currentColumn-1)].canMoveTo(movingRow-1, movingColumn-1, board))||blackFleet[findPiece(blackFleet, currentRow-1, currentColumn-1)].isTaken){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
                 std::cout<<"Enter the row and column of where you want to move the piece\n";
                 std::cin>>movingRow>>movingColumn;
             }
+            currentRow--;currentColumn--;movingRow--;movingColumn--;
             if(board[movingRow][movingColumn]!='.'){
                 whiteFleet[findPiece(whiteFleet, movingRow, movingColumn)].isTaken=true;
             }
-            blackFleet[findPiece(blackFleet, currentRow, currentColumn)].row=currentRow;
-            blackFleet[findPiece(blackFleet, currentRow, currentColumn)].column=currentColumn;
+            blackFleet[findPiece(blackFleet,currentRow,currentColumn)].moveTo(movingRow,movingColumn);
             board[movingRow][movingColumn]=board[currentRow][currentColumn];
             board[currentRow][currentColumn]='.';
         }else{
@@ -130,18 +136,17 @@ int main(){
             std::cin>>currentRow>>currentColumn;
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
-            currentRow--;currentColumn--;movingRow--;movingColumn--;
-            while((islower(board[currentRow][currentColumn])!=0)||!(whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].canMoveTo(movingRow, movingColumn, board))||whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].isTaken){
+            while((islower(board[currentRow-1][currentColumn-1])!=0)||!(whiteFleet[findPiece(whiteFleet, currentRow-1, currentColumn-1)].canMoveTo(movingRow-1, movingColumn-1, board))||whiteFleet[findPiece(whiteFleet, currentRow-1, currentColumn-1)].isTaken){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
                 std::cout<<"Enter the row and column of where you want to move the piece\n";
                 std::cin>>movingRow>>movingColumn;
             }
+            currentRow--;currentColumn--;movingRow--;movingColumn--;
             if(board[movingRow][movingColumn]!='.'){
                 blackFleet[findPiece(blackFleet, movingRow, movingColumn)].isTaken=true;
             }
-            whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].row=currentRow;
-            whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].column=currentColumn;
+            whiteFleet[findPiece(whiteFleet,currentRow,currentColumn)].moveTo(movingRow,movingColumn);
             board[movingRow][movingColumn]=board[currentRow][currentColumn];
             board[currentRow][currentColumn]='.';
         }
