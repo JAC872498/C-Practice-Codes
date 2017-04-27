@@ -121,6 +121,8 @@ int main(){
             if(board[movingRow][movingColumn]!='.'){
                 whiteFleet[findPiece(whiteFleet, movingRow, movingColumn)].isTaken=true;
             }
+            blackFleet[findPiece(blackFleet, currentRow, currentColumn)].row=currentRow;
+            blackFleet[findPiece(blackFleet, currentRow, currentColumn)].column=currentColumn;
             board[movingRow][movingColumn]=board[currentRow][currentColumn];
             board[currentRow][currentColumn]='.';
         }else{
@@ -138,6 +140,8 @@ int main(){
             if(board[movingRow][movingColumn]!='.'){
                 blackFleet[findPiece(blackFleet, movingRow, movingColumn)].isTaken=true;
             }
+            whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].row=currentRow;
+            whiteFleet[findPiece(whiteFleet, currentRow, currentColumn)].column=currentColumn;
             board[movingRow][movingColumn]=board[currentRow][currentColumn];
             board[currentRow][currentColumn]='.';
         }
