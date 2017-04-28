@@ -1,3 +1,4 @@
+//This works, but needs to be polished up
 #include <iostream>
 #include <ctype.h>
 #include <stdlib.h>
@@ -21,8 +22,8 @@ class Piece{
         }
         
         void moveTo(int setRow, int setColumn){
-            row=setRow-1;
-            column=setColumn-1;
+            row=setRow;
+            column=setColumn;
         }
         
         bool canMoveTo(int moveToRow, int moveToColumn, char board[8][8]){
@@ -108,6 +109,8 @@ int main(){
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
     //std::cout<<whiteFleet[4].type<<whiteFleet[4].row<<whiteFleet[4].column<<"\n";
+    //whiteFleet[4].moveTo(6, 5);
+    //std::cout<<whiteFleet[4].row<<whiteFleet[4].column<<"\n";
     while(giveUp!="Y"){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
@@ -122,7 +125,7 @@ int main(){
             while((isupper(board[currentRow-1][currentColumn-1])!=0)||!(blackFleet[currentPiece].canMoveTo(movingRow-1, movingColumn-1, board))||blackFleet[currentPiece].isTaken){
                 std::cout<<"Invalid move, enter the row and column of the piece you want to move\n";
                 std::cin>>currentRow>>currentColumn;
-				currentPiece=findPiece(blackFleet,currentRow-1,currentColumn-1;)
+				currentPiece=findPiece(blackFleet,currentRow-1,currentColumn-1);
                 std::cout<<"Enter the row and column of where you want to move the piece\n";
                 std::cin>>movingRow>>movingColumn;
             }
