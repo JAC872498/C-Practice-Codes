@@ -59,7 +59,7 @@ class Piece{
 
 int findPiece(Piece fleet[16], int givenRow, int givenColumn){
     for(int x=0;x<16;x++){
-        if(fleet[x].row==givenRow-1&&fleet[x].column==givenColumn-1){
+        if(fleet[x].row==givenRow&&fleet[x].column==givenColumn){
             return x;
         }
     }
@@ -129,7 +129,7 @@ int main(){
                 whiteFleet[findPiece(whiteFleet, movingRow, movingColumn)].isTaken=true;
             }
             blackFleet[findPiece(blackFleet,currentRow,currentColumn)].moveTo(movingRow,movingColumn);
-            board[movingRow][movingColumn]=board[currentRow][currentColumn];
+            board[movingRow][movingColumn]=blackFleet[findPiece(blackFleet,currentRow,currentColumn)].type;
             board[currentRow][currentColumn]='.';
         }else{
             std::cout<<"White's turn.\nEnter the row and column of the piece you want to move\n";
@@ -148,7 +148,7 @@ int main(){
                 blackFleet[findPiece(blackFleet, movingRow, movingColumn)].isTaken=true;
             }
             whiteFleet[findPiece(whiteFleet,currentRow,currentColumn)].moveTo(movingRow,movingColumn);
-            board[movingRow][movingColumn]=board[currentRow][currentColumn];
+            board[movingRow][movingColumn]=whiteFleet[findPiece(whiteFleet,currentRow,currentColumn)].type;
             board[currentRow][currentColumn]='.';
         }
         if(check(whiteFleet,blackFleet,board)==1){
