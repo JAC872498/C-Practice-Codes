@@ -129,6 +129,7 @@ int main(){
                 whiteFleet[findPiece(whiteFleet, movingRow, movingColumn)].isTaken=true;
             }
             blackFleet[findPiece(blackFleet,currentRow,currentColumn)].moveTo(movingRow,movingColumn);
+            std::cout<<blackFleet[findPiece(blackFleet,currentRow,currentColumn)].type<<blackFleet[findPiece(blackFleet,currentRow,currentColumn)].row<<blackFleet[findPiece(blackFleet,currentRow,currentColumn)].column<<"\n";
             board[movingRow][movingColumn]=blackFleet[findPiece(blackFleet,currentRow,currentColumn)].type;
             board[currentRow][currentColumn]='.';
         }else{
@@ -148,6 +149,7 @@ int main(){
                 blackFleet[findPiece(blackFleet, movingRow, movingColumn)].isTaken=true;
             }
             whiteFleet[findPiece(whiteFleet,currentRow,currentColumn)].moveTo(movingRow,movingColumn);
+            std::cout<<whiteFleet[findPiece(whiteFleet,movingRow,movingColumn)].type<<whiteFleet[findPiece(whiteFleet,movingRow,movingColumn)].row<<whiteFleet[findPiece(whiteFleet,movingRow,movingColumn)].column<<"\n";
             board[movingRow][movingColumn]=whiteFleet[findPiece(whiteFleet,currentRow,currentColumn)].type;
             board[currentRow][currentColumn]='.';
         }
