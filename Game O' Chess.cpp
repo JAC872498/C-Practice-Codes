@@ -58,9 +58,8 @@ class Piece{
 };
 
 int findPiece(Piece fleet[16], int givenRow, int givenColumn){
-    
     for(int x=0;x<16;x++){
-        if(fleet[x].row==givenRow&&fleet[x].column==givenColumn){
+        if(fleet[x].row==givenRow-1&&fleet[x].column==givenColumn-1){
             return x;
         }
     }
@@ -112,10 +111,11 @@ int main(){
     while(giveUp!="Y"){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
-        std::cout<<whiteFleet[7].type<<whiteFleet[7].row<<whiteFleet[7].column<<"\n";
+        //std::cout<<whiteFleet[7].type<<whiteFleet[7].row<<whiteFleet[7].column<<"\n";
         if(turn%2==0){
             std::cout<<"Black's turn.\nEnter the row and column of the piece you want to move\n";
             std::cin>>currentRow>>currentColumn;
+            std::cout<<blackFleet[findPiece(blackFleet,currentRow-1,currentColumn-1)].type<<blackFleet[findPiece(blackFleet,currentRow-1,currentColumn-1)].row<<blackFleet[findPiece(blackFleet,currentRow-1,currentColumn-1)].column<<"\n";
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
             while((isupper(board[currentRow-1][currentColumn-1])!=0)||!(blackFleet[findPiece(blackFleet, currentRow-1, currentColumn-1)].canMoveTo(movingRow-1, movingColumn-1, board))||blackFleet[findPiece(blackFleet, currentRow-1, currentColumn-1)].isTaken){
@@ -134,6 +134,7 @@ int main(){
         }else{
             std::cout<<"White's turn.\nEnter the row and column of the piece you want to move\n";
             std::cin>>currentRow>>currentColumn;
+            std::cout<<whiteFleet[findPiece(whiteFleet,currentRow-1,currentColumn-1)].type<<whiteFleet[findPiece(whiteFleet,currentRow-1,currentColumn-1)].row<<whiteFleet[findPiece(whiteFleet,currentRow-1,currentColumn-1)].column<<"\n";
             std::cout<<"Enter the row and column of where you want to move the piece\n";
             std::cin>>movingRow>>movingColumn;
             while((islower(board[currentRow-1][currentColumn-1])!=0)||!(whiteFleet[findPiece(whiteFleet, currentRow-1, currentColumn-1)].canMoveTo(movingRow-1, movingColumn-1, board))||whiteFleet[findPiece(whiteFleet, currentRow-1, currentColumn-1)].isTaken){
