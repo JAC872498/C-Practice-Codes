@@ -7,7 +7,7 @@ class Piece{
     public:
         int row, column;
         bool isWhite, isTaken;
-        char type;//, types[18]={"R","N","B","Q","K","B","N","R","P","r","n","b","q","k","b","n","r","p"};
+        char type;
         
         void setAll(int setTypeNum, int setRow, int setColumn, bool setIsWhite, bool setIsTaken, char types[18]){
             row=setRow-1;
@@ -108,13 +108,9 @@ int main(){
         board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
-    //std::cout<<whiteFleet[4].type<<whiteFleet[4].row<<whiteFleet[4].column<<"\n";
-    //whiteFleet[4].moveTo(6, 5);
-    //std::cout<<whiteFleet[4].row<<whiteFleet[4].column<<"\n";
     while(giveUp!="Y"){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
-        //std::cout<<whiteFleet[7].type<<whiteFleet[7].row<<whiteFleet[7].column<<"\n";
         if(turn%2==0){
             std::cout<<"Black's turn.\nEnter the row and column of the piece you want to move\n";
             std::cin>>currentRow>>currentColumn;
@@ -163,13 +159,13 @@ int main(){
         if(check(whiteFleet,blackFleet,board)==1){
             std::cout<<"The black king is in check, do you give up?(Y/N)\n";
             std::cin>>giveUp;
-            if(giveUp=="Y"){
+            if(giveUp=="Y"||giveUp=="y"){
                 winner="White";
             }   
         }else if(check(whiteFleet,blackFleet,board)==2){
             std::cout<<"The white king is in check, do you give up?(Y/N)\n";
             std::cin>>giveUp;
-            if(giveUp=="Y"){
+            if(giveUp=="Y"||giveUp=="y"){
                 winner="Black";
             }
         }
