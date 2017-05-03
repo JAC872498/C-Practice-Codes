@@ -130,7 +130,6 @@ int main(){
                 whiteFleet[findPiece(whiteFleet, movingRow, movingColumn)].isTaken=true;
             }
             blackFleet[currentPiece].moveTo(movingRow,movingColumn);
-            std::cout<<blackFleet[currentPiece].type<<blackFleet[currentPiece].row<<blackFleet[currentPiece].column<<"\n";
             board[movingRow][movingColumn]=blackFleet[currentPiece].type;
             board[currentRow][currentColumn]='.';
         }else{
@@ -152,7 +151,6 @@ int main(){
                 blackFleet[findPiece(blackFleet, movingRow, movingColumn)].isTaken=true;
             }
             whiteFleet[currentPiece].moveTo(movingRow,movingColumn);
-            std::cout<<whiteFleet[currentPiece].type<<whiteFleet[currentPiece].row<<whiteFleet[currentPiece].column<<"\n";
             board[movingRow][movingColumn]=whiteFleet[currentPiece].type;
             board[currentRow][currentColumn]='.';
         }
