@@ -1,4 +1,5 @@
 //This works, but needs to be polished up
+//Basicly just a game of chess 
 #include <iostream>
 #include <ctype.h>
 #include <stdlib.h>
