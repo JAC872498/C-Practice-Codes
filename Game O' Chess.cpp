@@ -109,7 +109,7 @@ int main(){
         board[whiteFleet[pieceNum].row][whiteFleet[pieceNum].column]=whiteFleet[pieceNum].type;
         board[blackFleet[pieceNum].row][blackFleet[pieceNum].column]=blackFleet[pieceNum].type;
     }
-    while(giveUp!="Y"){
+    while(giveUp!="Y"&&giveUp!="y"){
         turn++;
         for(int row=0;row<8;row++){for(int column=0;column<8;column++){std::cout<<board[row][column];}std::cout<<"\n";}
         if(turn%2==0){
@@ -171,4 +171,4 @@ int main(){
     }
     std::cout<<winner<<" won in "<<turn-2<<" turns";
     return 0;
-}
+} 
