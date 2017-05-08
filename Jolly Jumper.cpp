@@ -3,14 +3,12 @@
 #include <iostream>
 
 int main(){
-    int currInt, nextInt;
+    int total;
     while(true){
-        std::cin>>currInt>>nextInt;
-        if(currInt==||nextInt==){
-            break;
-        }
+        std::cin>>total;
+        if(!std::cin){break;}
+        std::cout<<total<<"\n";
     }
-    if(isJolly) std::cout<<"0";
-    else std::cout<<"1";
+    std::cout<<"XD";
     return 0;
 }
