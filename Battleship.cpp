@@ -1,5 +1,4 @@
-/*This basicly recreates the game of battle ship with S being ships, O being water on your board. and M being miss and E being hit on enemy's board.*/
-
+/*This basicly recreates the game of battle ship with S being ships, O being water on your board, and M being miss and E being hit on enemy's board.*/
 #include <iostream>
 #include <string>
 #include <stdlib.h>
