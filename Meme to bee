@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+//bool willStrike(int day, )
+
 int main(){
 	int days, parties, strikes[parties], lost=0;
 	bool counts=true;//dosn't count if on fri or sat, day 1 is sun
@@ -13,9 +15,14 @@ int main(){
 	    counts=true;
 	    if(day%7==0||(day+1)%7==0) counts=false;
 	    if(counts){
-	        
+	        for(int x=0;x<parties;x++){
+	            if(day%strikes[x]==0){
+	                lost+=1;
+	                break;
+	            }
+	        }
 	    }
 	}
-	std::cout<<last;
+	std::cout<<lost;
 	return 0;
 }
