@@ -3,7 +3,10 @@
 #include <iostream>
 
 int main(){
-	int days, parties;
+	int days, parties, strikes[parties];
 	std::cin>>days>>parties;
+	for(int x=0;x<parties;x++){
+	    std::cin>>strikes[x];
+	}
 	return 0;
 }
