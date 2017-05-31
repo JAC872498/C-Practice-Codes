@@ -1,5 +1,7 @@
 /*PG 65*/
 
+#include <iostream>
+
 int main(){
 	int days, parties;
 	std::cin>>days>>parties;
