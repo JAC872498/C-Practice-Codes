@@ -1,5 +1,7 @@
 /**/
 
 int main(){
+	int days, parties;
+	std::cin>>days>>parties;
 	return 0;
 }
