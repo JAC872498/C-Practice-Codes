@@ -1,4 +1,4 @@
-/**/
+/*PG 65*/
 
 int main(){
 	int days, parties;
