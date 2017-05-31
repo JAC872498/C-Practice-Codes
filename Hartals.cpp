@@ -1,8 +1,6 @@
-/*PG 65*/
+/*PG 65 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf*/
 
 #include <iostream>
-
-//bool willStrike(int day, )
 
 int main(){
 	int days, parties, strikes[parties], lost=0;
