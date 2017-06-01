@@ -3,11 +3,12 @@
 #include <iostream>
 
 int main(){
-	int times, days, parties, strikes[parties], lost=0;
+	int days, parties, lost=0;
 	bool counts=true;//dosn't count if on fri or sat, day 1 is sun
-	std::cin>>times;
-	for(int i=0;i<times;i++){
+	//std::cin>>times;
+	//for(int i=0;i<times;i++){
 	std::cin>>days>>parties;
+	int strikes[parties];
 	for(int x=0;x<parties;x++){
 	    std::cin>>strikes[x];
 	}
@@ -24,6 +25,6 @@ int main(){
 	    }
 	}
 	std::cout<<lost;
-	}
+	//}
 	return 0;
 }
