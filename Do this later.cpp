@@ -24,27 +24,28 @@ int main(){
 		c++;//ayy
 	}
 	calc:
-	for(int x=0;x<n;x++){
-		std::cout<<names[x]<<" ";
-	}std::cout<<"\n";
-	for(int y=0;y<c;y++){
-		for(int x=0;x<n;x++){
-			std::cout<<votes[y][x]<<" ";
-			if(votes[y][x]==curr){
-				voted[x]++;
+	for(int curr=1;curr<=n;curr++){
+		for(int y=0;y<c;y++){
+			for(int x=0;x<n;x++){
+				   	if(votes[y][x]==curr){
+					voted[x]++;
+				}
 			}
 		}
-		std::cout<<"\n";
-	}std::cout<<"\n";
-	for(int x=0;x<n;x++){
-		std::cout<<voted[x];
-		if(voted[x]>top){
-			top=voted[x];
-			topX=x;
+		for(int x=0;x<n;x++){
+			   	if(voted[x]>top){
+				top=voted[x];
+			   	topX=x;
+		   	}
+		}
+		if(top*2>=c){
+			goto ending;
+		}else{
+			top=0;
+			topx=0;
 		}
 	}
-	if(top*2>=c){
-		std::cout<<names[topX];
-	}
+	ending:
+	std::cout<<names[topX];
 	return 0;
 }
