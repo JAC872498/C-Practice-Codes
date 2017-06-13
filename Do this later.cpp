@@ -4,8 +4,8 @@
 #include <string>
 
 int main(){
-	int cases,n,c=0,vote,curr=1,top=0,topX;
-	std::cin>>cases>>n;
+	int n,c=0,vote,curr=1,top=0,topX;
+	std::cin>>n;
 	std::string names[n];
 	int votes[1000][n];
 	int voted[n];
