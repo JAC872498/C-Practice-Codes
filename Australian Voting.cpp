@@ -1,10 +1,12 @@
 /*pg.45 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf except the lowest candidate isn't removed*/
 
+/*pg.45 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf except the lowest candidate isn't removed*/
+
 #include <iostream>
 #include <string>
 
 int main(){
-	int n,c=0,vote,curr=1,top=0,topX;
+	int n,c=0,vote,top=0,topX;
 	std::cin>>n;
 	std::string names[n];
 	int votes[1000][n];
@@ -33,10 +35,11 @@ int main(){
 			}
 		}
 		for(int x=0;x<n;x++){
-			   	if(voted[x]>top){
+			if(voted[x]>top){
 				top=voted[x];
-			   	topX=x;
-		   	}
+		   		topX=x;
+		   		voted[x]=0;
+			}
 		}
 		if(top*2>=c){
 			goto ending;
