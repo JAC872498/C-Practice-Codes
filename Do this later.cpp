@@ -4,19 +4,16 @@
 #include <string>
 
 int main(){
-	int cases,n,i,vote;
+	int cases,n,i,vote=1;
 	std::cin>>cases>>n;
 	std::string names[n];
 	int votes[n];
 	for(int x=0;x<n;x++){
-		getline(std::cin, names[x]);
+		std::cin>>names[x];
+		//getline(std::cin, names[x]);
 	}
-	while(true){
+	while(vote!=0){
 		std::cin>>vote;
-		getline(std::cin, vote);
-		if(vote==0){
-			break;
-		}
 		i++;
 		if(i==n){
 			i=0;
