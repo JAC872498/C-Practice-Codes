@@ -4,7 +4,7 @@
 #include <string>
 
 int main(){
-	int cases,n,c=0,vote,curr=1,ballots=0;
+	int cases,n,c=0,vote,curr=1,top=0,topX;
 	std::cin>>cases>>n;
 	std::string names[n];
 	int votes[1000][n];
@@ -38,6 +38,13 @@ int main(){
 	}std::cout<<"\n";
 	for(int x=0;x<n;x++){
 		std::cout<<voted[x];
+		if(voted[x]>top){
+			top=voted[x];
+			topX=x;
+		}
+	}
+	if(top*2>=c){
+		std::cout<<names[topX];
 	}
 	return 0;
 }
