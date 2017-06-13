@@ -1,4 +1,4 @@
-/**/
+/*pg.45 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf except the lowest candidate isn't removed*/
 
 #include <iostream>
 #include <string>
@@ -42,7 +42,7 @@ int main(){
 			goto ending;
 		}else{
 			top=0;
-			topx=0;
+			topX=0;
 		}
 	}
 	ending:
