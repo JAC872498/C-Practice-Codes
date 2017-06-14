@@ -13,7 +13,7 @@ int main(){
 		std::cin>>names[x];
 		voted[x]=0;
 	}
-	while(vote!=0){
+	while(true){
 		for(int i=0;i<n;i++){
 			std::cin>>vote;
 			if(vote==0){
