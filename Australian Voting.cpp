@@ -1,6 +1,5 @@
 /*pg.45 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf except the lowest candidate isn't removed*/
 
-/*pg.45 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf except the lowest candidate isn't removed*/
 
 #include <iostream>
 #include <string>
