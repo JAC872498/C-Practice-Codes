@@ -26,10 +26,9 @@ std::string change(std::string s){
 int main(){
 	std::string wrd,newWrd="";
 	getline(std::cin,wrd);
-	std::cout<<wrd;
 	for(int n=0;n<wrd.length();n++){
-		std::cout<<"\n"<<wrd.substr(n,1);
+		newWrd=newWrd+change(wrd.substr(n,1));
 	}
-	//std::cout<<newWrd;
+	std::cout<<newWrd;
 	return 0;
 }
