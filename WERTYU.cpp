@@ -1,4 +1,4 @@
-/**/
+/*This basicly takes a sentance and moves every letter one to the right(excluding \, ', and /)*/
 
 #include <iostream>
 #include <string>
