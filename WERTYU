@@ -13,6 +13,6 @@ int main(){
 	for(int n=0;n<wrd.length();n++){
 		std::cout<<"\n"<<wrd.substr(n,n+1);
 	}
-	#std::cout<<newWrd;
+	//std::cout<<newWrd;
 	return 0;
 }
