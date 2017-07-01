@@ -1,1 +1,10 @@
 /**/
+
+#include <iostream>
+int main(){
+	std::string l1[13]={"`","1","2","3","4","5","6","7","8","9","0","-","="};//These are L's not 1's
+	std::string l2[13]={"q","w","e","r","t","y","u","i","o","p","[","]","|"};
+	std::string l3[11]={"a","s","d","f","g","h","j","k","l",";","'"};
+	std::string l4[10]={"z","x","c","v","b","n","m",",",".","/"};
+	return 0;
+}
