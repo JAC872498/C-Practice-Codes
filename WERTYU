@@ -9,9 +9,9 @@ int main(){
 	std::string l4[10]={"z","x","c","v","b","n","m",",",".","/"};
 	std::string wrd,newWrd="";
 	getline(std::cin,wrd);
-	std::cout<<wrd<<"\n";
+	std::cout<<wrd;
 	for(int n=0;n<wrd.length();n++){
-		std::cout<<"\n"<<wrd.substr(n,n+1);
+		std::cout<<"\n"<<wrd.substr(n,1);
 	}
 	//std::cout<<newWrd;
 	return 0;
