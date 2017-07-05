@@ -8,9 +8,9 @@ int main(){
 		t[n]=0;
 		s[n]=0;
 	}
-	int name,solved,time;
+	int name=0,solved,time;
 	std::string grade;
-	for(int xd=0;xd<5;xd++){
+	while(/*still another line*/){
 		std::cin>>name>>solved>>time>>grade;
 		if(grade=="I"){
 			t[name-1]+=20;
