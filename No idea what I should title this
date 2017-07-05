@@ -2,13 +2,20 @@
 
 #include <iostream>
 int main(){
+	int t[100];
+	int s[100];
+	for(int n=0;n<100;n++){
+		t[n]=0;
+		s[n]=0;
+	}
 	int name,solved,time;
 	std::string grade;
 	std::cin>>name>>solved>>time>>grade;
 	std::cout<<name<<solved<<time<<grade;
 	if(grade=="I"){
-		
+		t[name-1]+=20;
 	}else if(grade=="C"){
-		
+		t[name-1]+=time;
+		s[name-1]+=1;
 	}
 }
