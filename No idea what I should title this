@@ -1,2 +1,14 @@
 /**/
 
+#include <iostream>
+int main(){
+	int name,solved,time;
+	std::string grade;
+	std::cin>>name>>solved>>time>>grade;
+	std::cout<<name<<solved<<time<<grade;
+	if(grade=="I"){
+		
+	}else if(grade=="C"){
+		
+	}
+}
