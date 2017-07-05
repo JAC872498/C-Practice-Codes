@@ -10,7 +10,7 @@ int main(){
 	}
 	int name,solved,time;
 	std::string grade;
-	while(/*there's another line*/){
+	for(int xd=0;xd<5;xd++){
 		std::cin>>name>>solved>>time>>grade;
 		if(grade=="I"){
 			t[name-1]+=20;
