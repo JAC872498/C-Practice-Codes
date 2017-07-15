@@ -1,3 +1,4 @@
+/*This takes a given revealed mine sweeper board and scores it appropriately*/
 #include <iostream>
 #include <string>
 #include <stdlib.h> 
