@@ -1,5 +1,27 @@
 /**/
 
+#include <iostream>
+
+bool allCrossed(bool* crossed,int members){
+	for(int x=0;x<members;x++){
+		if(crossed[x]==false) return false;
+	}return true;
+}
+
 int main(){
+	int members;
+	std::cin>>members;
+	int paces[members];
+	bool crossed[members];
+	for(int x=0;x<members;x++){
+		std::cin>>paces[x];
+		crossed[x]=false;
+	}
+	int totalTime=0;
+	while(!allCrossed(crossed,members)){
+		for(int x=0;x<members;x++){
+			
+		}
+	}
 	return 0;
 }
