@@ -9,7 +9,7 @@ bool allCrossed(bool* crossed,int members){
 }
 
 int main(){
-	int members;
+	int members,group=1;
 	std::cin>>members;
 	int paces[members];
 	bool crossed[members];
@@ -19,9 +19,19 @@ int main(){
 	}
 	int totalTime=0;
 	while(!allCrossed(crossed,members)){
-		for(int x=0;x<members;x++){
-			
+		if(group!=1&&members>=2&&crossed[0]==false&&crossed[1]==false){
+			totalTime+=paces[1];
+			crossed[0]=true;
+			crossed[1]=true;
+			std::cout<<paces[0]<<" "<<paces[1]<<"\n";
+		}else{
+			totalTime+=paces[group];
+			crossed[group]=true;
+			crossed[group-1]=true;
+			group+=2;
+			std::cout<<paces[group-1]<<" "<<paces[group]<<"\n";
 		}
+		if()
 	}
 	return 0;
 }
