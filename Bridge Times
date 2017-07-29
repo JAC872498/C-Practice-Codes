@@ -31,7 +31,13 @@ int main(){
 			group+=2;
 			std::cout<<paces[group-1]<<" "<<paces[group]<<"\n";
 		}
-		if()
+		if(crossed[0]=true){
+			totalTime+=paces[0];
+			crossed[0]=false;
+		}else{
+			totalTime+=paces[1];
+			crossed[1]=false;
+		}
 	}
 	return 0;
 }
