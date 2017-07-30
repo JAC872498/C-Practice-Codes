@@ -1,8 +1,9 @@
 /**/
 
 #include <iostream>
+#include <vector>
 
-bool allCrossed(bool* crossed,int members){
+bool allCrossed(std::vector<bool> crossed,int members){
 	for(int x=0;x<members;x++){
 		if(crossed[x]==false) return false;
 	}return true;
@@ -15,8 +16,8 @@ int main(){
 		std::cout<<0;
 		return 0;
 	}
-	int paces[members];
-	bool crossed[members];
+	std::vector<int> paces(members);
+	std::vector<bool> crossed(members);
 	for(int x=0;x<members;x++){
 		std::cin>>paces[x];
 		crossed[x]=false;
@@ -39,6 +40,7 @@ int main(){
 			group+=2;
 			std::cout<<paces[group-1]<<" "<<paces[group]<<"\n";
 		}
+		if(allCrossed(crossed,members)) break;
 		if(t==1){//fastest goes back
 			totalTime+=paces[0];
 			crossed[0]=false;
