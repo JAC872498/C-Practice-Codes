@@ -11,6 +11,7 @@ bool allCrossed(std::vector<bool> crossed,int members){
 
 int main(){
 	int members,group=3,totalTime=0,t=0;
+	bool flashLight=true;//true=hasn't crossed, false=has crossed
 	std::cin>>members;
 	if(members==0){
 		std::cout<<0;
@@ -26,32 +27,37 @@ int main(){
 		std::cout<<paces[0];
 		return 0;
 	}
-	while(!allCrossed(crossed,members)){
-		if(t==0){//2 fastest cross, fastest goes back
+	while(group<=members&&!allCrossif(t==1){//fastest goes back
+		crossing:
+		if(allCrossed(crossed,members)) break;
+		if(t==0){//2 fastest cross
 			totalTime+=paces[1];
 			crossed[1]=true;
 			crossed[0]=true;
 			t+=1;
-			std::cout<<paces[0]<<" "<<paces[1]<<"\n";
-		}else{
+			std::cout<<paces[0]<<"A"<<paces[1]<<"\n";
+		}else{//others cross
 			totalTime+=paces[group];
 			crossed[group]=true;
 			crossed[group-1]=true;
 			group+=2;
-			std::cout<<paces[group-1]<<" "<<paces[group]<<"\n";
+			std::cout<<paces[group-1]<<"B"<<paces[group]<<"\n";
 		}
 		if(allCrossed(crossed,members)) break;
 		if(t==1){//fastest goes back
-			totalTime+=paces[0];
+		  	totalTime+=paces[0];
 			crossed[0]=false;
 			t+=1;
-			std::cout<<paces[0];
+			std::cout<<paces[0]<<"C";
+			goto crossing;
 		}else if(t==2){//2nd fastest goes back
-			totalTime+=paces[1];
-			crossed[1]=false;
-			t+=1;
-			std::cout<<paces[1];
+		   	totalTime+=paces[1];
+		   	crossed[1]=false;
+			t=0;
+		   	std::cout<<paces[1]<<"D";
+		   	goto crossing;
 		}
+		
 	}
 	return 0;
 }
