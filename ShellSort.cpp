@@ -19,7 +19,7 @@ int main(){
     for(int x=0;x<cases;x++){
         tries=0;
         std::cin>>num;
-        while(num!=reverse(num)||std::to_string(num).length()){
+        while(num!=reverse(num)){
             tries+=1;
             num+=reverse(num);
         }
