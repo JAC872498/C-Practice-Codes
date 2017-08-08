@@ -14,17 +14,16 @@ int reverse(int n){
 }
 
 int main(){
-    int cases,num,tries=0;
-    std::cin>>cases;
-    for(int x=0;x<cases;x++){
-        tries=0;
+    int num,tries=0;
+    //std::cin>>cases;
+    //for(int x=0;x<cases;x++){
         std::cin>>num;
         while(num!=reverse(num)){
             tries+=1;
             num+=reverse(num);
         }
         std::cout<<tries<<" "<<num<<"\n";
-    }
+    //}
     //std::cout<<str.substr(0,str.length()/2)<<"\n";
     //std::cout<<str.substr(str.length()/2,str.length());
     return 0;
