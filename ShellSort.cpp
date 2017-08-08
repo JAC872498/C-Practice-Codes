@@ -1,26 +1,30 @@
 /**/
 
 #include <iostream>
+#include <string> 
+
+int reverse(int n){
+    int reversedNumber=0,remainder;
+    while(n != 0){
+        remainder=n%10;
+        reversedNumber=reversedNumber*10+remainder;
+        n/=10;
+    }
+    return reversedNumber;
+}
 
 int main(){
-	int amount,curr=0;
-	std::cin>>amount;
-	std::string names[amount];
-	std::string name;
-	int scores[amount];
-	for(int x=0;x<6;x++){
-		std::cin>>name;
-		for(int n=0;n<curr;n++){
-			if(name==names[n]){
-				scores[n]+=1;
-				goto found;
-			}
-		}
-		names[curr]=name;
-		scores[curr]=0;
-		curr+=1;
-		found:
-		std::cout<<"";
-	}
-	return 0;
+    int starting=0,tries=0;
+    std::cin>>starting;
+    std::string str=std::to_string(starting);
+    if(str.substr(0,str.length()/2)==str.substr(str.length()/2,str.length())){
+        std::cout<<tries<<" "<<starting;
+        return 0;
+    }else{
+        again:
+        
+    }
+    //std::cout<<str.substr(0,str.length()/2)<<"\n";
+    //std::cout<<str.substr(str.length()/2,str.length());
+    return 0;
 }
