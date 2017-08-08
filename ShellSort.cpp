@@ -1,30 +1,31 @@
-/**/
+/*PG 140 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf
+Basicly takes a number and adds it reversed until the number is a palindrom, this works with every number except for 196*/
 
 #include <iostream>
 #include <string> 
 
 int reverse(int n){
-    int reversedNumber=0,remainder;
+    int reversedNumber=0,r;
     while(n != 0){
-        remainder=n%10;
-        reversedNumber=reversedNumber*10+remainder;
+        r=n%10;
+        reversedNumber=reversedNumber*10+r;
         n/=10;
     }
     return reversedNumber;
 }
 
 int main(){
-    int num,tries=0;
-    //std::cin>>cases;
-    //for(int x=0;x<cases;x++){
+    int cases,num=0,tries=0;
+    std::cin>>cases;
+    for(int x=0;x<cases;x++){
+        tries=0;
+        num=0;
         std::cin>>num;
         while(num!=reverse(num)){
             tries+=1;
             num+=reverse(num);
         }
         std::cout<<tries<<" "<<num<<"\n";
-    //}
-    //std::cout<<str.substr(0,str.length()/2)<<"\n";
-    //std::cout<<str.substr(str.length()/2,str.length());
+    }
     return 0;
 }
