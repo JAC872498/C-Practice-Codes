@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main(){
-	int n=2,c=0;
+	int n=12,c=0;
 	int f[n];
 	f[0]=1;
 	f[1]=2;
