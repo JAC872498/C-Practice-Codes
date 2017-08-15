@@ -3,7 +3,8 @@
 #include <iostream>
 
 int main(){
-	int n=100,c=0;
+	int n=1,c=0;
+	std::cin>>n;
 	int f[n];
 	f[0]=1;
 	f[1]=2;
@@ -14,7 +15,7 @@ int main(){
 			f[c]=x+1;
 			c+=1;
 			if(c>n){
-				std::cout<<n;
+				std::cout<<x+1;
 				return 0;
 			}
 		}
