@@ -1,4 +1,5 @@
-/*164*/
+/*PG 164 of http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf
+This is basicly a sequence where f(n) contains f(n) amounts of n*/
 
 #include <iostream>
 
