@@ -16,6 +16,7 @@ int reverse(int n){
 
 int main(){
     int cases,num=0,tries=0;
+    std::cout<<"Enter the amount of cases.";
     std::cin>>cases;
     for(int x=0;x<cases;x++){
         tries=0;
