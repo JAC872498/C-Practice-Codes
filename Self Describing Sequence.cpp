@@ -12,7 +12,6 @@ int main(){
 	for(int x=0;x<n;x++){
 		std::cout<<"f(n):"<<f[x]<<"\n";
 		for(int y=0;y<f[x];y++){
-			//std::cout<<"c:"<<c<<"\n";
 			f[c]=x+1;
 			c+=1;
 			if(c>n){
