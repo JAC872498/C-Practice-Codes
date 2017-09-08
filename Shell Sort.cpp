@@ -16,12 +16,12 @@ int reverse(int n){
 
 int main(){
     int cases,num=0,tries=0;
-    std::cout<<"Enter the amount of cases.";
+    std::cout<<"Enter the amount of cases.\n";
     std::cin>>cases;
     for(int x=0;x<cases;x++){
         tries=0;
         num=0;
-        std::cout<<"Enter your number.";
+        std::cout<<"Enter your number.\n";
         std::cin>>num;
         while(num!=reverse(num)){
             tries+=1;
