@@ -10,7 +10,7 @@ int main(){
 	f[0]=1;
 	f[1]=2;
 	for(int x=0;x<n;x++){
-		std::cout<<"n:"<<x+1<<" "<<"f(n):"<<f[x]<<"\n";
+		std::cout<<"f(n):"<<f[x]<<"\n";
 		for(int y=0;y<f[x];y++){
 			//std::cout<<"c:"<<c<<"\n";
 			f[c]=x+1;
