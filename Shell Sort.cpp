@@ -21,6 +21,7 @@ int main(){
     for(int x=0;x<cases;x++){
         tries=0;
         num=0;
+        std::cout<<"Enter your number.";
         std::cin>>num;
         while(num!=reverse(num)){
             tries+=1;
