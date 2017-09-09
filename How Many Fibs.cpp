@@ -19,6 +19,6 @@ int main(){
 			tot+=1;
 		}
 	}
-	std::cout<<"There are "<<tot<<" total fibonnaci numbers inbetween those numbers.";
+	std::cout<<"There are "<<tot<<" total fibonacci numbers inbetween those numbers.";
 	return 0;
 }
