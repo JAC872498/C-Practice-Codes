@@ -4,9 +4,14 @@
 #include <vector>
 
 int main(){
-	std::cout<<"XD";
+	int startRagne=0,endRange=0;
+	std::cout<<"Enter your starting and ending numbers.\n";
+	std::cin>>startRagne>>endRange;
 	std::vector <int> fibs;
 	fibs.push_back(0);
 	fibs.push_back(1);
+	while(fibs[fibs.size()-1]<=endRange){
+		
+	}
 	return 0;
 }
