@@ -1,4 +1,5 @@
-/**/
+/*This takes two given numbers and returns all fibonacci numbers between them
+pg 157 of http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf explains this better*/
 
 #include <iostream>
 #include <vector>
