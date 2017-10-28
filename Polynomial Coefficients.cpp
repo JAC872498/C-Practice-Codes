@@ -5,11 +5,13 @@ The description was preaty terrible for this problem*/
 #include <iostream>
 
 int main(){
-	int n,k;
+	int n,k,cur,tot=0;
 	std::cin>>n>>k;
-	int sequence[k];
+	//int sequence[k];
 	for(int x=0;x<k;x++){
-		std::cin>>sequence[x];
+		std::cin>>cur;
+		tot+=cur;
+		//std::cin>>sequence[x];
 	}
     return(0);
 }
