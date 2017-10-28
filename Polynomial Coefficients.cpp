@@ -3,5 +3,11 @@
 #include <iostream>
 
 int main(){
+	int n,k;
+	std::cin>>n>>k;
+	int sequence[k];
+	for(int x=0;x<k;x++){
+		std::cin>>sequence[x];
+	}
     return(0);
 }
