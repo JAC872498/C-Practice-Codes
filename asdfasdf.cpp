@@ -13,7 +13,7 @@ int main(){
           std::cout<<xPos<<" "<<yPos<<"\n";
       }
       for(int y=0;y<jump;y++){
-          yPos+=1;
+          yPos-=1;
           std::cout<<xPos<<" "<<yPos<<"\n";
       }
       jump+=1;
