@@ -2,7 +2,7 @@
 
 int main(){
   int xPos=0,yPos=0,jump=0,move=1;
-  int graph[6][6];
+  int graph[5][5];
   graph[yPos][xPos]=move;
   //std::cout<<move<<" "<<xPos<<" "<<yPos<<"\n";
   for(int n=0;n<2;n++){
@@ -41,8 +41,8 @@ int main(){
           //std::cout<<move<<" "<<xPos<<" "<<yPos<<"\n";
       }
   }
-  for(int y=0;y<6;y++){
-      for(int x=0;x<6;x++){
+  for(int y=4;y>=0;y--){
+      for(int x=0;x<5;x++){
           std::cout<<graph[y][x]<<" ";
       }
       std::cout<<"\n";
