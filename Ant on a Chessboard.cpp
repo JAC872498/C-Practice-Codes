@@ -2,12 +2,14 @@
 
 #include <iostream>
 #include <iomanip>
+#include <math.h>
 
 int main(){
-  int xPos=0,yPos=0,jump=0,move=1;
-  int graph[5][5];
+  int xPos=0,yPos=0,jump=0,move=1,wantedX,wantedY,wantedNum;
+  std::cin>>wantedNum;
+  int graph[sqrt(wantedNum)][sqrt(wantedNum)];
   graph[yPos][xPos]=move;
-  for(int n=0;n<2;n++){
+  while(move<wantedNum){
       jump+=1;
       yPos+=1;
       move+=1;
@@ -37,10 +39,15 @@ int main(){
           graph[yPos][xPos]=move;
       }
   }
-  for(int y=4;y>=0;y--){
-      for(int x=0;x<5;x++){
+  for(int y=sqrt(wantedNum)-1;y>=0;y--){
+      for(int x=0;x<sqrt(wantedNum);x++){
           std::cout<<std::setw(2)<<std::left<<graph[y][x]<<" ";
+          if(graph[y][x]==wantedNum){
+            wantedY=y;
+            wantedX=x;
+          }
       }
       std::cout<<std::endl;
   }
+  std::cout<<wantedY<<" "<<wantedX;
 }
