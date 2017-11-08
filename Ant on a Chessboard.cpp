@@ -7,7 +7,7 @@
 int main(){
   int xPos=0,yPos=0,jump=0,move=1,wantedX,wantedY,wantedNum;
   std::cin>>wantedNum;
-  int graph[ciel(sqrt(wantedNum))][ciel(sqrt(wantedNum))];
+  int graph[(int) ceil(sqrt(wantedNum))][(int) ceil(sqrt(wantedNum))];
   graph[yPos][xPos]=move;
   while(move<wantedNum){
       jump+=1;
@@ -39,8 +39,8 @@ int main(){
           graph[yPos][xPos]=move;
       }
   }
-  for(int y=ciel(sqrt(wantedNum))-1;y>=0;y--){
-      for(int x=0;x<ciel(sqrt(wantedNum));x++){
+  for(int y=ceil(sqrt(wantedNum))-1;y>=0;y--){
+      for(int x=0;x<ceil(sqrt(wantedNum));x++){
           std::cout<<std::setw(2)<<std::left<<graph[y][x]<<" ";
           if(graph[y][x]==wantedNum){
             wantedY=y;
@@ -49,5 +49,5 @@ int main(){
       }
       std::cout<<std::endl;
   }
-  std::cout<<wantedY<<" "<<wantedX;
+  std::cout<<wantedX+1<<" "<<wantedY+1;
 }
