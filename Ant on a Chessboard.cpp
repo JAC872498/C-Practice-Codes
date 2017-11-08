@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 int main(){
   int xPos=0,yPos=0,jump=0,move=1;
@@ -43,8 +44,8 @@ int main(){
   }
   for(int y=4;y>=0;y--){
       for(int x=0;x<5;x++){
-          std::cout<<graph[y][x]<<" ";
+          std::cout<<std::setw(2)<<std::left<<graph[y][x]<<" ";
       }
-      std::cout<<"\n";
+      std::cout<<std::endl;
   }
 }
