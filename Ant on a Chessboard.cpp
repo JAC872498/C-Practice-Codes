@@ -1,4 +1,4 @@
-//Page 299 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf
+/*Page 299 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf*/
 
 #include <iostream>
 #include <iomanip>
