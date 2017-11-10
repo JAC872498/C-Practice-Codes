@@ -1,4 +1,7 @@
-/*Page 299 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf*/
+/*Page 299 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf
+This explination is too long to go here so just look at it in the book
+An ant walks on a chessboard in a pattern of up, right, down, right, up, left
+Where will this ant be when it walks a given number of steps*/
 
 #include <iostream>
 #include <iomanip>
