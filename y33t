@@ -2,4 +2,6 @@
 Very similar to the 'ants on a chessboard' problem but with a different shape
 Happy Thanksgiving!*/
 
-/**/
+int main(){
+  return(0);
+}
