@@ -2,6 +2,9 @@
 Very similar to the 'ants on a chessboard' problem but with a different shape
 Happy Thanksgiving!*/
 
+#include <iostream>
+
 int main(){
-  return(0);
+	std::cout<<"XD";
+	return(0);
 }
