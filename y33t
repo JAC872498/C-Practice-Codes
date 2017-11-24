@@ -5,6 +5,7 @@ Happy Thanksgiving!*/
 #include <iostream>
 
 int main(){
-	std::cout<<"XD";
+	int xPos=0,yPos=0,spot=0,jump=0;
+	
 	return(0);
 }
