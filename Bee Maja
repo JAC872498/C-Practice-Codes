@@ -12,14 +12,14 @@ int main(){
 	xPos-=horiJump;
 	spot+=1;
 	horiJump+=1;
-	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
+	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
 	yPos-=vertJump;
 	spot+=1;
 	vertJump+=1;
-	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
+	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
 	xPos+=horiJump;
 	spot+=1;
 	horiJump+=1;
-	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
+	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
 	return(0);
 }
