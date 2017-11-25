@@ -12,7 +12,7 @@ int main(){
 	xPos-=horiJump;
 	spot+=1;
 	horiJump+=1;
-	std::cout<<xPos<<" "<<ypPos<<" "<<spot<<"\n";
+	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
 	yPos-=vertJump;
 	spot+=1;
 	vertJump+=1;
