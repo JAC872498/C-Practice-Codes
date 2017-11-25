@@ -16,10 +16,10 @@ int main(){
 	yPos-=vertJump;
 	spot+=1;
 	vertJump+=1;
-	std::cout<<xPos<<" "<<ypPos<<" "<<spot<<"\n";
+	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
 	xPos+=horiJump;
 	spot+=1;
 	horiJump+=1;
-	std::cout<<xPos<<" "<<ypPos<<" "<<spot<<"\n";
+	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
 	return(0);
 }
