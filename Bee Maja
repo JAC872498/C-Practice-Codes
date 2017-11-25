@@ -5,34 +5,39 @@ Happy Thanksgiving!*/
 #include <iostream>
 
 int main(){
-	int xPos=0,yPos=0,spot=1,jump=1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
+	int xPos=0,yPos=0,spot=1,jump=1,wanted,wantedX,wantedY;
+	std::cin>>wanted;
 	yPos+=jump;//the first two moves are weird
 	spot+=1;//also the y-axis is inverted
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
 	xPos-=jump;
 	spot+=1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
 	
-	yPos-=jump;//Up
-	spot+=1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
-	yPos-=jump;//Up right
-	xPos+=jump;
-	spot+=1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
-	xPos+=jump;//Right
-	spot+=1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
-	yPos+=jump+1;//Down+1
-	spot+=1+1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
-	yPos+=jump;//Down left
-	xPos-=jump;
-	spot+=1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
-	xPos-=jump+1;//Left+1
-	spot+=1+1;
-	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
+	for(int n=0;n<jump;n++){
+		yPos-=1;//Up
+		spot+=1;
+	}
+	for(int n=0;n<jump;n++){
+		yPos-=1;//Up right
+		xPos+=1;
+		spot+=1;
+	}
+	for(int n=0;n<jump;n++){
+		xPos+=jump;//Right
+		spot+=1;
+	}
+	for(int n=0;n<=jump;n++){
+		yPos+=jump+1;//Down+1
+		spot+=1+1;
+	}
+	for(int n=0;n<jump;n++){
+		yPos+=jump;//Down left
+		xPos-=jump;
+		spot+=1;
+	}
+	for(int n=0;n<=jump;n++){
+		xPos-=jump+1;//Left+1
+		spot+=1+1;
+		jump+=1;
+	}
 	return(0);
 }
