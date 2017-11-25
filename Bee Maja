@@ -5,7 +5,21 @@ Happy Thanksgiving!*/
 #include <iostream>
 
 int main(){
-	int xPos=0,yPos=0,spot=0,jump=0;
-	
+	int xPos=0,yPos=0,spot=1,horiJump=1,vertJump=1;
+	yPos+=vertJump;
+	spot+=1;
+	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
+	xPos-=horiJump;
+	spot+=1;
+	horiJump+=1;
+	std::cout<<xPos<<" "<<ypPos<<" "<<spot<<"\n";
+	yPos-=vertJump;
+	spot+=1;
+	vertJump+=1;
+	std::cout<<xPos<<" "<<ypPos<<" "<<spot<<"\n";
+	xPos+=horiJump;
+	spot+=1;
+	horiJump+=1;
+	std::cout<<xPos<<" "<<ypPos<<" "<<spot<<"\n";
 	return(0);
 }
