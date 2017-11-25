@@ -8,7 +8,7 @@ int main(){
 	int xPos=0,yPos=0,spot=0,horiJump=1,vertJump=1;
 	yPos+=vertJump;
 	spot+=1;
-	std::cout<<xPos<<" "<<yPos<<" "<<spot<<"\n";
+	std::cout<<spot<<" ("<<xPos<<","<<yPos<<")\n";
 	xPos-=horiJump;
 	spot+=1;
 	horiJump+=1;
