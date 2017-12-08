@@ -6,10 +6,10 @@ int main(){
   int currLen=1, currNum=0;
   for(int n=0;n<3;n++){
       for(int n2=0;n2<currLen;n2++){
-          System.out.print(currNum+" ");
+          std::cout<<currNum<<" ";
           currNum+=1;
       }
-      System.out.print("\n");
+      std::cout<<"\n";
       currLen+=2;
   }
   return(0);
