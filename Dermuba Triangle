@@ -1,5 +1,6 @@
 /*pg307 http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf*/
 
 int main(){
+  int currLen;
   return(0);
 }
