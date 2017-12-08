@@ -1,6 +1,16 @@
 /*pg307 http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf*/
 
+#include <iostream>
+
 int main(){
   int currLen=1, currNum=0;
+  for(int n=0;n<3;n++){
+      for(int n2=0;n2<currLen;n2++){
+          System.out.print(currNum+" ");
+          currNum+=1;
+      }
+      System.out.print("\n");
+      currLen+=2;
+  }
   return(0);
 }
