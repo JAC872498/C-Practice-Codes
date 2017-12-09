@@ -3,8 +3,9 @@
 #include <iostream>
 
 int main(){
-  int currLen=1, currNum=0;
-  for(int n=0;n<3;n++){
+  int currLen=1, currNum=0, maxLen=(2*3+1);
+  int nums[2];
+  for(int n=0;n<4;n++){
       for(int n2=0;n2<currLen;n2++){
           std::cout<<currNum<<" ";
           currNum+=1;
