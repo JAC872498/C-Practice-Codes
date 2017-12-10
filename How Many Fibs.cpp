@@ -1,25 +1,23 @@
-/*This takes two given numbers and returns all fibonacci numbers between them
-pg 157 of http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf explains this better*/
+/*pg157 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf
+given two numbers, a and b, calculate how many fibonacci numbers are between them*/
 
 #include <iostream>
-#include <vector>
+
+int fibs(int num){
+	if(num<=1) return(1);
+	return(fibs(num-2)+fibs(num-1));
+}
 
 int main(){
-	int startRagne=0,endRange=0,tot=0;
-	std::cout<<"Enter your starting and ending numbers.\n";
-	std::cin>>startRagne>>endRange;
-	std::vector <int> fibs;
-	fibs.push_back(0);
-	fibs.push_back(1);
-	while(fibs[fibs.size()-1]<=endRange){
-		fibs.push_back(fibs[fibs.size()-1]+fibs[fibs.size()-2]);
-	}
-	for(int n=0;n<fibs.size();n++){
-		if(fibs[n]>=startRagne&&fibs[n]<=endRange){
-			std::cout<<fibs[n]<<"\n";
-			tot+=1;
+	int a=1,b=1,n=0,ways=0;
+	std::cin>>a>>b;
+	while(a!=0||b!=0){
+		while(fibs(n)<=b){
+			if(fibs(n)>=a) ways+=1;
+			n+=1;
 		}
+		std::cout<<ways<<"\n";
+		std::cin>>a>>b;
+		ways=0,n=0100;
 	}
-	std::cout<<"There are "<<tot<<" total fibonacci numbers inbetween those numbers.";
-	return 0;
 }
