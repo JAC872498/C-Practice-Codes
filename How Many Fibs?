@@ -2,5 +2,13 @@
 
 #include <iostream>
 
+int fibs(int num){
+	if(num<=2) return(1);
+	return(fibs(num-2)+fibs(num-1));
+}
+
 int main(){
+	for(int n=0;n<10;n++){
+		std::cout<<fibs(n)<<"\n";
+	}
 }
