@@ -8,7 +8,15 @@ int fibs(int num){
 }
 
 int main(){
-	for(int n=0;n<10;n++){
-		std::cout<<fibs(n)<<"\n";
+	int a=1,b=1,n=0,ways=0;
+	std::cin>>a>>b;
+	while(a!=0||b!=0){
+		while(fibs(n)<=b){
+			if(fibs(n)>=a) ways+=1;
+			n+=1;
+		}
+		std::cin>>a>>b;
+		std::cout<<ways;
+		ways=0;
 	}
 }
