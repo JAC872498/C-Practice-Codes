@@ -3,4 +3,6 @@
 #include <iostream>
 
 int main(){
+	std::string fullEquation="";
+	std::String dividend=fullEquation.split("/")[0], divisor=.split("/")[1];
 }
