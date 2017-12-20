@@ -1,16 +1,6 @@
-/*pg325 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf*/
+/*https://www.cprogramming.com/challenges/pascal.html*/
 
 #include <iostream>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
 
 int main(){
-	int x1,x2,y1,y2,r;
-	std::cin>>x1>>y1>>x2>>y2>>r;
-	double distA=sqrt(pow(abs(x1-x2),2)+pow(abs(y1-y2),2));//distance between the two points
-	double m=(abs(y1-y2)/abs(x1-x2));//y=mx+b
-	double b=y1-(m*x1);//y=mx+b
- 	std::cout<<distA;
-	return(0);
 }
