@@ -1,10 +1,14 @@
 /*pg325 in http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf*/
 
 #include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <cmath>
 
 int main(){
 	int x1,x2,y1,y2,r;
 	std::cin>>x1>>y1>>x2>>y2>>r;
-	
+	int distA=sqrt(pow(abs(x1-x2),2)+pow(abs(y1-y2),2));//distance between the two points
+ 	std::cout<<distA;
 	return(0);
 }
