@@ -8,7 +8,9 @@
 int main(){
 	int x1,x2,y1,y2,r;
 	std::cin>>x1>>y1>>x2>>y2>>r;
-	int distA=sqrt(pow(abs(x1-x2),2)+pow(abs(y1-y2),2));//distance between the two points
+	double distA=sqrt(pow(abs(x1-x2),2)+pow(abs(y1-y2),2));//distance between the two points
+	double m=(abs(y1-y2)/abs(x1-x2));//y=mx+b
+	
  	std::cout<<distA;
 	return(0);
 }
