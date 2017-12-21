@@ -15,7 +15,7 @@ int main(){
 	}
 	for(int n1=2;n1<row;n1++){
 		for(int n2=1;n2<n1;n2++){
-			f
+			rows[n1][n2]=rows[n1-1][n2]+rows[n1-1][n2];
 		}
 		
 	}
