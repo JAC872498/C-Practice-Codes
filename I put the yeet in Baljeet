@@ -14,7 +14,7 @@ int main(){
 			rows[n1][0]=1;
 			rows[n1][row-1]=1;
 		}else{
-			row[n1][0]=1;
+			rows[n1][0]=1;
 		}
 	}
 	for(int n1=0;n1<row;n1++){
