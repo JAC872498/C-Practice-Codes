@@ -10,12 +10,8 @@ int main(){
 		for(int n2=row-1;n2>n1;n2--){
 			rows[n1][n2]=0;
 		}
-		if(n1!=0){
-			rows[n1][0]=1;
-			rows[n1][row-1]=1;
-		}else{
-			rows[n1][0]=1;
-		}
+		rows[n1][0]=1;
+		rows[n1][n1]=1;
 	}
 	for(int n1=0;n1<row;n1++){
 		for(int n2=0;n2<row;n2++){
