@@ -19,15 +19,22 @@ int main(){
 		}//adding the important numbers inside the 1 'border'
 		
 	}
-	for(int n1=0;n1<row;n1++){
-		for(int n2=0;n2<row;n2++){
-			if(rows[n1][n2]==0){
-				goto endLine;//cuts off a line once it's nothing but 0
-			}else{
-				std::cout<<rows[n1][n2]<<" ";
+	for(int n1=0;n1<row*2-1;n1++){
+		if(n1<row){
+			for(int n2=0;n2<row;n2++){
+				if(rows[n1][n2]==0){
+					goto endLine;//cuts off a line once it's nothing but 0
+				}else{
+					std::cout<<rows[n1][n2]<<" ";
+				}
+			}
+			endLine:
+			std::cout<<"\n";
+		}else{
+			for(int n2=0;n2<row;n2++){
+				std::cout<<rows[(n1-row-3)*-1][n2]<<" " ;
 			}
 		}
-		endLine:
-		std::cout<<"\n";
 	}
+	
 }
