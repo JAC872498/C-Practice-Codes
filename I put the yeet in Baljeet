@@ -13,6 +13,13 @@ int main(){
 		if(n1!=0){
 			rows[n1][0]=1;
 			rows[n1][row-1]=1;
+		}else{
+			row[n1][0]=1;
 		}
+	}
+	for(int n1=0;n1<row;n1++){
+		for(int n2=0;n2<row;n2++){
+			std::cout<<rows[n1][n2]<<"X";
+		}std::cout<<"\n";
 	}
 }
