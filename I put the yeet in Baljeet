@@ -3,4 +3,14 @@
 #include <iostream>
 
 int main(){
+	int row;
+	std::cin>>row;
+	int rows[row][row];
+	for(int n1=0;n1<row;n1++){
+		for(int n2=row-1;n2>n1;n2--){
+			rows[n1][n2]=0;
+			std::cout<<n2<<" ";
+		}
+		std::cout<<"\n";
+	}
 }
