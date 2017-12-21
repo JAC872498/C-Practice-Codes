@@ -1,4 +1,5 @@
-/*https://www.cprogramming.com/challenges/pascal.html*/
+/*https://www.cprogramming.com/challenges/pascal.html
+TODO: fix the formating and spacing*/
 
 #include <iostream>
 
@@ -23,17 +24,23 @@ int main(){
 		if(n1<row){
 			for(int n2=0;n2<row;n2++){
 				if(rows[n1][n2]==0){
-					goto endLine;//cuts off a line once it's nothing but 0
+					goto endLine1;//cuts off a line once it's nothing but 0
 				}else{
 					std::cout<<rows[n1][n2]<<" ";
 				}
 			}
-			endLine:
+			endLine1:
 			std::cout<<"\n";
 		}else{
 			for(int n2=0;n2<row;n2++){
-				std::cout<<rows[(n1-row-3)*-1][n2]<<" " ;
+				if(rows[(n1-row-3)*-1][n2]==0){
+					goto endLine2;
+				}else{
+					std::cout<<rows[(n1-row-3)*-1][n2]<<" " ;
+				}
 			}
+			endLine2:
+			std::cout<<"\n";
 		}
 	}
 	
