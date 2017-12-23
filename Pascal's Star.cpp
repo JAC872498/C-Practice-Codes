@@ -1,5 +1,5 @@
 /*https://www.cprogramming.com/challenges/pascal.html
-TODO: fix the formating and spacing*/
+This makes pascal's triangle but twice into a star shape*/
 
 #include <iostream>
 
