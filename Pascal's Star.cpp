@@ -33,10 +33,10 @@ int main(){
 			std::cout<<"\n";
 		}else{
 			for(int n2=0;n2<row;n2++){
-				if(rows[(n1-row-3)*-1][n2]==0){
+				if(rows[(n1-row-row+2)*-1][n2]==0){
 					goto endLine2;
 				}else{//doing the 2nd reverse triangle
-					std::cout<<rows[(n1-row-3)*-1][n2]<<" " ;
+					std::cout<<rows[(n1-row-row+2)*-1][n2]<<" " ;
 				}
 			}
 			endLine2:
