@@ -23,7 +23,7 @@ int main(){
 	for(int n1=0;n1<row*2-1;n1++){
 		if(n1<row){
 			for(int space=0;space<row-n1;space++){
-				std::cout<<" ";
+				std::cout<<" ";//spacing to make it a star
 			}
 			for(int n2=0;n2<row;n2++){
 				if(rows[n1][n2]==0){
@@ -35,6 +35,9 @@ int main(){
 			endLine1:
 			std::cout<<"\n";
 		}else{
+			for(int space=0;space<row-(n1-row-row+2)*-1;space++){
+				std::cout<<" ";//spacing to make it a star
+			}
 			for(int n2=0;n2<row;n2++){
 				if(rows[(n1-row-row+2)*-1][n2]==0){
 					goto endLine2;
