@@ -25,7 +25,7 @@ int main(){
 			for(int n2=0;n2<row;n2++){
 				if(rows[n1][n2]==0){
 					goto endLine1;//cuts off a line once it's nothing but 0
-				}else{
+				}else{//doing the 1st triangle
 					std::cout<<rows[n1][n2]<<" ";
 				}
 			}
@@ -35,7 +35,7 @@ int main(){
 			for(int n2=0;n2<row;n2++){
 				if(rows[(n1-row-3)*-1][n2]==0){
 					goto endLine2;
-				}else{
+				}else{//doing the 2nd reverse triangle
 					std::cout<<rows[(n1-row-3)*-1][n2]<<" " ;
 				}
 			}
