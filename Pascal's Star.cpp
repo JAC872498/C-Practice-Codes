@@ -22,6 +22,9 @@ int main(){
 	}
 	for(int n1=0;n1<row*2-1;n1++){
 		if(n1<row){
+			for(int space=0;space<row-n1;space++){
+				std::cout<<" ";
+			}
 			for(int n2=0;n2<row;n2++){
 				if(rows[n1][n2]==0){
 					goto endLine1;//cuts off a line once it's nothing but 0
