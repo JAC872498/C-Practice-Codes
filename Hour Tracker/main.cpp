@@ -9,5 +9,8 @@ int main(){
 	hours.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
 	int total=0;
 	std::cout<<"(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours";
+	while(wage>>w){
+		std::cout<<w;
+	}
 	return(0);
 }
