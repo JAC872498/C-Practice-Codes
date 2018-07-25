@@ -19,9 +19,10 @@ int main(){
 		if(choice==1){
 			
 		}else if(choice==2){
-			cout<<"\nEnter new wage.\n";
+			cout<<"Enter new wage.\n";
 			cin>>wage;
 		}else if(choice==3){
+			cout<<"Enter starting hours.\n";
 			
 		}else if(choice==4){
 			
