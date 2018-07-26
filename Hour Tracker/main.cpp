@@ -29,12 +29,11 @@ int main(){
 	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
 	fls>>wage;
 	while(fls>>fileNum){
-		h+=1;
 		hours.push_back(fileNum);
-		if(h%2==0){
-			total+=hrTMnt(hours[h]);
-			total-=hrTMnt(hours[h-1]);
+		if(h%2==1){
+			total+=(hrTMnt(hours[h])-hrTMnt(hours[h-1]));
 		}
+		h+=1;
 	}
 	fls.close();
 	
@@ -44,19 +43,13 @@ int main(){
 	}
 	fls.close();
 	
-	/*display_vector(hours);
-	cout<<"\n";
-	display_vector(dates);*/
-	for(int t=30;t<=2400;t+=30){
-		cout<<"\n"<<hrTMnt(t);
-	}
-	
 	while(choice!=5){
 		cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
 		cin>>choice;
 		if(choice==1){
-			cout<<"Wage: $"<<(wage/100)<<"."<<(wage%100);
-			cout<<"Total Hours: ";
+			cout<<"Wage: $"<<(wage/100)<<"."<<(wage%100)<<"\n";
+			cout<<"Total Hours: "<<(total/60)<<"\n";
+			cout<<"Total Amount Owed: $"<<(((total/60)*wage)/100)<<"\n";
 		}else if(choice==2){
 			cout<<"Enter new wage.\n";
 			cin>>wage;
