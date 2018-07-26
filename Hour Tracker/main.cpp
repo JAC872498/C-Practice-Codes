@@ -54,7 +54,7 @@ int main(){
 			cout<<"_____________________________"<<"\n";
 			for(int n=0;n<hours.size();n+=2){
 				cout<<hours[n]<<"	"<<hours[n+1]<<"	"<<69<<"	";
-				cout<<dates[n/2]<<"-"<<dates[(n/2)+1]<<"-"<<dates[(n/2)+2]<<"\n";
+				cout<<dates[(n/2)*3]<<"-"<<dates[(n/2)*3+1]<<"-"<<dates[(n/2)*3+2]<<"\n";
 			}
 		}else if(choice==2){
 			cout<<"Enter new wage.\n";
