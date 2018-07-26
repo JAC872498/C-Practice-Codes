@@ -14,6 +14,9 @@ int hrTMnt(int hour){//Hours to minutes
 	return(mins);
 }
 
+int mntTHr(int min){//Minutes to hours
+	
+}
 
 void display_vector(const vector<int> &v)
 {
@@ -53,7 +56,7 @@ int main(){
 			cout<<"Start	Stop	Hours	Date"<<"\n";
 			cout<<"_____________________________"<<"\n";
 			for(int n=0;n<hours.size();n+=2){
-				cout<<hours[n]<<"	"<<hours[n+1]<<"	"<<69<<"	";
+				cout<<hours[n]<<"	"<<hours[n+1]<<"	"<<(hrTMnt(hours[n+1])-hrTMnt(hours[n]))<<"	";
 				cout<<dates[(n/2)*3]<<"-"<<dates[(n/2)*3+1]<<"-"<<dates[(n/2)*3+2]<<"\n";
 			}
 		}else if(choice==2){
