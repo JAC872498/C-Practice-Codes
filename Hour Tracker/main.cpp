@@ -48,8 +48,8 @@ int main(){
 		cin>>choice;
 		if(choice==1){
 			cout<<"Wage: $"<<(wage/100)<<"."<<(wage%100)<<"\n";
-			cout<<"Total Hours: "<<(total/60)<<"\n";
-			cout<<"Total Amount Owed: $"<<(((total/60)*wage)/100)<<"\n";
+			cout<<"Total Hours: "<<(total/60.0)<<"\n";
+			cout<<"Total Amount Owed: $"<<(((total/60.0)*wage)/100)<<"\n";
 		}else if(choice==2){
 			cout<<"Enter new wage.\n";
 			cin>>wage;
