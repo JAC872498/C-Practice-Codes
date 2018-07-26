@@ -14,22 +14,26 @@ void display_vector(const vector<int> &v)
 }
 
 int main(){
-	ifstream hrs;
-	vector<int> hours;
-	vector<int> dates;
-	int n=0,wage,hour,total=0,choice=0;
-	hrs.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
-	hrs>>wage;
-	while(hrs>>hour){
-		n+=1;
-		//if(n%3==0){
-		//	dates.push_back(hour);
-		//}else{
-			hours.push_back(hour);
-		//}
+	ifstream fls;
+	vector<int> hours,dates;
+	int wage,n,total=0,choice=0;
+	
+	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
+	fls>>wage;
+	while(fls>>n){
+		hours.push_back(n);
 	}
+	fls.close();
+	
+	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Dates.txt");
+	while(fls>>n){
+		dates.push_back(n);
+	}
+	fls.close();
+	
 	display_vector(hours);
-	//display_vector(dates);
+	cout<<"\n";
+	display_vector(dates);
 	while(choice!=5){
 		cout<<"(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
 		cin>>choice;
