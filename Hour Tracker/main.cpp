@@ -50,6 +50,11 @@ int main(){
 			cout<<"Wage: $"<<(wage/100)<<"."<<(wage%100)<<"\n";
 			cout<<"Total Hours: "<<(total/60.0)<<"\n";
 			cout<<"Total Amount Owed: $"<<(((total/60.0)*wage)/100)<<"\n";
+			cout<<"Start	Stop	Hours	Date"<<"\n";
+			cout<<"_____________________________"<<"\n";
+			for(int n=0;n<hours.size()/2;n++){
+				cout<<hours[n]<<"\n";
+			}
 		}else if(choice==2){
 			cout<<"Enter new wage.\n";
 			cin>>wage;
