@@ -2,17 +2,34 @@
 #include <fstream>
 #include <vector>
 
+#include <algorithm>
+#include <iterator>
+
 using namespace std;
+
+void display_vector(const vector<int> &v)
+{
+    std::copy(v.begin(), v.end(),
+        std::ostream_iterator<int>(std::cout, " "));
+}
 
 int main(){
 	ifstream hrs;
 	vector<int> hours;
-	int wage,hour,total=0,choice=0;
+	vector<int> dates;
+	int n=0,wage,hour,total=0,choice=0;
 	hrs.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
 	hrs>>wage;
 	while(hrs>>hour){
-		hours.push_back(hour);
+		n+=1;
+		//if(n%3==0){
+		//	dates.push_back(hour);
+		//}else{
+			hours.push_back(hour);
+		//}
 	}
+	display_vector(hours);
+	//display_vector(dates);
 	while(choice!=5){
 		cout<<"(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
 		cin>>choice;
