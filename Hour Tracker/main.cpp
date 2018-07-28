@@ -29,7 +29,8 @@ void display_vector(const vector<int> &v)//Temporary function to display vectors
 int main(){
 	ifstream fls;
 	vector<int> hours,timeAmounts,dates;//Hours-start and end times, timeamounts-time spent in minutes, dates-date of the hours
-	int wage,fileNum,h=0,total=0,choice=0,startH,endH;
+	int wage=0,fileNum,h=0,total=0;
+	int choice=0,startH,endH,inputYear,inputMonth,inputDay;
 	
 	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
 	fls>>wage;
@@ -62,11 +63,22 @@ int main(){
 				cout<<hours[n]<<"	"<<hours[n+1]<<"	"<<timeAmounts[n/2]/60.0<<"	";
 				cout<<dates[(n/2)*3]<<"-"<<dates[(n/2)*3+1]<<"-"<<dates[(n/2)*3+2]<<"\n";
 			}
+			
 		}else if(choice==2){
 			cout<<"Enter new wage.\n";
 			cin>>wage;
+			
 		}else if(choice==3){
-			cout<<"Enter starting hours.\n";
+			cout<<"Enter starting hour.\n";
+			cin>>startH;
+			cout<<"Enter ending hour.\n";
+			cin>>endH;
+			cout<<"Enter the year.\n";
+			cin>>inputYear;
+			cout<<"Enter the month.\n";
+			cin>>inputMonth;
+			cout<<"Enter the day.\n";
+			cin>>inputDay;
 			
 		}else if(choice==4){
 			
