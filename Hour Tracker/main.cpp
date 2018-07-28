@@ -28,7 +28,7 @@ void display_vector(const vector<int> &v)
 
 int main(){
 	ifstream fls;
-	vector<int> hours,dates;
+	vector<int> hours,timeAmounts,dates;
 	int wage,fileNum,h=0,total=0,choice=0;
 	
 	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
@@ -37,6 +37,7 @@ int main(){
 		hours.push_back(fileNum);
 		if(h%2==1){
 			total+=(hrTMnt(hours[h])-hrTMnt(hours[h-1]));
+			timeAmounts.push_back(hrTMnt(hours[h])-hrTMnt(hours[h-1]));
 		}
 		h+=1;
 	}
@@ -58,7 +59,7 @@ int main(){
 			cout<<"Start	Stop	Hours	Date"<<"\n";
 			cout<<"_____________________________"<<"\n";
 			for(int n=0;n<hours.size();n+=2){
-				cout<<hours[n]<<"	"<<hours[n+1]<<"	"<<(hrTMnt(hours[n+1])-hrTMnt(hours[n]))<<"	";
+				cout<<hours[n]<<"	"<<hours[n+1]<<"	"<<timeAmounts[n/2]/60.0<<"	";
 				cout<<dates[(n/2)*3]<<"-"<<dates[(n/2)*3+1]<<"-"<<dates[(n/2)*3+2]<<"\n";
 			}
 		}else if(choice==2){
