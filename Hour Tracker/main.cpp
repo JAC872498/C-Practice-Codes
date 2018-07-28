@@ -20,7 +20,7 @@ int mntTHr(int min){//Minutes to hours
 	
 }
 
-void display_vector(const vector<int> &v)
+void display_vector(const vector<int> &v)//Temporary function to display vectors
 {
     std::copy(v.begin(), v.end(),
         std::ostream_iterator<int>(std::cout, " "));
@@ -28,7 +28,7 @@ void display_vector(const vector<int> &v)
 
 int main(){
 	ifstream fls;
-	vector<int> hours,timeAmounts,dates;
+	vector<int> hours,timeAmounts,dates;//Hours-start and end times, timeamounts-time spent in minutes, dates-date of the hours
 	int wage,fileNum,h=0,total=0,choice=0;
 	
 	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
