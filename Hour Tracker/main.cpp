@@ -65,7 +65,7 @@ int main(){
 			}
 			
 		}else if(choice==2){
-			cout<<"Enter new wage.\n";
+			cout<<"Enter new wage w/o the decimal spot.\n";
 			cin>>wage;
 			
 		}else if(choice==3){
