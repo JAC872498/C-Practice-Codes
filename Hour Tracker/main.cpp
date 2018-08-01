@@ -81,7 +81,7 @@ int main(){
 			cin>>inputDay;
 			
 		}else if(choice==4){
-			cout<<"Enter number of hours to remove.\n";
+			cout<<"Enter the amount of numbers to remove.\n";
 			
 		}else if(choice!=5){
 			cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
