@@ -1,5 +1,5 @@
-/*
-*/
+/*This is a program I built mostly for myself
+It keeps track of your wage, your hours worked, and the dates worked*/
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -29,7 +29,7 @@ void display_vector(const vector<int> &v)//Temporary function to display vectors
 int main(){
 	ifstream fls;
 	vector<int> hours,timeAmounts,dates;//Hours-start and end times, timeamounts-time spent in minutes, dates-date of the hours
-	int wage=0,fileNum,h=0,total=0;
+	int wage=0,fileNum,h=0,total=0,removeHours;
 	int choice=0,startH,endH,inputYear,inputMonth,inputDay;
 	
 	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
@@ -82,7 +82,8 @@ int main(){
 			
 		}else if(choice==4){
 			cout<<"Enter the amount of numbers to remove.\n";
-			
+			cin>>removeHours;
+				
 		}else if(choice!=5){
 			cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
 		   	cin>>choice;
