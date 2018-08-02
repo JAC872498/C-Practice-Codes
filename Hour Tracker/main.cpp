@@ -81,7 +81,6 @@ int main(){
 			cout<<"Enter the day.\n";
 			cin>>inputDay;
 			
-			
 		}else if(choice==4){
 			cout<<"Enter the amount of numbers to remove.\n";
 			cin>>removeHours;
@@ -91,5 +90,11 @@ int main(){
 		   	cin>>choice;
 		}
 	}
+	flsOut.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
+	flsOut<<wage<<"\n";
+	for(int n=0;n<hours.size();n+=2){
+		flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
+	}
+	flsOut.close();
 	return(0);
 }
