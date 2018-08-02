@@ -80,6 +80,11 @@ int main(){
 			cin>>inputMonth;
 			cout<<"Enter the day.\n";
 			cin>>inputDay;
+			hours.push_back(startH);
+			hours.push_back(endH);
+			dates.push_back(inputYear);
+			dates.push_back(inputMonth);
+			dates.push_back(inputDay);
 			
 		}else if(choice==4){
 			cout<<"Enter the amount of numbers to remove.\n";
@@ -94,6 +99,11 @@ int main(){
 	flsOut<<wage<<"\n";
 	for(int n=0;n<hours.size();n+=2){
 		flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
+	}
+	flsOut.close();
+	flsOut.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Dates.txt");
+	for(int n=0;n<dates.size();n+=3){
+		flsOut<<dates[n]<<" "<<dates[n+1]<<" "<<dates[n+2]<<"\n";
 	}
 	flsOut.close();
 	return(0);
