@@ -27,14 +27,15 @@ void display_vector(const vector<int> &v)//Temporary function to display vectors
 }
 
 int main(){
-	ifstream fls;
+	ifstream flsIn;
+	ofstream flsOut;
 	vector<int> hours,timeAmounts,dates;//Hours-start and end times, timeamounts-time spent in minutes, dates-date of the hours
 	int wage=0,fileNum,h=0,total=0,removeHours;
 	int choice=0,startH,endH,inputYear,inputMonth,inputDay;
 	
-	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
-	fls>>wage;
-	while(fls>>fileNum){
+	flsIn.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
+	flsIn>>wage;
+	while(flsIn>>fileNum){
 		hours.push_back(fileNum);
 		if(h%2==1){
 			total+=(hrTMnt(hours[h])-hrTMnt(hours[h-1]));
@@ -42,16 +43,16 @@ int main(){
 		}
 		h+=1;
 	}
-	fls.close();
+	flsIn.close();
 	
-	fls.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Dates.txt");
-	while(fls>>fileNum){
+	flsIn.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Dates.txt");
+	while(flsIn>>fileNum){
 		dates.push_back(fileNum);
 	}
-	fls.close();
+	flsIn.close();
 	
 	while(choice!=5){
-		cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
+		cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Save and Exit\n";
 		cin>>choice;
 		if(choice==1){
 			cout<<"Wage: $"<<(wage/100)<<"."<<(wage%100)<<"\n";
@@ -79,6 +80,7 @@ int main(){
 			cin>>inputMonth;
 			cout<<"Enter the day.\n";
 			cin>>inputDay;
+			
 			
 		}else if(choice==4){
 			cout<<"Enter the amount of numbers to remove.\n";
