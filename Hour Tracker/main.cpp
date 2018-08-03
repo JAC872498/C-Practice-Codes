@@ -1,5 +1,6 @@
 /*This is a program I built mostly for myself
 It keeps track of your wage, your hours worked, and the dates worked*/
+
 #include <iostream>
 #include <fstream>
 #include <vector>
