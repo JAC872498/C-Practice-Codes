@@ -18,7 +18,8 @@ int hrTMnt(int hour){//Hours to minutes
 }
 
 int mntTHr(int min){//Minutes to hours
-	
+	int hours=0;
+	return(hours);
 }
 
 void display_vector(const vector<int> &v){//Temporary function to display vectors
