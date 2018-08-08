@@ -22,7 +22,6 @@ int mntTHr(int min){//Minutes to hours
 }
 
 void display_vector(const vector<int> &v)//Temporary function to display vectors
-{
     std::copy(v.begin(), v.end(),
         std::ostream_iterator<int>(std::cout, " "));
 }
