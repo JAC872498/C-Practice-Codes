@@ -20,6 +20,7 @@ int hrTMnt(int hour){//Hours to minutes
 int mntTHr(int min){//Minutes to hours
 	int hours=0;
 	return(hours);
+	//TODO: finish this
 }
 
 void display_vector(const vector<int> &v){//Temporary function to display vectors
@@ -91,6 +92,7 @@ int main(){
 		}else if(choice==4){
 			cout<<"Enter the amount of numbers to remove.\n";
 			cin>>removeHours;
+			//TODO: finish this
 				
 		}else if(choice!=5){
 			cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
