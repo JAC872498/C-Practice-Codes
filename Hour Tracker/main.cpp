@@ -17,9 +17,8 @@ int hrTMnt(int hour){//Hours to minutes
 	return(mins);
 }
 
-int mntTHr(int min){//Minutes to hours
-	int hours=0;
-	return(hours);
+float mntTHr(int min){//Minutes to hours
+	return(mins/60.0);
 	//TODO: finish this
 }
 
