@@ -91,9 +91,12 @@ int main(){
 			cout<<"Enter the amount of minutes to remove.\n";
 			cin>>removeMinutes;
 			if(removeMinutes>hrTMnt(timeAmounts[0])){
-				
+				//TODO: Fill this in
 			}else{
 				timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
+			}
+			if(timeAmounts[0]<=0){
+				//TODO: Fill this in
 			}
 		}else if(choice!=5){
 			cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
