@@ -88,13 +88,12 @@ int main(){
 			//TODO: Fix bug where hours entered and then display w/o saved to file breaks program
 			
 		}else if(choice==4){
-			cout<<"Enter the amount of numbers to remove.\n";
+			cout<<"Enter the amount of minutes to remove.\n";
 			cin>>removeMinutes;
-			removeMinutes*=60
-			if(removeMinutes>hrTMnt(hours[0]){
+			if(removeMinutes>hrTMnt(timeAmounts[0])){
 				
 			}else{
-				hours[0]=mntTHr(hrTMnt(hours[0])-removeMinutes);
+				timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
 			}
 		}else if(choice!=5){
 			cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
