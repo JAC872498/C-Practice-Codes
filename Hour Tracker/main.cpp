@@ -18,7 +18,7 @@ int hrTMnt(int hour){//Hours to minutes
 }
 
 float mntTHr(int min){//Minutes to hours
-	return(min/60.0);
+	return(min/60.0*100);
 }
 
 void display_vector(const vector<int> &v){//Temporary function to display vectors
@@ -30,7 +30,7 @@ int main(){
 	ifstream flsIn;
 	ofstream flsOut;
 	vector<int> hours,timeAmounts,dates;//Hours-start and end times, timeamounts-time spent in minutes, dates-date of the hours
-	int wage=0,fileNum,h=0,total=0,removeHours;
+	int wage=0,fileNum,h=0,total=0,removeMinutes;
 	int choice=0,startH,endH,inputYear,inputMonth,inputDay;
 	
 	flsIn.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
@@ -89,9 +89,13 @@ int main(){
 			
 		}else if(choice==4){
 			cout<<"Enter the amount of numbers to remove.\n";
-			cin>>removeHours;
-			//TODO: finish this
+			cin>>removeMinutes;
+			removeMinutes*=60
+			if(removeMinutes>hrTMnt(hours[0]){
 				
+			}else{
+				hours[0]=mntTHr(hrTMnt(hours[0])-removeMinutes);
+			}
 		}else if(choice!=5){
 			cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
 		   	cin>>choice;
