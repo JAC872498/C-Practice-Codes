@@ -35,7 +35,7 @@ int main(){
 	
 	flsIn.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
 	flsIn>>wage;
-	while(flsIn>>fileNum){
+	while(flsIn>>fileNum){//Getting hours from text file
 		hours.push_back(fileNum);
 		if(h%2==1){
 			total+=(hrTMnt(hours[h])-hrTMnt(hours[h-1]));
@@ -46,7 +46,7 @@ int main(){
 	flsIn.close();
 	
 	flsIn.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Dates.txt");
-	while(flsIn>>fileNum){
+	while(flsIn>>fileNum){//Getting dates from text file
 		dates.push_back(fileNum);
 	}
 	flsIn.close();
@@ -54,7 +54,7 @@ int main(){
 	while(choice!=5){
 		cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Save and Exit\n";
 		cin>>choice;
-		if(choice==1){
+		if(choice==1){//Displaying info
 			cout<<"Wage: $"<<(wage/100)<<"."<<(wage%100)<<"\n";
 			cout<<"Total Hours: "<<(total/60.0)<<"\n";
 			cout<<"Total Amount Owed: $"<<(((total/60.0)*wage)/100)<<"\n";
@@ -65,11 +65,11 @@ int main(){
 				cout<<dates[(n/2)*3]<<"-"<<dates[(n/2)*3+1]<<"-"<<dates[(n/2)*3+2]<<"\n";
 			}
 			
-		}else if(choice==2){
+		}else if(choice==2){//Entering new wage
 			cout<<"Enter new wage w/o the decimal spot.\n";
 			cin>>wage;
 			
-		}else if(choice==3){
+		}else if(choice==3){//Entering new hours
 			cout<<"Enter starting hour.\n";
 			cin>>startH;
 			cout<<"Enter ending hour.\n";
@@ -87,15 +87,16 @@ int main(){
 			dates.push_back(inputDay);
 			//TODO: Fix bug where hours entered and then display w/o saved to file breaks program
 			
-		}else if(choice==4){
+		}else if(choice==4){//REmoving hours
 			cout<<"Enter the amount of minutes to remove.\n";
 			cin>>removeMinutes;
 			if(removeMinutes>hrTMnt(timeAmounts[0])){
-				//TODO: Fill this in
+				removeMinutes-=hrTMnt(timeAmounts[0]);
+				timesAmounts[0]=0;
 			}else{
 				timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
 			}
-			if(timeAmounts[0]<=0){
+			if(timeAmounts[0]<=0){//Remove time amount
 				//TODO: Fill this in
 			}
 		}else if(choice!=5){
@@ -104,7 +105,7 @@ int main(){
 		}
 	}
 	flsOut.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
-	flsOut<<wage<<"\n";
+	flsOut<<wage<<"\n";//Writing back to the text files
 	for(int n=0;n<hours.size();n+=2){
 		flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
 	}
