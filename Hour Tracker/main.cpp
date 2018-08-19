@@ -94,6 +94,7 @@ int main(){
 				if(removeMinutes>hrTMnt(timeAmounts[0])){
 					removeMinutes-=hrTMnt(timeAmounts[0]);
 					timesAmounts[0]=0;
+					dates[0]=0;//TODO: Finish this
 				}else{
 					timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
 				}
