@@ -90,14 +90,19 @@ int main(){
 		}else if(choice==4){//REmoving hours
 			cout<<"Enter the amount of minutes to remove.\n";
 			cin>>removeMinutes;
-			if(removeMinutes>hrTMnt(timeAmounts[0])){
-				removeMinutes-=hrTMnt(timeAmounts[0]);
-				timesAmounts[0]=0;
-			}else{
-				timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
-			}
-			if(timeAmounts[0]<=0){//Remove time amount
-				//TODO: Fill this in
+			while(removeMinutes>0){
+				if(removeMinutes>hrTMnt(timeAmounts[0])){
+					removeMinutes-=hrTMnt(timeAmounts[0]);
+					timesAmounts[0]=0;
+				}else{
+					timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
+				}
+				if(timeAmounts[0]<=0){//Remove time amount
+					//TODO: Fill this in
+					for(int n=1;n<timeAmounts.length;n++){
+						timeAmoutns[n-1]=timeAmounts[n];
+					}
+				}
 			}
 		}else if(choice!=5){
 			cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Exit\n";
