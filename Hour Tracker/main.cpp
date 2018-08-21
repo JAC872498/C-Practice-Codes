@@ -116,12 +116,12 @@ int main(){
 	}
 	flsOut.open("Hours.txt");
 	flsOut<<wage<<"\n";//Writing back to the text files
-	for(int n=0;n<hours.size();n+=2){
+	for(int n=0;n<hours.size();n+=2){//TODO: Don't add 0s
 		flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
 	}
 	flsOut.close();
 	flsOut.open("Dates.txt");
-	for(int n=0;n<dates.size();n+=3){
+	for(int n=0;n<dates.size();n+=3){//TODO: Don't add 0s
 		flsOut<<dates[n]<<" "<<dates[n+1]<<" "<<dates[n+2]<<"\n";
 	}
 	flsOut.close();
