@@ -51,6 +51,8 @@ int main(){
 	}
 	flsIn.close();
 	
+	display_vector(dates);
+	
 	while(choice!=5){
 		cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Save and Exit\n";
 		cin>>choice;
@@ -93,15 +95,15 @@ int main(){
 			while(removeMinutes>0){
 				if(removeMinutes>hrTMnt(timeAmounts[0])){
 					removeMinutes-=hrTMnt(timeAmounts[0]);
-					timesAmounts[0]=0;
+					timeAmounts[0]=0;
 					dates[0]=0;//TODO: Finish this
 				}else{
 					timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
 				}
 				if(timeAmounts[0]<=0){//Remove time amount
 					//TODO: Fill this in
-					for(int n=1;n<timeAmounts.length;n++){
-						timeAmoutns[n-1]=timeAmounts[n];
+					for(int n=1;n<sizeof(timeAmounts);n++){
+						timeAmounts[n-1]=timeAmounts[n];
 					}
 				}
 			}
