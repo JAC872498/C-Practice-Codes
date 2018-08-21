@@ -87,7 +87,7 @@ int main(){
 			dates.push_back(inputDay);
 			//TODO: Fix bug where hours entered and then display w/o saved to file breaks program
 			
-		}else if(choice==4){//REmoving hours
+		}else if(choice==4){//Removing hours
 			cout<<"Enter the amount of minutes to remove.\n";
 			cin>>removeMinutes;
 			while(removeMinutes>0){
