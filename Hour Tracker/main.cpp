@@ -96,7 +96,9 @@ int main(){
 				if(removeMinutes>hrTMnt(timeAmounts[0])){
 					removeMinutes-=hrTMnt(timeAmounts[0]);
 					timeAmounts[0]=0;
-					dates[0]=0;//TODO: Finish this
+					dates[0]=0;
+					dates[1]=0;
+					dates[2]=0;
 				}else{
 					timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
 				}
@@ -112,13 +114,13 @@ int main(){
 		   	cin>>choice;
 		}
 	}
-	flsOut.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
+	flsOut.open("Hours.txt");
 	flsOut<<wage<<"\n";//Writing back to the text files
 	for(int n=0;n<hours.size();n+=2){
 		flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
 	}
 	flsOut.close();
-	flsOut.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Dates.txt");
+	flsOut.open("Dates.txt");
 	for(int n=0;n<dates.size();n+=3){
 		flsOut<<dates[n]<<" "<<dates[n+1]<<" "<<dates[n+2]<<"\n";
 	}
