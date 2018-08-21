@@ -33,7 +33,7 @@ int main(){
 	int wage=0,fileNum,h=0,total=0,removeMinutes;
 	int choice=0,startH,endH,inputYear,inputMonth,inputDay;
 	
-	flsIn.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Hours.txt");
+	flsIn.open("Hours.txt");
 	flsIn>>wage;
 	while(flsIn>>fileNum){//Getting hours from text file
 		hours.push_back(fileNum);
@@ -45,7 +45,7 @@ int main(){
 	}
 	flsIn.close();
 	
-	flsIn.open("C:\\Users\\Dell\\CCodes\\Hour Tracker\\Dates.txt");
+	flsIn.open("Dates.txt");
 	while(flsIn>>fileNum){//Getting dates from text file
 		dates.push_back(fileNum);
 	}
