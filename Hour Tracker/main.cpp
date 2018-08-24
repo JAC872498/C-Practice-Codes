@@ -124,7 +124,9 @@ int main(){
 	flsOut.close();
 	flsOut.open("Dates.txt");
 	for(int n=0;n<dates.size();n+=3){//TODO: Don't add 0s
+		if(dates[n]!=0 || dates[n+1]!=0 || dates[n+2]!=0){
 			flsOut<<dates[n]<<" "<<dates[n+1]<<" "<<dates[n+2]<<"\n";
+		}
 	}
 	flsOut.close();
 	return(0);
