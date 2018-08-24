@@ -118,13 +118,13 @@ int main(){
 	flsOut<<wage<<"\n";//Writing back to the text files
 	for(int n=0;n<hours.size();n+=2){//TODO: Don't add 0s
 		if(hours[n]!=0 || hours[n+1]!=0){
-		flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
+			flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
 		}
 	}
 	flsOut.close();
 	flsOut.open("Dates.txt");
 	for(int n=0;n<dates.size();n+=3){//TODO: Don't add 0s
-		flsOut<<dates[n]<<" "<<dates[n+1]<<" "<<dates[n+2]<<"\n";
+			flsOut<<dates[n]<<" "<<dates[n+1]<<" "<<dates[n+2]<<"\n";
 	}
 	flsOut.close();
 	return(0);
