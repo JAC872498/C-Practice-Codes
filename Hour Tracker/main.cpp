@@ -117,7 +117,7 @@ int main(){
 	flsOut.open("Hours.txt");
 	flsOut<<wage<<"\n";//Writing back to the text files
 	for(int n=0;n<hours.size();n+=2){//TODO: Don't add 0s
-		if(hours[n]!=0 || hours[n+1]!=0){
+		if(timeAmounts[n/2]!=0){
 			flsOut<<hours[n]<<" "<<hours[n+1]<<"\n";
 		}
 	}
