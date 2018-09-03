@@ -30,7 +30,7 @@ int main(){
 	ifstream flsIn;
 	ofstream flsOut;
 	vector<int> hours,timeAmounts,dates;//Hours-start and end times, timeamounts-time spent in minutes, dates-date of the hours
-	int wage=0,fileNum,h=0,total=0,removeMinutes;
+	int wage=0,fileNum,h=0,total=0,removeMinutes,removeNum=0;
 	int choice=0,startH,endH,inputYear,inputMonth,inputDay;
 	
 	flsIn.open("Hours.txt");
@@ -51,7 +51,7 @@ int main(){
 	}
 	flsIn.close();
 	
-	display_vector(dates);
+	//display_vector(dates);
 	
 	while(choice!=5){
 		cout<<"\n(1)Check info\n(2)Change Wage\n(3)Add Hours\n(4)Remove Hours\n(5)Save and Exit\n";
@@ -92,21 +92,24 @@ int main(){
 		}else if(choice==4){//Removing hours
 			cout<<"Enter the amount of minutes to remove.\n";
 			cin>>removeMinutes;
+			removeNum=0;
 			while(removeMinutes>0){
-				if(removeMinutes>hrTMnt(timeAmounts[0])){
-					removeMinutes-=hrTMnt(timeAmounts[0]);
-					timeAmounts[0]=0;
-					dates[0]=0;
-					dates[1]=0;
-					dates[2]=0;
+				if(removeMinutes>hrTMnt(timeAmounts[removeNum])){
+					removeMinutes-=hrTMnt(timeAmounts[removeNum]);
+					timeAmounts[removeNum]=0;
+					dates[removeNum*3]=0;
+					dates[(removeNum*3)+1]=0;
+					dates[(removeNum*3)+2]=0;
+					removeNum+=1;
 				}else{
-					timeAmounts[0]=mntTHr(hrTMnt(timeAmounts[0])-removeMinutes);
+					timeAmounts[removeNum]=mntTHr(hrTMnt(timeAmounts[removeNum])-removeMinutes);
+					removeMinutes=0;
 				}
 				if(timeAmounts[0]<=0){//Remove time amount
 					//TODO: Fill this in
-					for(int n=1;n<sizeof(timeAmounts);n++){
+					/*for(int n=1;n<sizeof(timeAmounts);n++){
 						timeAmounts[n-1]=timeAmounts[n];
-					}
+					}*/
 				}
 			}
 		}else if(choice!=5){
