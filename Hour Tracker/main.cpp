@@ -21,7 +21,7 @@ float mntTHr(int min){//Minutes to hours
 	return(min/60.0*100);
 }
 
-void display_vector(const vector<int> &v){//Temporary function to display vectors
+void display_vector(const vector<int> &v){//Test function used to display vectors
     std::copy(v.begin(), v.end(),
         std::ostream_iterator<int>(std::cout, " "));
 }
