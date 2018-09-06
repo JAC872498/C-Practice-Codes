@@ -104,7 +104,7 @@ int main(){
 				}else{
 					timeAmounts[removeNum]=mntTHr(hrTMnt(timeAmounts[removeNum])-removeMinutes);
 					//cout<<removeNum;
-					hours[(removeNum*2)-1]=mntTHr(hrTMnt(hours[(removeNum*2)-2])+timeAmounts[removeNum]);
+					hours[((removeNum+1)*2)-1]=mntTHr(hrTMnt(hours[((removeNum+1)*2)-2]) + timeAmounts[removeNum]);
 					removeMinutes=0;
 				}
 			}
