@@ -103,13 +103,9 @@ int main(){
 					removeNum+=1;
 				}else{
 					timeAmounts[removeNum]=mntTHr(hrTMnt(timeAmounts[removeNum])-removeMinutes);
+					//cout<<removeNum;
+					hours[(removeNum*2)-1]=mntTHr(hrTMnt(hours[(removeNum*2)-2])+timeAmounts[removeNum]);
 					removeMinutes=0;
-				}
-				if(timeAmounts[0]<=0){//Remove time amount
-					//TODO: Fill this in
-					/*for(int n=1;n<sizeof(timeAmounts);n++){
-						timeAmounts[n-1]=timeAmounts[n];
-					}*/
 				}
 			}
 		}else if(choice!=5){
