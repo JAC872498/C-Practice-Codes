@@ -1,3 +1,4 @@
 /*PG 142 of http://acm.cs.buap.mx/downloads/Programming_Challenges.pdf
-Given any integer 0≤n≤10,000 not divisible by 2 or 5, some multiple ofnis anumber which in decimal notation is a sequence of1’s. How many digits are in thesmallest such multiple ofn?InputA file of integers at one integer per line.OutputEach output line gives the smallest integerx>0 such thatp=x−1i=01×10i, whereais the corresponding input integer,p=a×b, andbis an integer greater than zero.Sample Input379901Sample Output3612
+Given any integer 0≤n≤10,000 not divisible by 2 or 5, some multiple ofnis anumber which in decimal notation is a sequence of1’s
+How many digits are in thesmallest such multiple ofn?InputA file of integers at one integer per line.smallest integerx>0 such thatp=x−1i=01×10i, whereais the corresponding input integer,p=a×b, andbis an integer greater than zero.Sample Input379901Sample Output3612
 */
