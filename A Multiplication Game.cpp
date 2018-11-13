@@ -6,9 +6,10 @@ Before a game starts, they draw an integer 1<n<4,294,967,295 and the winner is w
 
 int main(){
   int p=1,n=rnd();
-  int turn=0;//0=Stan, 1=Ollie
+  bool turn=true;//true=Stan, false=Ollie
   while(p<n){
     
+    turn=!turn;
   }
   return(0);
 }
