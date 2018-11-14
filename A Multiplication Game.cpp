@@ -8,7 +8,11 @@ int main(){
   int p=1,n=rnd();
   bool turn=true;//true=Stan, false=Ollie
   while(p<n){
-    
+    if(turn){
+      
+    }else{
+      
+    }
     turn=!turn;
   }
   return(0);
