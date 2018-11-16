@@ -15,5 +15,10 @@ int main(){
     }
     turn=!turn;
   }
+  if(turn){
+    
+  }else{
+    
+  }
   return(0);
 }
