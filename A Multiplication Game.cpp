@@ -15,7 +15,7 @@ int main(){
     }
     turn=!turn;
   }
-  if(turn){
+  if(!turn){
     std::cout<<"Ollie wins!";
   }else{
     std::cout<<"Stan wins!";
