@@ -9,9 +9,9 @@ int main(){
   bool turn=true;//true=Stan, false=Ollie
   while(p<n){
     if(turn){
-      
+      p*=9;
     }else{
-      
+      p*=2;
     }
     turn=!turn;
   }
