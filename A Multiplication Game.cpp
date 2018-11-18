@@ -15,7 +15,7 @@ int main(){
     }
     turn=!turn;
   }
-  if(!turn){
+  if(!turn){//Because the turn changes at the end, winner will alwawys end his turn with a winning p
     std::cout<<"Ollie wins!";
   }else{
     std::cout<<"Stan wins!";
