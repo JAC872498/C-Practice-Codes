@@ -8,7 +8,7 @@ int main(){
   int p=1,n=rnd();
   bool turn=true;//true=Stan, false=Ollie
   while(p<n){
-    if(turn){
+    if(turn){//This assumses that Stan always gets a perfect 9 and Ollie always gets the worse 2
       p*=9;
     }else{
       p*=2;
