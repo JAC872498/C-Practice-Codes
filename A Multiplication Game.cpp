@@ -9,9 +9,9 @@ int main(){
   bool turn=true;//true=Stan, false=Ollie
   while(p<n){
     if(turn){//This assumses that Stan always gets a perfect 9 and Ollie always gets the worse 2
-      p*=9;
+      p*=9;//Stan's turn
     }else{
-      p*=2;
+      p*=2;//Ollie's turn
     }
     turn=!turn;
   }
