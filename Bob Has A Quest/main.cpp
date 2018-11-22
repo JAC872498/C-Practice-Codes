@@ -1,5 +1,4 @@
-/*
-*/
+/*A very crude and basic ASCII art game*/
 
 #include <iostream>
 
