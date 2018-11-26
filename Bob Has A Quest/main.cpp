@@ -3,7 +3,7 @@
 #include <iostream>
 
 String newScene(){//Used to 'clear' to screen prior to printing out a new screen
- return(""); 
+ return("\n\n\n"); 
 }
 
 int main(){
