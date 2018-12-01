@@ -24,5 +24,6 @@ int main(){
 		std::cin>>choiceNum;
 	}
 	clearScene();
+	std::cout<<"Bob accepts his quest, whatever it might be.\n Speaking of which, who is Bob?";
 	return(0);
 }
