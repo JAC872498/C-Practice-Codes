@@ -31,5 +31,7 @@ int main(){
 		std::cout<<"Sorry, there have only been 5 people named Bob in all of history.";
 		std::cin>>choiceNum;
 	}
+	clearScene();
+	
 	return(0);
 }
