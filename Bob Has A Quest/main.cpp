@@ -17,6 +17,7 @@ void clearScene(char fill=' ') {
 
 int main(){
 	int choiceNum=0;
+	int storyChoice=0;
 	std::cout<<"Bob Has A Quest.\n\n1. He accepts the quest\n2. He rejects his fate\n";
 	std::cin>>choiceNum;
 	while(choiceNum!=1){
@@ -26,10 +27,10 @@ int main(){
 	clearScene();
 	std::cout<<"Bob accepts his quest, whatever it might be.\n Speaking of which, who is Bob?";
 	std::cout<<"1. A middle-aged peasant.\n2. A Chinese scholar.\n3. A Spanish sailor.\n4. A Moroccan merchant.\n5. A wage-slave Burger King worker.";
-	std::cin>>choiceNum;
-	while(choiceNum<1 || choiceNum>5){
+	std::cin>>storyChoice;
+	while(storyChoice<1 || storyChoice>5){
 		std::cout<<"Sorry, there have only been 5 people named Bob in all of history.";
-		std::cin>>choiceNum;
+		std::cin>>storyChoice;
 	}
 	clearScene();
 	
