@@ -33,6 +33,7 @@ int main(){
 		std::cin>>storyChoice;
 	}
 	clearScene();
+	std::cout<<"So, Bob is a ";
 	switch(storyChoice){
 		case 1:
 			break;
