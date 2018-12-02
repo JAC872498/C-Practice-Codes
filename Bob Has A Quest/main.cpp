@@ -25,7 +25,7 @@ int main(){
 		std::cin>>choiceNum;
 	}
 	clearScene();
-	std::cout<<"Bob accepts his quest, whatever it might be.\n Speaking of which, who is Bob?";
+	std::cout<<"Bob accepts his quest, whatever it might be.\n Speaking of which, who is Bob?\n";
 	std::cout<<"1. A middle-aged peasant.\n2. A Chinese scholar.\n3. A Spanish sailor.\n4. A Moroccan merchant.\n5. A wage-slave Burger King worker.";
 	std::cin>>storyChoice;
 	while(storyChoice<1 || storyChoice>5){
