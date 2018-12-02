@@ -36,8 +36,10 @@ int main(){
 	std::cout<<"So, Bob is a ";
 	switch(storyChoice){
 		case 1:
+			std::cout<<"peasant from 1493 from Russia.\n\n";
 			break;
 		case 2:
+			std::cout<<"one of the only people who can read, what a smartie.\n\n";
 			break;
 		case 3:
 			break;
