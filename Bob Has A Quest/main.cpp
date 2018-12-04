@@ -48,7 +48,7 @@ int main(){
 			std::cout<<"Ok, so maybe they didn't ask "<<title<<", or even tell him that he was going on 'vacation'.\n";
 			std::cout<<"Ok, so maybe they burnt down his house as soon as they saw it.\n";
 			std::cout<<"Ok, so maybe they murdered all of the guards in the town.\n";
-1			std::cout<<"Ok, so maybe "<<title<<" is being kidnapped.\n";
+			std::cout<<"Ok, so maybe "<<title<<" is being kidnapped.\n";
 			break;
 		
 		case 2:
