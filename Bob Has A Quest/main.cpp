@@ -38,9 +38,17 @@ int main(){
 	clearScene();
 	std::cout<<"So, Bob is a";
 	switch(storyChoice){
+		
 		case 1:
 			title="Bob the peasant";
 			std::cout<<" peasant from 1259 from Russia.\n";
+			std::cout<<"Recently these new guys have showed up in "<<title<<"'s town, they've got tiny horses and cool bows.\n";
+			std::cout<<"They can be a bit rude and quite like killing a lot, but other than that they're quite nice.\n";
+			std::cout<<"So nice, in fact, that they've taken "<<title<<" on a free 'vacation' to the east.\n";
+			std::cout<<"Ok, so maybe they didn't ask "<<title<<", or even tell him that he was going on 'vacation'.\n";
+			std::cout<<"Ok, so maybe they burnt down his house as soon as they saw it.\n";
+			std::cout<<"Ok, so maybe they murdered all of the guards in the town.\n";
+			std::cout<<"Ok, so maybe "<<title<<" is being kidnapped.\n";
 			break;
 		
 		case 2:
