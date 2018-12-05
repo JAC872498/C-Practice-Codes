@@ -55,7 +55,8 @@ int main(){
 			title="Bob the scholar";
 			std::cout<<" one of the who can read in 1271 China, he's kinda a big deal.\n";
 			std::cout<<"He went to school, so he's seen as a demi-god.\n";
-			std::cout<<"";
+			std::cout<<title<<" also knows of some far off land across the vast deserts.\n";
+			std::cout<<title<<" has also spoke to some pale dude who says he's from there, cool guy, has some cool spices.\n";
 			break;
 		
 		case 3:
