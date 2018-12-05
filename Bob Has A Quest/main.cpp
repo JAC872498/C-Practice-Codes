@@ -54,7 +54,8 @@ int main(){
 		case 2:
 			title="Bob the scholar";
 			std::cout<<" one of the who can read in 1271 China, he's kinda a big deal.\n";
-			std::cout<<"He went to school, so he's kinda a god.";
+			std::cout<<"He went to school, so he's seen as a demi-god.\n";
+			std::cout<<"";
 			break;
 		
 		case 3:
