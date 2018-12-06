@@ -62,11 +62,13 @@ int main(){
 		case 3:
 			title="Bob the sailor";
 			std::cout<<" guy paid to be on a ship during 1513, where is he going? Who knows?.\n";
+			std::cout<<"";
 			break;
 		
 		case 4:
 			title="Bob the merchant";
 			std::cout<<"ble to do basic math, meaning he's one of the richest people in 1062.\n";
+			std::cout<<"";
 			break;
 		
 		case 5:
