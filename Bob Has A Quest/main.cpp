@@ -49,6 +49,7 @@ int main(){
 			std::cout<<"Ok, so maybe they burnt down his house as soon as they saw it.\n";
 			std::cout<<"Ok, so maybe they murdered all of the guards in the town.\n";
 			std::cout<<"Ok, so maybe "<<title<<" is being kidnapped.\n";
+			std::cout<<"";
 			break;
 		
 		case 2:
@@ -57,6 +58,7 @@ int main(){
 			std::cout<<"He went to school, so he's seen as a demi-god.\n";
 			std::cout<<title<<" also knows of some far off land across the vast deserts.\n";
 			std::cout<<title<<" has also spoke to some pale dude who says he's from there, cool guy, has some cool spices.\n";
+			std::cout<<"";
 			break;
 		
 		case 3:
@@ -78,6 +80,7 @@ int main(){
 			std::cout<<"You could have sail the oceans, you could have watched history unfold, but no, you want to work at Burger King.\n";
 			std::cout<<"I didn't even have anything good, I just wanted a 5th option so I made something that NO ONE SHOULD HAVE PICKED.\n";
 			std::cout<<"Who cares about the year. Who cares about the location. You're a faceless wage slave, I hope you're happy.";
+			std::cout<<"";
 			break;
 		
 	}
