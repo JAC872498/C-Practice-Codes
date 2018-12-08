@@ -1,4 +1,4 @@
-/*A very crude and basic ASCII art game*/
+/*A very crude and basic ASCII art game about a man named Bob.*/
 
 #include <iostream>
 #include <stdlib.h>
