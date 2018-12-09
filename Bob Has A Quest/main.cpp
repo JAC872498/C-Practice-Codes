@@ -65,6 +65,8 @@ int main(){
 			title="Bob the sailor";
 			std::cout<<" guy paid to be on a ship during 1513, where is he going? Who knows?.\n";
 			std::cout<<"He's also one of the only ones left alive.\n";
+			std::cout<<"And he's one of the only ones left with any rations.\n";
+			std::cout<<"All in all, things could be better.";
 			break;
 		
 		case 4:
