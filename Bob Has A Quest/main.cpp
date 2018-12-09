@@ -64,7 +64,7 @@ int main(){
 		case 3:
 			title="Bob the sailor";
 			std::cout<<" guy paid to be on a ship during 1513, where is he going? Who knows?.\n";
-			std::cout<<"";
+			std::cout<<"He's also one of the only ones left alive.\n";
 			break;
 		
 		case 4:
