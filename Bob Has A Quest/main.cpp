@@ -66,7 +66,8 @@ int main(){
 			std::cout<<" guy paid to be on a ship during 1513, where is he going? Who knows?.\n";
 			std::cout<<"He's also one of the only ones left alive.\n";
 			std::cout<<"And he's one of the only ones left with any rations.\n";
-			std::cout<<"All in all, things could be better.";
+			std::cout<<"All in all, things could be better.\n";
+			std::cout<<"";
 			break;
 		
 		case 4:
