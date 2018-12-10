@@ -73,7 +73,7 @@ int main(){
 		case 4:
 			title="Bob the merchant";
 			std::cout<<"ble to do basic math, meaning he's one of the richest people in 1062.\n";
-			std::cout<<"";
+			std::cout<<"You'd assume that would be great. But there's not much you can buy in 1062.\n";
 			break;
 		
 		case 5:
