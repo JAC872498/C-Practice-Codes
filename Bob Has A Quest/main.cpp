@@ -74,6 +74,8 @@ int main(){
 			title="Bob the merchant";
 			std::cout<<"ble to do basic math, meaning he's one of the richest people in 1062.\n";
 			std::cout<<"You'd assume that would be great. But there's not much you can buy in 1062.\n";
+			std::cout<<"But hey you can buy silk and salt, so there's that.";
+			std::cout<<"";
 			break;
 		
 		case 5:
