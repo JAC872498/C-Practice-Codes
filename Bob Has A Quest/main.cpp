@@ -58,6 +58,7 @@ int main(){
 			std::cout<<"He went to school, so he's seen as a demi-god.\n";
 			std::cout<<title<<" also knows of some far off land across the vast deserts.\n";
 			std::cout<<title<<" has also spoke to some pale dude who says he's from there, cool guy, has some cool spices.\n";
+			std::cout<<"He's interested in some of your fireworks, or more specificly the powder in them.\n";
 			std::cout<<"";
 			break;
 		
