@@ -3,5 +3,10 @@
 #include <iostream>
 
 int main(){
+  std::String word;
+  int tries=0;
+  while(tries<8){
+    
+  }
   return(0);
 }
