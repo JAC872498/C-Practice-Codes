@@ -8,7 +8,8 @@ int main(){
   std::String guess;
   int tries=0;
   while(tries<8){
-    
+    std::cout<<"Guess your letter.\n";
+    std::cin>>guess;
   }
   return(0);
 }
