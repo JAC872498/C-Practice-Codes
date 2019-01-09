@@ -3,7 +3,9 @@
 #include <iostream>
 
 int main(){
+  std::String[] man=[];
   std::String word;
+  std::String guess;
   int tries=0;
   while(tries<8){
     
