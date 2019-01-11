@@ -2,6 +2,16 @@
 
 #include <iostream>
 
+std::string changeWord(std::string wrd, char c){
+	std::string newWrd=wrd;
+	for(int n=0;n<wrd.length();n++){
+		if(wrd.split("")[n]==c){
+			
+		}
+	}
+	return(newWrd);
+}
+
 int main(){
 	std::string man[]={   "O",
 					"\n/","|","\\",
