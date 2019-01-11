@@ -5,8 +5,8 @@
 
 std::string changeWord(char wrd[], char c){
 	std::string newWrd=wrd;
-	for(int n=0;n<wrd.length();n++){
-		if(wrd.split("")[n]==c){
+	for(int n=0;n<;n++){
+		if(wrd[n]==c){
 			
 		}
 	}
@@ -16,9 +16,12 @@ std::string changeWord(char wrd[], char c){
 int main(){
 	std::string man[]={   "O",
 					"\n/","|","\\",
-					  "\n/","\\"};	
+					  "\n/","\\"};
+	std::cout<<"Enter your word.\n";	
 	std::string w;
+	std::cin>>w;
 	char word[w.length()+1];
+	char guessed[w.length()+1];
 	char guess;
 	int tries=0;
 	strcpy(word,w.c_str());
