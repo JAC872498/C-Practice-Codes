@@ -15,8 +15,8 @@ std::string changeWord(char wrd[], char guess[] char c){
 
 int main(){
 	std::string man[]={   "O",
-					"\n/","|","\\",
-					  "\n/","\\"};
+			"\n/","|","\\",
+			  "\n/","\\"};
 	std::cout<<"Enter your word.\n";	
 	std::string w;
 	std::cin>>w;
