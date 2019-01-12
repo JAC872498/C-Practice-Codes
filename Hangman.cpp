@@ -4,7 +4,6 @@
 #include <bits/stdc++.h>
 
 std::string changeWord(char wrd[], char guess[] char c){
-	char newGuess[]=guess; 
 	for(int n=0;n<;n++){
 		if(wrd[n]==c){
 			guess[n]=c;
