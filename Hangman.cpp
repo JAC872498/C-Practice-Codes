@@ -24,7 +24,7 @@ int main(){
 	char guess;
 	int tries=0;
 	strcpy(word,w.c_str());
-	while(tries<8){
+	while(tries<6){
 	   	std::cout<<"Guess your letter.\n";
 		std::cin>>guess;
 	}
