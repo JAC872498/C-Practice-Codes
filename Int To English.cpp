@@ -10,5 +10,9 @@ int main(){
 	std::string wrd="";
 	int num=0;
 	std::cin>>num;
+	for(int n=str(num).length;n>=0;n-=3){
+		
+	}
+	std::cout<<wrd;
 	return(0);
 }
