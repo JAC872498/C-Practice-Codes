@@ -11,8 +11,8 @@ int main(){
 	std::string wrd="";
 	int num=0;
 	std::cin>>num;
-	for(int n=std::to_string(num).length();n>=0;n-=3){
-		
+	for(int n=(std::to_string(num)).length();n>=0;n-=3){
+		//TODO: fix this, because why should it work the way the official c++ forums said it should work
 	}
 	std::cout<<wrd;
 	return(0);
