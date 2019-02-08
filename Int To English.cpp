@@ -12,7 +12,8 @@ int main(){
 	int num=0;
 	std::cin>>num;
 	for(int n=(std::to_string(num)).length();n>=0;n-=3){
-		//TODO: fix this, because why should it work the way the official c++ forums said it should work
+		//TODO: Fix this, because why should it work the way the official c++ forums said it should work
+		wrd+=ones[num[n]];//TODO: Fix this too
 	}
 	std::cout<<wrd;
 	return(0);
