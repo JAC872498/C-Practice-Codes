@@ -2,6 +2,7 @@
 */
 
 #include <iostream>
+#include <string>
 
 int main(){
 	std::string ones[]={"one","two","three","four","five","six","seven","eight","nine"};
@@ -10,7 +11,7 @@ int main(){
 	std::string wrd="";
 	int num=0;
 	std::cin>>num;
-	for(int n=str(num).length;n>=0;n-=3){
+	for(int n=(std::to_string(num)).length();n>=0;n-=3){
 		
 	}
 	std::cout<<wrd;
