@@ -20,5 +20,4 @@ int main(){
 	}
 	std::cout<<wrd;
 	return(0);
-
 }
