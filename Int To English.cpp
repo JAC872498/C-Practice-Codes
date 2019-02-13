@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream> 
 #include <string>
+#include <cmath>
 
 int main(){
 	std::string ones[]={"one","two","three","four","five","six","seven","eight","nine"};
@@ -14,9 +15,9 @@ int main(){
 	std::ostringstream str1; 
 	std::cin>>num;
 	str1<<num;
-	for(int n=str1.str().length();n>=0;n-=3){
+	for(int n=str1.str().length()-1;n>=0;n-=3){
 		//TODO: Fix this, because why should it work the way the official c++ forums said it should work
-		wrd+=ones[num[n]];//TODO: Fix this too
+		std::cout<<(num/std::pow(10,n))<<"\n";	
 	}
 	std::cout<<wrd;
 	return(0);
