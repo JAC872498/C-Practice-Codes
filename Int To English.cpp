@@ -18,6 +18,7 @@ int main(){
 	for(int n=str1.str().length()-1;n>=0;n-=3){
 		//TODO: Fix this, because why should it work the way the official c++ forums said it should work
 		std::cout<<(num/std::pow(10,n))<<"\n";	
+		wrd+=suffix[n/3];
 	}
 	std::cout<<wrd;
 	return(0);
