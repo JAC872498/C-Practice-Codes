@@ -16,7 +16,6 @@ int main(){
 	std::cin>>num;
 	str1<<num;
 	for(int n=0;n<str1.str().length();n+=3){
-		wrd=ones[(int)(num/std::pow(10,n))%1000]+"hundred "+tens[(int)(num/std::pow(10,n))%100]+ones[(int)(num/std::pow(10,n))%10]+suffix[n]+wrd;
 	}
 	std::cout<<wrd;
 	return(0);
