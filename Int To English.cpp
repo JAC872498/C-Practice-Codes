@@ -15,10 +15,10 @@ int main(){
 	std::ostringstream str1; 
 	std::cin>>num;
 	str1<<num;
-	for(int n=str1.str().length()-1;n>=0;n-=3){
+	for(int n=0;n<str1.str().length();n+=3){
 		//TODO: Fix this, because why should it work the way the official c++ forums said it should work
 		std::cout<<(num/std::pow(10,n))<<"\n";	
-		wrd+=suffix[n/3];
+		wrd=suffix[n/3]+wrd;
 	}
 	std::cout<<wrd;
 	return(0);
