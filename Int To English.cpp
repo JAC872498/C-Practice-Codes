@@ -16,6 +16,7 @@ int main(){
 	std::cin>>num;
 	str1<<num;
 	for(int n=0;n<str1.str().length();n+=3){
+		wrd=suffix[n/3]+wrd;
 		wrd=ones[(int)(num/pow(10,n))%10]+wrd;
 		wrd=tens[(int)(num/pow(10,n+1))%10]+wrd;
 		if(ones[(int)(num/pow(10,n+2))%10]!="")
