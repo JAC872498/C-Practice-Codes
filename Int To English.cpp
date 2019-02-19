@@ -15,8 +15,8 @@ int main(){
 	std::ostringstream str1; 
 	std::cin>>num;
 	str1<<num;
-	for(int n=0;n<str1.str().length();n+=3){
-		std::cout<<n;
+	for(int n=1;n<=str1.str().length();n+=1){
+		std::cout<<((num/pow(10,n))%10);
 	}
 	std::cout<<wrd;
 	return(0);
