@@ -21,6 +21,7 @@ int main(){
 		if(ones[(int)(num/pow(10,n+2))%10]!="")
 			wrd=ones[(int)(num/pow(10,n+2))%10]+" hundred"+wrd;
 	}
+	wrd.erase(0,1);
 	std::cout<<wrd;
 	return(0);
 }
