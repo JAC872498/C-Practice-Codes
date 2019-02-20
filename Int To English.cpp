@@ -1,5 +1,5 @@
-/*
-*/
+/*This is a simple program I made that takes a digit and turns it into the word version of it.
+I made this mostly just to kill time and to have something to do*/
 
 #include <iostream>
 #include <sstream> 
