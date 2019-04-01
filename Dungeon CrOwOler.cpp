@@ -4,5 +4,6 @@
 #include <iostream>
 
 int main(){
-  return(0);
+	String[] map;
+	return(0);
 }
