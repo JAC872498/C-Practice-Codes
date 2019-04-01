@@ -4,6 +4,6 @@
 #include <iostream>
 
 int main(){
-	String[] map;
+	std::String[] map;
 	return(0);
 }
