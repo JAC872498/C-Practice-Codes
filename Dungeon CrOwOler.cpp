@@ -5,7 +5,13 @@
 
 std::String displayMap(){
 	std::String rtn="";
-	for(S
+	for(std::String s1[]: map){
+		for(std::String s2:s1){
+			rtn+=s2+" ";
+		}
+		rtn+="\n";
+	}
+	return(rtn);
 }
 
 int main(){
