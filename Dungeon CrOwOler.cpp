@@ -4,7 +4,7 @@
 #include <iostream>
 
 std::String displayMap(){
-	return("");
+	std::String rtn="";
 }
 
 int main(){
