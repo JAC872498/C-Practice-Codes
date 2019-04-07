@@ -17,6 +17,8 @@ std::String displayMap(){
 int main(){
 	std::String[][] map;
 	bool playerAlive=true;
+	int[] playerSpot=[0,0];
+	int playerMove;
 	while(playerAlive){
 		
 	}
