@@ -16,5 +16,9 @@ std::String displayMap(){
 
 int main(){
 	std::String[][] map;
+	bool playerAlive=true;
+	while(playerAlive){
+		
+	}
 	return(0);
 }
