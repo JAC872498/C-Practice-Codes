@@ -20,7 +20,7 @@ int main(){
 	int[] playerSpot=[0,0];
 	int playerMove;
 	while(playerAlive){
-		
+		std::cin<<playerMove;
 	}
 	return(0);
 }
