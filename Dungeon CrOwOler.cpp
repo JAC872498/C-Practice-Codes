@@ -20,7 +20,19 @@ int main(){
 	int[] playerSpot=[0,0];
 	int playerMove;
 	while(playerAlive){
-		std::cin<<playerMove;
+		std::cout<<displayMap();
+		do{
+			std::cin>>playerMove;
+		}while(playerMove<0 || playerMove>3);
+		if(playerMove==0){
+			
+		}else if(playerMove==1){
+			
+		}else if(playerMove==2){
+			
+		}else if(playerMove==3){
+			
+		}
 	}
 	return(0);
 }
