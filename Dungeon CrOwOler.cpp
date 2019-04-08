@@ -29,9 +29,9 @@ int main(){
 		}else if(playerMove==1 && player[0]>0){
 			player[0]-=1;
 		}else if(playerMove==2 ){
-			
-		}else if(playerMove==3){
-			
+			player[1]+=1;
+		}else if(playerMove==3 ){
+			player[0]+=1;
 		}
 	}
 	return(0);
