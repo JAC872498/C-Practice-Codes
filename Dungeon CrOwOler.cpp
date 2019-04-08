@@ -28,9 +28,9 @@ int main(){
 			player[1]-=1;
 		}else if(playerMove==1 && player[0]>0){
 			player[0]-=1;
-		}else if(playerMove==2 ){
+		}else if(playerMove==2 && player[1]<map[0].length){
 			player[1]+=1;
-		}else if(playerMove==3 ){
+		}else if(playerMove==3 && player[0]<map.length){
 			player[0]+=1;
 		}
 	}
