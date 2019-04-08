@@ -24,11 +24,11 @@ int main(){
 		do{
 			std::cin>>playerMove;
 		}while(playerMove<0 || playerMove>3);
-		if(playerMove==0){
-			
-		}else if(playerMove==1){
-			
-		}else if(playerMove==2){
+		if(playerMove==0 && player[1]>0){
+			player[1]-=1;
+		}else if(playerMove==1 && player[0]>0){
+			player[0]-=1;
+		}else if(playerMove==2 ){
 			
 		}else if(playerMove==3){
 			
