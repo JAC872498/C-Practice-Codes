@@ -19,6 +19,8 @@ int main(){
 	bool playerAlive=true;
 	int[] playerSpot=[0,0];
 	int playerMove;
+	int playerScore=0;
+	int uninfectedLeft;
 	while(playerAlive){
 		std::cout<<displayMap();
 		do{
