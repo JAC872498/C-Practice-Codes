@@ -20,7 +20,7 @@ int main(){
 	int[] playerSpot=[0,0];
 	int playerMove;
 	int playerScore=0;
-	int uninfectedLeft;
+	int uninfectedLeft=(playerSpot[0]*playerSpot[1])/10;
 	while(playerAlive){
 		std::cout<<displayMap();
 		do{
