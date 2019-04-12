@@ -14,6 +14,11 @@ std::String displayMap(){
 	return(rtn);
 }
 
+class normie{
+	public:
+		
+};
+
 int main(){
 	std::String[][] map;
 	bool playerAlive=true;
