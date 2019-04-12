@@ -16,7 +16,7 @@ std::String displayMap(){
 
 class normie{
 	public:
-		int[] location;
+	    int[] location;
 };
 
 int main(){
