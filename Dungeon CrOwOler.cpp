@@ -17,6 +17,7 @@ std::String displayMap(){
 class normie{
 	public:
 	    int[] location;
+		int health;
 };
 
 int main(){
