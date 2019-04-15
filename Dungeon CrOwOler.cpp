@@ -1,15 +1,17 @@
 /*
 */
 
+using namespace std;
+
 #include <iostream>
 #define for_each_item(item, list) \
     for(T * item = list->head; item != NULL; item = item->next)
 //Creates a foreach loop
 	
-std::string displayMap(){
-	std::string rtn="";
+std::string displayMap(string map[]){
+	string rtn="";
 	for(int row=0;row<sizeof(map)/sizeof(map[0]);row++){
-		for(int colm=0;colm<sizeOf(map[row])/sizeOf(map[row][0]);colm++){
+		for(int colm=0;colm<sizeof(map[row])/sizeof(map[row][0]);colm++){
 			rtn+=map[row][colm]+" ";
 		}
 		rtn+="\n";
@@ -24,7 +26,7 @@ class normie{
 };
 
 int main(){
-	std::string[][] map;
+	string[][] map;
 	bool playerAlive=true;
 	int[] playerSpot=[0,0];
 	int playerMove;
