@@ -21,14 +21,14 @@ std::string displayMap(string map[]){
 
 class normie{
 	public:
-	    int[] location;
-		int health;
+	int location[];
+	int health;
 };
 
 int main(){
-	string[][] map;
+	string map[][];
 	bool playerAlive=true;
-	int[] playerSpot=[0,0];
+	int playerSpot[]=[0,0];
 	int playerMove;
 	int playerScore=0;
 	int uninfectedLeft=(playerSpot[0]*playerSpot[1])/10;
