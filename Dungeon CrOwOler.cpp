@@ -26,11 +26,11 @@ class normie{
 };
 
 int main(){
-	int length,width;
-	cout<<"Enter map's length.";
+	int length,height;
+	cout<<"Enter map's length.\n";
 	cin>>length;
-	cout<<"Enter map's height.";
-	cin>>width;
+	cout<<"Enter map's height.\n";
+	cin>>height;
 	string **map;
 	bool playerAlive=true;
 	int playerSpot[2]={0,0};
@@ -46,9 +46,9 @@ int main(){
 			playerSpot[1]-=1;
 		}else if(playerMove==1 && playerSpot[0]>0){
 			playerSpot[0]-=1;
-		}else if(playerMove==2 && playerSpot[1]<map[0].length){
+		}else if(playerMove==2 && playerSpot[1]<length){
 			playerSpot[1]+=1;
-		}else if(playerMove==3 && playerSpot[0]<map.length){
+		}else if(playerMove==3 && playerSpot[0]<height){
 			playerSpot[0]+=1;
 		}
 	}
