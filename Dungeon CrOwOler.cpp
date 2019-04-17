@@ -26,6 +26,8 @@ class normie{
 };
 
 int main(){
+	int xLen,yLen;
+	
 	string map[][];
 	bool playerAlive=true;
 	int playerSpot[]=[0,0];
@@ -33,9 +35,9 @@ int main(){
 	int playerScore=0;
 	int uninfectedLeft=(playerSpot[0]*playerSpot[1])/10;
 	while(playerAlive){
-		std::cout<<displayMap();
+		cout<<displayMap();
 		do{
-			std::cin>>playerMove;
+			cin>>playerMove;
 		}while(playerMove<0 || playerMove>3);
 		if(playerMove==0 && player[1]>0){
 			player[1]-=1;
