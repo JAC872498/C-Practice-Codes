@@ -26,9 +26,12 @@ class normie{
 };
 
 int main(){
-	int xLen,yLen;
-	
-	string map[][];
+	int length,width;
+	cout<<"Enter map's length.";
+	cin>>length;
+	cout<<"Enter map's height.";
+	cin>>width
+	string map[width][length];
 	bool playerAlive=true;
 	int playerSpot[]=[0,0];
 	int playerMove;
