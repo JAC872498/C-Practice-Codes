@@ -8,7 +8,7 @@ using namespace std;
     for(T * item = list->head; item != NULL; item = item->next)
 //Creates a foreach loop
 	
-std::string displayMap(string map[]){
+string displayMap(string map[]){
 	string rtn="";
 	for(int row=0;row<sizeof(map)/sizeof(map[0]);row++){
 		for(int colm=0;colm<sizeof(map[row])/sizeof(map[row][0]);colm++){
@@ -30,10 +30,10 @@ int main(){
 	cout<<"Enter map's length.";
 	cin>>length;
 	cout<<"Enter map's height.";
-	cin>>width
+	cin>>width;
 	string map[width][length];
 	bool playerAlive=true;
-	int playerSpot[]=[0,0];
+	int playerSpot[2]={0,0};
 	int playerMove;
 	int playerScore=0;
 	int uninfectedLeft=(playerSpot[0]*playerSpot[1])/10;
