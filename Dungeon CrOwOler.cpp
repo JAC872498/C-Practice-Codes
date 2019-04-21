@@ -37,7 +37,6 @@ int main(){
 	int playerMove;
 	int playerScore=0;
 	int uninfectedLeft=(playerSpot[0]*playerSpot[1])/10;
-	cout<<"ABCD";
 	while(playerAlive){
 		cout<<displayMap(map);
 		do{
