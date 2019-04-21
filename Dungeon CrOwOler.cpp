@@ -12,7 +12,7 @@ string displayMap(string **map){
 	string rtn="";
 	for(int row=0;row<sizeof(map)/sizeof(map[0]);row++){
 		for(int colm=0;colm<sizeof(map[row])/sizeof(map[row][0]);colm++){
-			rtn+=map[row][colm]+" ";
+			rtn+=map[row][colm]+"X ";
 		}
 		rtn+="\n";
 	}
