@@ -32,14 +32,15 @@ int main(){
 	cout<<"Enter map's height.\n";
 	cin>>height;
 	string map[height][length];
-	string **mapPoint;
+	string **mapPoint=map;
 	bool playerAlive=true;
 	int playerSpot[2]={0,0};
 	int playerMove;
 	int playerScore=0;
 	int uninfectedLeft=(playerSpot[0]*playerSpot[1])/10;
 	while(playerAlive){
-		cout<<displayMap(map);
+		mapPoint=map;
+		cout<<displayMap(mapPoint);
 		do{
 			cin>>playerMove;
 		}while(playerMove<0 || playerMove>3);
