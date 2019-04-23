@@ -1,5 +1,5 @@
-/*
-*/
+/*No clue what this is going to turn out to be
+mainly making this for the sake of it*/
 
 using namespace std;
 
