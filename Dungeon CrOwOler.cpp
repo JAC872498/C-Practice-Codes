@@ -31,7 +31,8 @@ int main(){
 	cin>>length;
 	cout<<"Enter map's height.\n";
 	cin>>height;
-	string **map;
+	string map[height][length];
+	string **mapPoint;
 	bool playerAlive=true;
 	int playerSpot[2]={0,0};
 	int playerMove;
