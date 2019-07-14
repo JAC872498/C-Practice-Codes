@@ -4,8 +4,11 @@
 using namespace std;
 
 int main(){
-	int playerHealth;
+	int playerHealth=100;
 	int playerAttack;
 	int playerDefence;
+	while(playerHealth>0){
+		
+	}
 	return(0);
 }
