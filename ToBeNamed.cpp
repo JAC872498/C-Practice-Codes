@@ -4,5 +4,8 @@
 using namespace std;
 
 int main(){
+	int playerHealth;
+	int playerAttack;
+	int playerDefence;
 	return(0);
 }
