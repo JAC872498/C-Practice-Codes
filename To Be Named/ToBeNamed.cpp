@@ -4,7 +4,15 @@
 
 using namespace std;
 
+class test{
+	public:
+		int health;
+		int attack;
+		int defence;
+}
+
 int main(){
+	boolean turn=true;//True-player's turn, False-enemy's turn
 	int playerHealth=100;
 	int playerAttack=10;
 	int playerDefence=8;
