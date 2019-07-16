@@ -5,11 +5,17 @@
 using namespace std;
 
 class test{
-	public:
+	private:
 		int health;
 		int attack;
 		int defence;
-}
+	int attack(){
+		
+	}
+	int defend(){
+		
+	}
+};
 
 int main(){
 	boolean turn=true;//True-player's turn, False-enemy's turn
