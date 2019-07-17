@@ -7,48 +7,31 @@ using namespace std;
 class basicEnemy{//Used as an interface class
 	private:
 		int health;
-		int attack;
-		int defence;
-	int attack(){}
-	int defend(){}
+		int attackPow;
+		int defencePow;
+	void attack(){}
+	void defend(){}
 };
 
-int main(){
-	boolean turn=true;//True-player's turn, False-enemy's turn
-	int playerHealth=100;
-	int playerAttack=10;
-	int playerDefence=8;
-	while(playerHealth>0){
-		
-	}
-	return(0);
-}
-//"To Be Named" is its actual name
-//The game will be a satire about all the overdone clichés of 'fantasy' games
-#include <iostream>
-
-using namespace std;
-
-class enemy{
-	private:
-		int health;
-		int attack;
-		int defence;
-	int attack(){
-		
-	}
-	int defend(){
-		
-	}
+class basicSwordGuy : public basicEnemy{
+	
 };
 
+class basicMagicGuy : public basicEnemy{
+	
+};
+
+class basicRangedGuy : public basicEnemy{
+	
+}; 
+
 int main(){
-	boolean turn=true;//True-player's turn, False-enemy's turn
+	bool turn=true;//True-player's turn, False-enemy's turn
 	int playerHealth=100;
-	int playerAttack=10;
-	int playerDefence=8;
+	int playerAttackPow=10;
+	int playerDefencePow=8;
 	while(playerHealth>0){
-		
+		playerHealth-=1;
 	}
 	return(0);
 }
