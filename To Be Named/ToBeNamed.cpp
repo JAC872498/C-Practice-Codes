@@ -4,17 +4,13 @@
 
 using namespace std;
 
-class basicEnemy{
+class basicEnemy{//Used as an interface class
 	private:
 		int health;
 		int attack;
 		int defence;
-	int attack(){
-		
-	}
-	int defend(){
-		
-	}
+	int attack(){}
+	int defend(){}
 };
 
 int main(){
