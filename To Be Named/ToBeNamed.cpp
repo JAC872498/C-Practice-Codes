@@ -21,11 +21,17 @@ class basicSwordGuy : public basicEnemy{
 };
 
 class basicMagicGuy : public basicEnemy{
-	
+	private:
+		health=100;
+		attackPow=14;
+		defencePow=8;
 };
 
 class basicRangedGuy : public basicEnemy{
-	
+	private:
+		health=60;
+		attackPow=6;
+		defencePow=4;
 }; 
 
 int main(){
