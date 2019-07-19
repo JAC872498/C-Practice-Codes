@@ -15,7 +15,7 @@ class basicEnemy{//Used as an interface class
 
 class basicSwordGuy : public basicEnemy{
 	private:
-		health=80;
+		health=100;
 		attackPow=12;
 		defencePow=10;
 };
