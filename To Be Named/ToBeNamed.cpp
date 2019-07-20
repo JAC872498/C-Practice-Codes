@@ -32,6 +32,7 @@ class basicRangedGuy : public basicEnemy{
 		health=60;
 		attackPow=6;
 		defencePow=4;
+		
 }; 
 
 int main(){
