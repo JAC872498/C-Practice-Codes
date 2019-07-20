@@ -9,30 +9,33 @@ class basicEnemy{//Used as an interface class
 		int health;
 		int attackPow;
 		int defencePow;
-	void attack(){}
-	void defend(){}
+	public:
+		string attack(){}
+		void defend(){}
 };
 
 class basicSwordGuy : public basicEnemy{
 	private:
-		health=100;
-		attackPow=12;
-		defencePow=10;
+		int health=100;
+		int attackPow=12;
+		int defencePow=10;
+	public:
 };
 
 class basicMagicGuy : public basicEnemy{
 	private:
-		health=100;
-		attackPow=14;
-		defencePow=8;
+		int health=100;
+		int attackPow=14;
+		int defencePow=8;
+	public:
 };
 
 class basicRangedGuy : public basicEnemy{
 	private:
-		health=60;
-		attackPow=6;
-		defencePow=4;
-		
+		int health=60;
+		int attackPow=6;
+		int defencePow=4;
+	public:
 }; 
 
 int main(){
@@ -40,6 +43,7 @@ int main(){
 	int playerHealth=100;
 	int playerAttackPow=10;
 	int playerDefencePow=8;
+		
 	while(playerHealth>0){
 		playerHealth-=1;
 	}
