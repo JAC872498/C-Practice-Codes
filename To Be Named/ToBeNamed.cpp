@@ -6,9 +6,9 @@ using namespace std;
 
 class basicEnemy{//Used as an interface class
 	private:
-		int health;
-		int attackPow;
-		int defencePow;
+		int health=100;
+		int attackPow=10;
+		int defencePow=8;
 	public:
 		string attack(){}
 		void defend(){}
@@ -33,8 +33,9 @@ class basicMagicGuy : public basicEnemy{
 class basicRangedGuy : public basicEnemy{
 	private:
 		int health=60;
-		int attackPow=6;
+		int attackPow=4;
 		int defencePow=4;
+		int rangedPow=8;
 	public:
 }; 
 
