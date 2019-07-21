@@ -37,7 +37,7 @@ class basicRangedGuy : public basicEnemy{
 		int defencePow=4;
 		int rangedPow=8;
 	public:
-}; 
+};
 
 int main(){
 	bool turn=true;//True-player's turn, False-enemy's turn
