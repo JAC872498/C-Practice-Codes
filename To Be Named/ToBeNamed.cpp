@@ -6,9 +6,9 @@ using namespace std;
 
 class basicEnemy{//Used as an interface class
 	private:
-		int health=100;
-		int attackPow=10;
-		int defencePow=8;
+		int health;//100
+		int attackPow;//10
+		int defencePow;//8
 	public:
 		string attack(){}
 		void defend(){}
@@ -16,27 +16,27 @@ class basicEnemy{//Used as an interface class
 
 class basicSwordGuy : public basicEnemy{
 	private:
-		int health=100;
-		int attackPow=12;
-		int defencePow=10;
+		int health;//100
+		int attackPow;//12
+		int defencePow;//10
 	public:
 };
 
 class basicMagicGuy : public basicEnemy{
 	private:
-		int health=100;
-		int attackPow=14;
-		int defencePow=8;
-		int magicPow=2;
+		int health;//100
+		int attackPow;//14
+		int defencePow;//8
+		int magicPow;//2
 	public:
 };
 
 class basicRangedGuy : public basicEnemy{
 	private:
-		int health=60;
-		int attackPow=4;
-		int defencePow=4;
-		int rangedPow=8;
+		int health;//60
+		int attackPow;//4
+		int defencePow;//4
+		int rangedPow;//8
 	public:
 };
 
