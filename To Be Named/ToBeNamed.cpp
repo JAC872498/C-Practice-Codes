@@ -27,6 +27,7 @@ class basicMagicGuy : public basicEnemy{
 		int health=100;
 		int attackPow=14;
 		int defencePow=8;
+		int magicPow=2;
 	public:
 };
 
