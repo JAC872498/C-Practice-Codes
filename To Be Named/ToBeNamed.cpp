@@ -52,8 +52,15 @@ int main(){
 	int playerAttackPow=10;
 	int playerDefencePow=8;
 		
-	while(playerHealth>0){
-		playerHealth-=1;
+	while(currLevel<=10){
+		for(){
+			if(playerHealth<=0){
+				goto death;
+			}
+		}
 	}
+	death:
+		cout<<"Deathed";
+		return(0);
 	return(0);
 }
