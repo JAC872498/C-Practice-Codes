@@ -40,8 +40,13 @@ class basicRangedGuy : public basicEnemy{
 	public:
 };
 
+void generateNewLevel(int currLevel){
+	
+}
+
 int main(){
 	bool turn=true;//True-player's turn, False-enemy's turn
+	int currLevel=1;
 	int playerHealth=100;
 	int playerAttackPow=10;
 	int playerDefencePow=8;
