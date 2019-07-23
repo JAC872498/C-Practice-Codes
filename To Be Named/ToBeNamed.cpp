@@ -58,6 +58,7 @@ int main(){
 				goto death;
 			}
 		}
+		currLevel+=1;
 	}
 	death:
 		cout<<"Deathed";
