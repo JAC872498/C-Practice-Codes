@@ -41,7 +41,7 @@ class basicRangedGuy : public basicEnemy{
 };
 
 void generateNewLevel(int currLevel){
-	
+	basicEnemy[] rtn=new basicEnemy[10];
 }
 
 int main(){
