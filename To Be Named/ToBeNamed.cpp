@@ -41,13 +41,16 @@ class basicRangedGuy : public basicEnemy{
 };
 
 void generateNewLevel(int currLevel){
-	
+	for(int n=0;n<10;n++){
+		
+	}
 }
+
+basicEnemy[] enemies;
 
 int main(){
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
-	basicEnemy currEnemy;
 	int playerHealth=100;
 	int playerAttackPow=10;
 	int playerDefencePow=8;
