@@ -40,14 +40,6 @@ class basicRangedGuy : public basicEnemy{
 	public:
 };
 
-void generateNewLevel(int currLevel){
-	for(int n=0;n<10;n++){
-		enemies[n]
-	}
-}
-
-basicEnemy[] enemies=new basicEnemy[10];
-
 int main(){
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
@@ -56,15 +48,16 @@ int main(){
 	int playerDefencePow=8;
 		
 	while(currLevel<=10){
-		for(int enemy=0;enemy<currEnemy.length;enemy++){
+		for(int e=0;e<10;e++){
+			while
 			if(playerHealth<=0){
 				goto death;
 			}
 		}
 		currLevel+=1;
 	}
+	return(0);
 	death:
 		cout<<"Deathed";
 		return(0);
-	return(0);
 }
