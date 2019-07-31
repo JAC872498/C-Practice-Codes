@@ -1,6 +1,18 @@
 //"To Be Named" is its actual name
 //The game will be a satire about all the overdone clichés of 'fantasy' games
 #include <iostream>
+#include <string>
+#include <sstream>
+
+namespace patch
+{
+    template < typename T > std::string to_string( const T& n )
+    {
+        std::ostringstream stm ;
+        stm << n ;
+        return stm.str() ;
+    }
+}
 
 class basicEnemy{//Used as an interface class
 	private:
@@ -11,7 +23,7 @@ class basicEnemy{//Used as an interface class
 		int defencePow;//8
 	public:
 		std::string attack(){
-			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+std::to_string(attackPow)+" damage.\n");
+			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
 		void defend(){}
 };
