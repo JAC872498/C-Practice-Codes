@@ -20,6 +20,12 @@ class basicSwordGuy : public basicEnemy{
 		int attackPow;//12
 		int defencePow;//10
 	public:
+		attack(){
+			
+		}
+		defend(){
+			
+		}
 };
 
 class basicMagicGuy : public basicEnemy{
@@ -29,6 +35,12 @@ class basicMagicGuy : public basicEnemy{
 		int defencePow;//8
 		int magicPow;//2
 	public:
+		attack(){
+			
+		}
+		defend(){
+			
+		}
 };
 
 class basicRangedGuy : public basicEnemy{
@@ -38,6 +50,12 @@ class basicRangedGuy : public basicEnemy{
 		int defencePow;//4
 		int rangedPow;//8
 	public:
+		attack(){
+			
+		}
+		defend(){
+			
+		}
 };
 
 int main(){
