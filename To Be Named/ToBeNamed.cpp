@@ -2,18 +2,16 @@
 //The game will be a satire about all the overdone clichés of 'fantasy' games
 #include <iostream>
 
-using namespace std;
-
 class basicEnemy{//Used as an interface class
 	private:
-		string name;//Blank
-		string weaponName;//Fists
+		std::string name;//Blank
+		std::string weaponName;//Fists
 		int health;//100
 		int attackPow;//10
 		int defencePow;//8
 	public:
-		string attack(){
-			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+attackPow+" damage.\n");
+		std::string attack(){
+			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+std::to_string(attackPow)+" damage.\n");
 		}
 		void defend(){}
 };
@@ -51,9 +49,8 @@ int main(){
 	int playerAttackPow=10;
 	int playerDefencePow=8;
 		
-	while(currLevel<=10){
-		for(int e=0;e<10;e++){
-			while
+	while(currLevel<=10){//10 levels in total
+		for(int e=0;e<10;e++){//10 enemies per level
 			if(playerHealth<=0){
 				goto death;
 			}
@@ -62,6 +59,6 @@ int main(){
 	}
 	return(0);
 	death:
-		cout<<"Deathed";
+		std::cout<<"Deathed";
 		return(0);
 }
