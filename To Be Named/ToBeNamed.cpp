@@ -6,11 +6,15 @@ using namespace std;
 
 class basicEnemy{//Used as an interface class
 	private:
+		string name;//Blank
+		string weaponName;//Fists
 		int health;//100
 		int attackPow;//10
 		int defencePow;//8
 	public:
-		string attack(){}
+		string attack(){
+			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+attackPow+" damage.\n");
+		}
 		void defend(){}
 };
 
@@ -20,12 +24,6 @@ class basicSwordGuy : public basicEnemy{
 		int attackPow;//12
 		int defencePow;//10
 	public:
-		attack(){
-			
-		}
-		defend(){
-			
-		}
 };
 
 class basicMagicGuy : public basicEnemy{
@@ -35,12 +33,6 @@ class basicMagicGuy : public basicEnemy{
 		int defencePow;//8
 		int magicPow;//2
 	public:
-		attack(){
-			
-		}
-		defend(){
-			
-		}
 };
 
 class basicRangedGuy : public basicEnemy{
@@ -50,12 +42,6 @@ class basicRangedGuy : public basicEnemy{
 		int defencePow;//4
 		int rangedPow;//8
 	public:
-		attack(){
-			
-		}
-		defend(){
-			
-		}
 };
 
 int main(){
