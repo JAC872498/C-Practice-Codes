@@ -14,6 +14,19 @@ namespace patch
     }
 }
 
+class basicEnemy{//Used as an interface class
+	private:
+		static std::string name;//Blank
+		static std::string weaponName;//Fists
+		static int health;//100
+		static int attackPow;//10
+		static int defencePow;//8
+	public:
+		std::string attack(){
+			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
+		}
+		void defend(){}
+};
 /*
 Sword Guy
 sword
@@ -39,19 +52,28 @@ bow
 0
 8
 */
-class basicEnemy{//Used as an interface class
-	private:
-		static std::string name;//Blank
-		static std::string weaponName;//Fists
-		static int health;//100
-		static int attackPow;//10
-		static int defencePow;//8
-	public:
-		std::string attack(){
-			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
-		}
-		void defend(){}
+
+static std::string names[]={
+	"Sword Guy","Maigc Guy","Bow Guy"
 };
+static std::string weaponNames[]={
+	"sword","magic staff","bow";
+}
+static int health[]={
+	100,100,60
+}
+static int attackPow[]={
+	12,14,4
+}
+static int defensePow[]={
+	10,8,4
+}
+static int magicPow[]={
+	0,2,0
+}
+static int rangedPow[]={
+	0,0,8
+}
 
 int main(){
 	bool turn=true;//True-player's turn, False-enemy's turn
@@ -60,8 +82,8 @@ int main(){
 	int playerAttackPow=10;
 	int playerDefencePow=8;
 		
-	basicRangedGuy test=new basicRangedGuy();
-	std::cout<<test.attack();
+	//basicRangedGuy test=new basicRangedGuy();
+	//std::cout<<test.attack();
 		
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<10;e++){//10 enemies per level
