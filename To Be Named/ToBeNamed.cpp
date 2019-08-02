@@ -21,11 +21,56 @@ class basicEnemy{//Used as an interface class
 		static int health;//100
 		static int attackPow;//10
 		static int defencePow;//8
+		static int magicPow;//0
+		static int rangedPow;//0
 	public:
 		std::string attack(){
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
 		void defend(){}
+		
+		std::string getName(){
+			return(name);
+		}
+		std::string getWeaponName(){
+			return(weaponName);
+		}
+		int getHealth(){
+			return(health);
+		}
+		int getAttackPow(){
+			return(attackPow);
+		}
+		int getDefencePow(){
+			return(defencePow);
+		}
+		int getMagicPow(){
+			return(magicPow);
+		}
+		int getRangedPow(){
+			return(rangedPow);
+		}
+		void setName(std::string n){
+			name=n;
+		}
+		void setWeaponName(std::string w){
+			weaponName=w;
+		}
+		void setHealth(int h){
+			health=h;
+		}
+		void setAttackPow(int a){
+			attackPow=a;
+		}
+		void setDefencePow(int d){
+			defencePow=d;
+		}
+		void setMagicPow(int m){
+			magicPow=m;
+		}
+		void setRangedPow(int r){
+			rangedPow=r;
+		}
 };
 
 /*
@@ -57,27 +102,27 @@ static std::string names[]={
 	"Sword Guy","Maigc Guy","Bow Guy"
 };
 static std::string weaponNames[]={
-	"sword","magic staff","bow";
-}
+	"sword","magic staff","bow"
+};
 static int health[]={
 	100,100,60
-}
+};
 static int attackPow[]={
 	12,14,4
-}
+};
 static int defensePow[]={
 	10,8,4
-}
+};
 static int magicPow[]={
 	0,2,0
-}
+};
 static int rangedPow[]={
 	0,0,8
-}
+};
 
 basicEnemy generateNewEnemy(int type){
-	basicEnemy rtn=new basicEnemy();
-	rtn.
+	basicEnemy rtn;
+	return(rtn);
 }
 
 int main(){
