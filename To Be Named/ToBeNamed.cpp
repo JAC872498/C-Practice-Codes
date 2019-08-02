@@ -14,50 +14,43 @@ namespace patch
     }
 }
 
+/*
+Sword Guy
+sword
+100
+12
+10
+0
+0
+
+Magic Guy
+magic staff
+100
+14
+8
+2
+0
+
+Bow Guy
+bow
+60
+4
+4
+0
+8
+*/
 class basicEnemy{//Used as an interface class
 	private:
-		std::string name;//Blank
-		std::string weaponName;//Fists
-		int health;//100
-		int attackPow;//10
-		int defencePow;//8
+		static std::string name;//Blank
+		static std::string weaponName;//Fists
+		static int health;//100
+		static int attackPow;//10
+		static int defencePow;//8
 	public:
 		std::string attack(){
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
 		void defend(){}
-};
-
-class basicSwordGuy : public basicEnemy{
-	private:
-		std::string name="Sword Guy";
-		std::string weaponName="sword";
-		int health;//100
-		int attackPow;//12
-		int defencePow;//10
-	public:
-};
-
-class basicMagicGuy : public basicEnemy{
-	private:
-		std::string name="Magic Guy";
-		std::string weaponName="magic staff";
-		int health;//100
-		int attackPow;//14
-		int defencePow;//8
-		int magicPow;//2
-	public:
-};
-
-class basicRangedGuy : public basicEnemy{
-	private:
-		std::string="Bow Guy";
-		std::string="Bow";
-		int health;//60
-		int attackPow;//4
-		int defencePow;//4
-		int rangedPow;//8
-	public:
 };
 
 int main(){
@@ -66,6 +59,9 @@ int main(){
 	int playerHealth=100;
 	int playerAttackPow=10;
 	int playerDefencePow=8;
+		
+	basicRangedGuy test=new basicRangedGuy();
+	std::cout<<test.attack();
 		
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<10;e++){//10 enemies per level
