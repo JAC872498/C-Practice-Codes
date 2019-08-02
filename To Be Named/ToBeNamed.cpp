@@ -30,6 +30,8 @@ class basicEnemy{//Used as an interface class
 
 class basicSwordGuy : public basicEnemy{
 	private:
+		std::string name="Sword Guy";
+		std::string weaponName="sword";
 		int health;//100
 		int attackPow;//12
 		int defencePow;//10
@@ -38,6 +40,8 @@ class basicSwordGuy : public basicEnemy{
 
 class basicMagicGuy : public basicEnemy{
 	private:
+		std::string name="Magic Guy";
+		std::string weaponName="magic staff";
 		int health;//100
 		int attackPow;//14
 		int defencePow;//8
@@ -47,6 +51,8 @@ class basicMagicGuy : public basicEnemy{
 
 class basicRangedGuy : public basicEnemy{
 	private:
+		std::string="Bow Guy";
+		std::string="Bow";
 		int health;//60
 		int attackPow;//4
 		int defencePow;//4
