@@ -27,6 +27,7 @@ class basicEnemy{//Used as an interface class
 		}
 		void defend(){}
 };
+
 /*
 Sword Guy
 sword
@@ -52,7 +53,6 @@ bow
 0
 8
 */
-
 static std::string names[]={
 	"Sword Guy","Maigc Guy","Bow Guy"
 };
@@ -73,6 +73,11 @@ static int magicPow[]={
 }
 static int rangedPow[]={
 	0,0,8
+}
+
+basicEnemy generateNewEnemy(int type){
+	basicEnemy rtn=new basicEnemy();
+	rtn.
 }
 
 int main(){
