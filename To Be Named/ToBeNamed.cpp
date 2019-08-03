@@ -122,6 +122,11 @@ static int rangedPow[]={
 
 basicEnemy generateNewEnemy(int type){
 	basicEnemy rtn;
+	rtn.setHealth(health[type]);
+	rtn.setAttackPow(attackPow[type]);
+	rtn.setDefencePow(defensePow[type]);
+	rtn.setMagicPow(magicPow[type]);
+	rtn.setRangedPow(rangedPow[type]);
 	return(rtn);
 }
 
