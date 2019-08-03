@@ -132,9 +132,6 @@ int main(){
 	int playerAttackPow=10;
 	int playerDefencePow=8;
 		
-	//basicRangedGuy test=new basicRangedGuy();
-	//std::cout<<test.attack();
-		
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<10;e++){//10 enemies per level
 			if(playerHealth<=0){
