@@ -1,5 +1,5 @@
 //"To Be Named" is its actual name
-//The game will be a satire about all the overdone clichés of 'fantasy' games
+//The game will be a satire about all the overdone clichÃ©s of 'fantasy' games
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -122,6 +122,8 @@ static int rangedPow[]={
 
 basicEnemy generateNewEnemy(int type){
 	basicEnemy rtn;
+	rtn.setName(name[type]);
+	rtn.setWeaponName(weaponName[type]);
 	rtn.setHealth(health[type]);
 	rtn.setAttackPow(attackPow[type]);
 	rtn.setDefencePow(defensePow[type]);
