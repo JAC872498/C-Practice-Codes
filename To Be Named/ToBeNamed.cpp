@@ -133,8 +133,12 @@ basicEnemy generateNewEnemy(int type){
 }
 
 int main(){
+	basicEnemy enemy1=new basicEnemy();
+	enemy1;
+	
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
+	int type;
 	int playerHealth=100;
 	int playerAttackPow=10;
 	int playerDefencePow=8;
@@ -142,6 +146,8 @@ int main(){
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<10;e++){//10 enemies per level
 			if(playerHealth<=0){
+				type=//random number;
+				enemy1=generateNewEnemy(type);
 				goto death;
 			}
 		}
