@@ -4,8 +4,8 @@
 #include <array>
 #include <string>
 #include <sstream>
-#include <stdio.h>      /* printf, scanf, puts, NULL */
-#include <stdlib.h>     /* srand, rand */
+#include <stdio.h>	/* printf, scanf, puts, NULL */
+#include <stdlib.h>	/* srand, rand */
 
 namespace patch
 {
