@@ -1,8 +1,11 @@
 //"To Be Named" is its actual name
 //The game will be a satire about all the overdone clichés of 'fantasy' games
 #include <iostream>
+#include <array>
 #include <string>
 #include <sstream>
+#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <stdlib.h>     /* srand, rand */
 
 namespace patch
 {
@@ -133,8 +136,7 @@ basicEnemy generateNewEnemy(int type){
 }
 
 int main(){
-	basicEnemy enemy1=new basicEnemy();
-	enemy1;
+	basicEnemy enemy1;
 	
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
@@ -146,7 +148,7 @@ int main(){
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<10;e++){//10 enemies per level
 			if(playerHealth<=0){
-				type=//random number;
+				type=rand()%sizeof(names)//random number;
 				enemy1=generateNewEnemy(type);
 				goto death;
 			}
