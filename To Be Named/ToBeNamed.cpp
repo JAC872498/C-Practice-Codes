@@ -148,7 +148,7 @@ int main(){
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<10;e++){//10 enemies per level
 			if(playerHealth<=0){
-				type=rand()%sizeof(names)//random number;
+				type=rand()%sizeof(names);//random number
 				enemy1=generateNewEnemy(type);
 				goto death;
 			}
