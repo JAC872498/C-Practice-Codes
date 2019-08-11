@@ -17,7 +17,7 @@ namespace patch
     }
 }
 
-class basicEnemy{//Used as an interface class
+/*class basicEnemy{//Used as an interface class
 	private:
 		static std::string name;//Blank
 		static std::string weaponName;//Fists
@@ -74,7 +74,7 @@ class basicEnemy{//Used as an interface class
 		void setRangedPow(int r){
 			rangedPow=r;
 		}
-};
+};*/
 
 /*
 Sword Guy
@@ -123,7 +123,7 @@ static int rangedPow[]={
 	0,0,8
 };
 
-basicEnemy generateNewEnemy(int type){
+/*basicEnemy generateNewEnemy(int type){
 	basicEnemy rtn;
 	rtn.setName(names[type]);
 	rtn.setWeaponName(weaponNames[type]);
@@ -133,10 +133,10 @@ basicEnemy generateNewEnemy(int type){
 	rtn.setMagicPow(magicPow[type]);
 	rtn.setRangedPow(rangedPow[type]);
 	return(rtn);
-}
+}*/
 
 int main(){
-	basicEnemy enemy1;
+	//basicEnemy enemy1;
 	
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
@@ -149,7 +149,7 @@ int main(){
 		for(int e=0;e<10;e++){//10 enemies per level
 			if(playerHealth<=0){
 				type=rand()%sizeof(names);//random number
-				enemy1=generateNewEnemy(type);
+				//enemy1=generateNewEnemy(type);
 				goto death;
 			}
 		}
