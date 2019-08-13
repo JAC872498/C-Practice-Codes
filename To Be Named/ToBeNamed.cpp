@@ -30,7 +30,9 @@ class basicEnemy{//Used as an interface class
 		std::string attack(){
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
-		void defend(){}
+		void defend(){
+            return(name+" defends themselves with their "+weaponName);
+		}
 
 		std::string getName(){
 			return(name);
