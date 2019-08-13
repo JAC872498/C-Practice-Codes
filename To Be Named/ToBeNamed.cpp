@@ -151,7 +151,13 @@ int main(){
 		for(int e=0;e<sizeof(names);e++){//10 enemies per level
             type=rand()%e;//random number
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
+			if(turn){//Player attacks
+
+			}else{//Player defends
+
+			}
 			if(playerHealth<=0){
+			    std::cout<<"Death";
 			}
 		}
 		currLevel+=1;
