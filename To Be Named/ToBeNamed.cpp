@@ -148,17 +148,13 @@ int main(){
 	int playerDefencePow=8;
 
 	while(currLevel<=10){//10 levels in total
-		for(int e=0;e<10;e++){//10 enemies per level
+		for(int e=0;e<sizeof(names);e++){//10 enemies per level
+            type=rand()%e;//random number
+            enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
 			if(playerHealth<=0){
-				type=rand()%sizeof(names);//random number
-				enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
-				goto death;
 			}
 		}
 		currLevel+=1;
 	}
 	return(0);
-	death:
-		std::cout<<"Deathed";
-		return(0);
 }
