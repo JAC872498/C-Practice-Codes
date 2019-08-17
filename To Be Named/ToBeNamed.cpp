@@ -158,6 +158,7 @@ int main(){
 			}
 			if(playerHealth<=0){
 			    std::cout<<"Death";
+			    //Warp to death screen
 			}
 		}
 		currLevel+=1;
