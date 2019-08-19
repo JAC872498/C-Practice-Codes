@@ -152,9 +152,11 @@ int main(){
             type=rand()%e;//random number
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
 			if(turn){//Player attacks
-
+			    enemy1.defend();
+			    playerAttack();
 			}else{//Player defends
-
+			    playerDefend();
+			    enemy1.attack();
 			}
 			if(playerHealth<=0){
 			    std::cout<<"Death";
