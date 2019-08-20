@@ -27,13 +27,10 @@ class basicEnemy{//Used as an interface class
 		int magicPow;//0
 		int rangedPow;//0
 	public:
-		std::string attack(){
-		    std::cout<<health<<"\n";
-		    health=90;
-		    std::cout<<health;
+		std::string attack(int def){\
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
-		std::string defend(){
+		std::string defend(int atk){
             return(name+" defends themselves with their "+weaponName+".\nThey block"+patch::to_string(defencePow)+" damage.\n");
 		}
 
