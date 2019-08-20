@@ -28,6 +28,9 @@ class basicEnemy{//Used as an interface class
 		int rangedPow;//0
 	public:
 		std::string attack(){
+		    std::cout<<health<<"\n";
+		    health=90;
+		    std::cout<<health;
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
 		std::string defend(){
@@ -151,9 +154,13 @@ int main(){
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
 	int type;
+	std::string playerName="Person";
+	std::string playerWeaponName="Really tight fists";
 	int playerHealth=100;
 	int playerAttackPow=10;
 	int playerDefencePow=8;
+	int playerMagicPow=0;
+	int playerRangedPow=0;
 
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<sizeof(names);e++){//10 enemies per level
