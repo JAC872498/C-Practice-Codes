@@ -144,14 +144,6 @@ basicUnit generateNewEnemy(int type, std::string n[], std::string w[], int h[], 
 	return(rtn);
 }
 
-std::string playerAttack(){
-
-}
-
-std::string playerDefend(){
-
-}
-
 int main(){
 	basicUnit enemy1;
 	basicUnit player;
