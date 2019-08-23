@@ -153,8 +153,9 @@ std::string playerDefend(){
 }
 
 int main(){
-    basicUnit player;
 	basicUnit enemy1;
+	basicUnit player;
+    player=generateNewEnemy(0,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
 
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
@@ -166,9 +167,9 @@ int main(){
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
 			if(turn){//Player attacks
 			    enemy1.defend();
-			    playerAttack();
+			    player.attack();
 			}else{//Player defends
-			    playerDefend();
+			    player.defend();
 			    enemy1.attack();
 			}
 			if(playerHealth<=0){
