@@ -7,8 +7,7 @@
 #include <stdio.h>	/* printf, scanf, puts, NULL */
 #include <stdlib.h>	/* srand, rand */
 
-namespace patch
-{
+namespace patch{
     template < typename T > std::string to_string( const T& n )
     {
         std::ostringstream stm ;
@@ -17,7 +16,7 @@ namespace patch
     }
 }
 
-class basicEnemy{//Used as an interface class
+class basicUnit{//Used as an interface class
 	private:
         std::string name;//Blank
 		std::string weaponName;//Fists
@@ -79,6 +78,14 @@ class basicEnemy{//Used as an interface class
 };
 
 /*
+Person
+really tight fists
+100
+10
+8
+0
+0
+
 Sword Guy
 sword
 100
@@ -104,29 +111,29 @@ bow
 8
 */
 static std::string names[]={
-	"Sword Guy","Magic Guy","Bow Guy"
+	"Person","Sword Guy","Magic Guy","Bow Guy"
 };
 static std::string weaponNames[]={
-	"sword","magic staff","bow"
+	"really tight fists","sword","magic staff","bow"
 };
 static int health[]={
-	100,100,60
+	100,100,100,60
 };
 static int attackPow[]={
-	12,14,4
+	12,12,14,4
 };
 static int defensePow[]={
-	10,8,4
+	10,10,8,4
 };
 static int magicPow[]={
-	0,2,0
+	0,0,2,0
 };
 static int rangedPow[]={
-	0,0,8
+	0,0,0,8
 };
 
-basicEnemy generateNewEnemy(int type, std::string n[], std::string w[], int h[], int a[], int d[], int m[], int r[]){
-	basicEnemy rtn;
+basicUnit generateNewEnemy(int type, std::string n[], std::string w[], int h[], int a[], int d[], int m[], int r[]){
+	basicUnit rtn;
 	rtn.setName(n[type]);
 	rtn.setWeaponName(w[type]);
 	rtn.setHealth(h[type]);
@@ -146,18 +153,11 @@ std::string playerDefend(){
 }
 
 int main(){
-	basicEnemy enemy1;
+	basicUnit enemy1;
 
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
 	int type;
-	std::string playerName="Person";
-	std::string playerWeaponName="Really tight fists";
-	int playerHealth=100;
-	int playerAttackPow=10;
-	int playerDefencePow=8;
-	int playerMagicPow=0;
-	int playerRangedPow=0;
 
 	while(currLevel<=10){//10 levels in total
 		for(int e=0;e<sizeof(names);e++){//10 enemies per level
