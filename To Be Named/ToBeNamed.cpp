@@ -153,6 +153,7 @@ std::string playerDefend(){
 }
 
 int main(){
+    basicUnit player;
 	basicUnit enemy1;
 
 	bool turn=true;//True-player's turn, False-enemy's turn
@@ -160,7 +161,7 @@ int main(){
 	int type;
 
 	while(currLevel<=10){//10 levels in total
-		for(int e=0;e<sizeof(names);e++){//10 enemies per level
+		for(int e=1;e<sizeof(names);e++){//10 enemies per level
             type=rand()%e;//random number
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
 			if(turn){//Player attacks
