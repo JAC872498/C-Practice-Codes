@@ -27,9 +27,11 @@ class basicUnit{//Used as an interface class
 		int rangedPow;//0
 	public:
 		std::string attack(int def){\
+            attackPow=rand();
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
 		std::string defend(int atk){
+		    defendPow=rand();
             return(name+" defends themselves with their "+weaponName+".\nThey block"+patch::to_string(defencePow)+" damage.\n");
 		}
 
