@@ -18,13 +18,13 @@ namespace patch{
 
 class basicUnit{//Used as an interface class
 	private:
-        std::string name;//Blank
-		std::string weaponName;//Fists
-		int health;//100
-		int attackPow;//10
-		int defencePow;//8
-		int magicPow;//0
-		int rangedPow;//0
+        std::string name;
+		std::string weaponName;
+		int health;
+		int attackPow;
+		int defencePow;
+		int magicPow;
+		int rangedPow;
 	public:
 		std::string attack(int def){\
             attackPow=rand();
