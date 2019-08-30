@@ -161,12 +161,12 @@ int main(){
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
 			if(turn){//Player attacks
 			    enemy1.defend(player.getAttackPow());
-			    player.attack();
+			    player.attack(enemy1.getDefencePow());
 			}else{//Player defends
-			    player.defend();
-			    enemy1.attack();
+			    player.defend(enemy1.getAttackPow());
+			    enemy1.attack(player.getDefencePow());
 			}
-			if(playerHealth<=0){
+			if(player.getHealth()<=0){
 			    std::cout<<"Death";
 			    //Warp to death screen
 			}
