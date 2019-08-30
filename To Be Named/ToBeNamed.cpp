@@ -25,6 +25,7 @@ class basicUnit{//Used as an interface class
 		int defencePow;
 		int magicPow;
 		int rangedPow;
+
 	public:
 		std::string attack(basicUnit target){
             attackPow=rand()%(attackPow-2)+(attackPow+2);
@@ -176,5 +177,5 @@ int main(){
 		}
 		currLevel+=1;
 	}
-	return(0);
+es | 413.	return(0);
 }
