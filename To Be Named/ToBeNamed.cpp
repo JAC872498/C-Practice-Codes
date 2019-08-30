@@ -26,11 +26,11 @@ class basicUnit{//Used as an interface class
 		int magicPow;
 		int rangedPow;
 	public:
-		std::string attack(int def){
+		std::string attack(basicUnit target){
             attackPow=rand()%(attackPow-2)+(attackPow+2);
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
-		std::string defend(int atk){
+		std::string defend(){
 		    defencePow=rand()%(defencePow-2)+(defencePow+2);
             return(name+" defends themselves with their "+weaponName+".\nThey block"+patch::to_string(defencePow)+" damage.\n");
 		}
@@ -160,11 +160,11 @@ int main(){
             type=rand()%e;//random number
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
 			if(turn){//Player attacks
-			    enemy1.defend(player.getAttackPow());
-			    player.attack(enemy1.getDefencePow());
+			    enemy1.defend();
+			    player.attack(enemy1);
 			}else{//Player defends
-			    player.defend(enemy1.getAttackPow());
-			    enemy1.attack(player.getDefencePow());
+			    player.defend();
+			    enemy1.attack(player);
 			}
 			if(player.getHealth()<=0){
 			    std::cout<<"Death";
