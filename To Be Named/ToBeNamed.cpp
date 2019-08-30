@@ -153,22 +153,25 @@ int main(){
 
 	bool turn=true;//True-player's turn, False-enemy's turn
 	int currLevel=1;
+	int e=0;
 	int type;
 
 	while(currLevel<=10){//10 levels in total
-		for(int e=1;e<sizeof(names);e++){//10 enemies per level
+		while(e<10){//10 enemies per level
             type=rand()%e;//random number
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
-			if(turn){//Player attacks
-			    enemy1.defend();
-			    player.attack(enemy1);
-			}else{//Player defends
-			    player.defend();
-			    enemy1.attack(player);
-			}
-			if(player.getHealth()<=0){
-			    std::cout<<"Death";
-			    //Warp to death screen
+			while(enemy1.getHealth()>0){
+                if(turn){//Player attacks
+                    enemy1.defend();
+                    player.attack(enemy1);
+                }else{//Player defends
+                    player.defend();
+                    enemy1.attack(player);
+                }
+                if(player.getHealth()<=0){
+                    std::cout<<"Death";
+                    //Warp to death screen
+                }
 			}
 		}
 		currLevel+=1;
