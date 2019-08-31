@@ -29,6 +29,7 @@ class basicUnit{//Used as an interface class
 	public:
 		std::string attack(basicUnit target){
             attackPow=rand()%(attackPow-2)+(attackPow+2);
+            target.setHealth(target.getHealth()-(attackPow/target.getDefencePow()));
 			return(name+" attacks with their "+weaponName+".\n"+name+" deals "+patch::to_string(attackPow)+" damage.\n");
 		}
 		std::string defend(){
@@ -160,7 +161,9 @@ int main(){
 	while(currLevel<=10){//10 levels in total
 		while(e<10){//10 enemies per level
             type=rand()%e;//random number
+            std::cout<<"Z";
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
+			std::cout<<"X";
 			while(enemy1.getHealth()>0){
                 if(turn){//Player attacks
                     enemy1.defend();
