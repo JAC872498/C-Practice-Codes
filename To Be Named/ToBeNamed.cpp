@@ -161,9 +161,7 @@ int main(){
 	while(currLevel<=10){//10 levels in total
 		while(e<10){//10 enemies per level
             type=rand()%e;//random number
-            std::cout<<"Z";
             enemy1=generateNewEnemy(type,names,weaponNames,health,attackPow,defensePow,magicPow,rangedPow);
-			std::cout<<"X";
 			while(enemy1.getHealth()>0){
                 if(turn){//Player attacks
                     enemy1.defend();
