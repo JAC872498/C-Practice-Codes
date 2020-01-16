@@ -3,7 +3,9 @@ Something to make ideas for you
 Randomly creates scenarios for stories/games/etc
 */
 #include <iostream>
+#include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 std::string createStartingIdea(){
     //This generates the first ideas stating who, where, when, and why
@@ -17,6 +19,7 @@ std::string createStartingIdea(){
 }
 
 int main(){
+    srand(time(NULL));//Generates random numbers
     std::cout<<createStartingIdea();
 	return(0);
 }
