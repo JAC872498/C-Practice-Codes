@@ -9,7 +9,7 @@ std::string createStartingIdea(){
     std::string rtn="You";//Who(expand this later?)
     std::string startingActions={" wake up"," arrive"," land"};
     std::string startingAreas={" within The City"," on the outskirts of the battlefield"};//Where
-    std::string startingDate={" on the dawn of the final day",""};//When
+    std::string startingDate={" on the dawn of the final day"," as the plan is just about to start"};//When
     std::string startingReason={" to regain the crown"," you know what you must do"};//Why
     return(rtn);
 }
