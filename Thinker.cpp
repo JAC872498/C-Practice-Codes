@@ -22,7 +22,8 @@ std::string createStartingIdea(){
 }
 
 std::string continueIdea(){
-	
+	std::string rtn="";
+	return(rtn);
 }
 
 int main(){
