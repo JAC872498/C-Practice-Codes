@@ -21,6 +21,10 @@ std::string createStartingIdea(){
 	return(rtn);
 }
 
+std::string continueIdea(){
+	
+}
+
 int main(){
 	srand(time(NULL));//Generates random numbers
 	std::cout<<createStartingIdea();
