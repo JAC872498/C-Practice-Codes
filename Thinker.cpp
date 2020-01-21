@@ -26,6 +26,7 @@ std::string createStartingIdea(){
 }
 
 std::string createStartingInventory(){
+	//This generates the main "key thing" of the story and a few other tidbits
 	std::string rtn="\nYou look within your bag to check on";
 	std::string startingKey[]={" the gold plated key"," the encrypted USB"," The One"};
 	std::string startingEnegy[]={" a few rotting apples"," your trusty blaster"," nothing, you're running out of supplies and time"};
@@ -38,6 +39,11 @@ std::string createStartingInventory(){
 	rtn+=startingFeelingWords[rand()%(sizeof(startingFeelingWords)/sizeof(*startingFeelingWords))];
 	rtn+=startingFeelingAction[rand()%(sizeof(startingFeelingAction)/sizeof(*startingFeelingAction))];
 	rtn+=".";
+	return(rtn);
+}
+
+std::string createStartingCliffhanger(){//Maybe expand this?
+	std::string rtn="";
 	return(rtn);
 }
 
