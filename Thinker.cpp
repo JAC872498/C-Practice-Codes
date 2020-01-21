@@ -43,7 +43,11 @@ std::string createStartingInventory(){
 }
 
 std::string createStartingCliffhanger(){//Maybe expand this?
-	std::string rtn="";
+	std::string rtn="\nYou are";
+	std::string startingCliffhanger[]={" are the last of your kind, the last of the"," on your way to change history for the"};
+	std::string startingRace[]={};
+	rtn+=startingCliffhanger[rand()%(sizeof(startingCliffhanger)/sizeof(*startingCliffhanger))];
+	rtn+=startingRace[rand()%(sizeof(startingRace)/sizeof(*startingRace))];
 	return(rtn);
 }
 
@@ -51,5 +55,6 @@ int main(){
 	srand(time(NULL));//Generates random numbers
 	std::cout<<createStartingIdea();
 	std::cout<<createStartingInventory();
+	std::cout<<createStartingCliffhanger();
 	return(0);
 }
