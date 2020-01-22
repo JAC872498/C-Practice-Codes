@@ -30,7 +30,7 @@ std::string createStartingInventory(){
 	std::string rtn="\nYou look within your bag to check on";
 	std::string startingKey[]={" the gold plated key"," the encrypted USB"," The One"};//The "key"
 	std::string startingEnegy[]={" a few rotting apples"," your trusty blaster"," nothing, you're running out of supplies and time"};//Extra stuff
-	std::string startingFeelingWords[]={" sad"," glad", "upset"," happy"," worried", "ecstatic"};//Feelings
+	std::string startingFeelingWords[]={" sad"," glad", " upset"," happy"," worried", " ecstatic"};//Feelings
 	std::string startingFeelingAction[]={" that it hasn't been stolen"," that you got it this far"," that it's still asleep"};//Why
 	rtn+=startingKey[rand()%(sizeof(startingKey)/sizeof(*startingKey))];
 	rtn+=" along with";
