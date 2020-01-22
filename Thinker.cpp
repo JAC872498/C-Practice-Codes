@@ -45,7 +45,7 @@ std::string createStartingInventory(){
 std::string createStartingCliffhanger(){//Maybe expand this?
 	//This creates a movie-esque "cliffhanger" for the story
 	std::string rtn="\nYou are";
-	std::string startingCliffhanger[]={" are the last of your kind, the last of the"," on your way to change history for "};////Generic "dramatic" statement
+	std::string startingCliffhanger[]={" are the last of your kind, the last of the"," on your way to change history for"};////Generic "dramatic" statement
 	std::string startingRace[]={" the bee people"," the dragons"," the last 3 fans of Lawbreakers"," the resistance"};//The group you're part of
 	rtn+=startingCliffhanger[rand()%(sizeof(startingCliffhanger)/sizeof(*startingCliffhanger))];
 	rtn+=startingRace[rand()%(sizeof(startingRace)/sizeof(*startingRace))];
