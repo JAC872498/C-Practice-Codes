@@ -1,6 +1,7 @@
 /*
 Something to make ideas for you
 Randomly creates scenarios for stories/games/etc
+Might have an added feature to display a little graphic about the story
 */
 #include <iostream>
 #include <stdio.h>
