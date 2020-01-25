@@ -58,6 +58,7 @@ int main(){
 	//TODO:
 	//Have a window created to put the words
 	//Create a series of images that can be combined
+	//Create a way to combine images based on the generated stories
 	srand(time(NULL));//Generates random numbers
 	std::cout<<createStartingIdea();
 	std::cout<<createStartingInventory();
