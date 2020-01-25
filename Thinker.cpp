@@ -10,8 +10,8 @@ Might have an added feature to display a little graphic about the story
 
 std::string createStartingIdea(){
 	//This generates the first ideas stating who, where, when, and why
-	std::string rtn="You";//Who(expand this later?)
-	std::string startingActions[]={" wake up"," arrive"," land"};
+	std::string rtn="You";//Who
+	std::string startingActions[]={" wake up"," arrive"," land"};//Where
 	std::string startingAreas[]={" within The City"," on the outskirts of the battlefield"};//Where
 	std::string startingDate[]={". It is the dawn of the final day, it is now time",", as the plan is just about to start"};//When
 	std::string startingReason[]={" to regain the crown",", you know what you must do"};//Why
