@@ -55,6 +55,9 @@ std::string createStartingCliffhanger(){//Maybe expand this?
 }
 
 int main(){
+	//TODO:
+	//Have a window created to put the words
+	//Create a series of images that can be combined
 	srand(time(NULL));//Generates random numbers
 	std::cout<<createStartingIdea();
 	std::cout<<createStartingInventory();
