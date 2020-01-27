@@ -9,10 +9,17 @@ Might have an added feature to display a little graphic about the story
 #include <time.h>
 
 class player{
+public:
 
 };
 
 class setting{
+public:
+
+};
+
+class inventory{
+public:
 
 };
 
