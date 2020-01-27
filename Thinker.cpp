@@ -8,6 +8,14 @@ Might have an added feature to display a little graphic about the story
 #include <stdlib.h>
 #include <time.h>
 
+class player{
+
+};
+
+class setting{
+
+};
+
 std::string createStartingIdea(){
 	//This generates the first ideas stating who, where, when, and why
 	std::string rtn="You";//Who
