@@ -9,10 +9,15 @@ Might have an added feature to display a little graphic about the story
 #include <time.h>
 
 class Starting{
+private:
+	std::string startingIdea="";
+	std::string startingInventory="";
+	std::string startingCliff="";
+
 public:
 	std::string createStartingIdea(){
 		//This generates the first ideas stating who, where, when, and why
-		std::string rtn="You";//Who
+		startingIdea="You";//Who
 		std::string startingActions[]={" wake up"," arrive"," land"};//Where
 		std::string startingAreas[]={" within The City"," on the outskirts of the battlefield"};//Where
 		std::string startingDate[]={". It is the dawn of the final day, it is now time",", as the plan is just about to start"};//When
@@ -25,7 +30,8 @@ public:
 		rtn+=", you feel";
 		rtn+=startigFeeling[rand()%(sizeof(startigFeeling)/sizeof(*startigFeeling))];
 		rtn+=".";
-		return(rtn);
+		startingIdea=rtn;
+		return(startingIdea);
 	}
 
 	std::string createStartingInventory(){
@@ -42,7 +48,8 @@ public:
 		rtn+=startingFeelingWords[rand()%(sizeof(startingFeelingWords)/sizeof(*startingFeelingWords))];
 		rtn+=startingFeelingAction[rand()%(sizeof(startingFeelingAction)/sizeof(*startingFeelingAction))];
 		rtn+=".";
-		return(rtn);
+		startingInventory=rtn;
+		return(startingInventory);
 	}
 
 	std::string createStartingCliffhanger(){//Maybe expand this?
@@ -53,7 +60,8 @@ public:
 		rtn+=startingCliffhanger[rand()%(sizeof(startingCliffhanger)/sizeof(*startingCliffhanger))];
 		rtn+=startingRace[rand()%(sizeof(startingRace)/sizeof(*startingRace))];
 		rtn+=".";
-		return(rtn);
+		startingCliff=rtn;
+		return(startingCliff);
 	}
 };
 
