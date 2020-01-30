@@ -7,6 +7,7 @@ Might have an added feature to display a little graphic about the story
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 class Starting{
 private:
@@ -69,10 +70,16 @@ int main(){
 	Create a series of images that can be combined
 	Create a way to combine images based on the generated stories
 	*/
+	HANDLE hConsole;//Used to handle colors
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
 	srand(time(NULL));//Generates random numbers
+	int kolor=8;//Color number
+	SetConsoleTextAttribute(hConsole, kolor);
 	Starting start;
-	std::cout<<start.createStartingIdea();
-	std::cout<<start.createStartingInventory();
-	std::cout<<start.createStartingCliffhanger();
+	std::cout<<start.createStartingIdea()<< std::endl;
+	std::cout<<start.createStartingInventory()<< std::endl;
+	std::cout<<start.createStartingCliffhanger()<< std::endl;
+
 	return(0);
 }
