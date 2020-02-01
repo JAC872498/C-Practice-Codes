@@ -1,4 +1,7 @@
 /*
+TODO: look into having this be its own repository?
+*/
+/*
 Something to make ideas for you
 Randomly creates scenarios for stories/games/etc
 Might have an added feature to display a little graphic about the story
