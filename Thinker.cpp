@@ -74,7 +74,7 @@ int main(){
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 	srand(time(NULL));//Generates random numbers
-	int kolor=8;//Color number
+	int kolor=rand()%126;//Color number
 	SetConsoleTextAttribute(hConsole, kolor);
 	Starting start;
 	std::cout<<start.createStartingIdea()<< std::endl;
