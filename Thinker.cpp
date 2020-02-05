@@ -80,9 +80,9 @@ int main(){
 	int kolor=rand()%126;//Color number
 	SetConsoleTextAttribute(hConsole, kolor);
 	Starting start;
-	std::cout<<start.createStartingIdea()<< std::endl;
-	std::cout<<start.createStartingInventory()<< std::endl;
-	std::cout<<start.createStartingCliffhanger()<< std::endl;
+	std::cout<<start.createStartingIdea()<<std::endl;
+	std::cout<<start.createStartingInventory()<<std::endl;
+	std::cout<<start.createStartingCliffhanger()<<std::endl;
 
 	return(0);
 }
