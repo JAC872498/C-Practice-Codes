@@ -7,68 +7,79 @@ Might have an added feature to display a little graphic about the story
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 class Starting{
+private:
+	std::string startingIdea="";
+	std::string startingInventory="";
+	std::string startingCliff="";
+
 public:
 	std::string createStartingIdea(){
 		//This generates the first ideas stating who, where, when, and why
-		std::string rtn="You";//Who
+		startingIdea="You";//Who
 		std::string startingActions[]={" wake up"," arrive"," land"};//Where
 		std::string startingAreas[]={" within The City"," on the outskirts of the battlefield"};//Where
 		std::string startingDate[]={". It is the dawn of the final day, it is now time",", as the plan is just about to start"};//When
 		std::string startingReason[]={" to regain the crown",", you know what you must do"};//Why
 		std::string startigFeeling[]={" scared of what's to come"," glad to finally get this over with"," like the plan shouldn't be going so smoothly"};//Feelings
-		rtn+=startingActions[rand()%(sizeof(startingActions)/sizeof(*startingActions))];//This simply gets a random value of a array
-		rtn+=startingAreas[rand()%(sizeof(startingAreas)/sizeof(*startingAreas))];
-		rtn+=startingDate[rand()%(sizeof(startingDate)/sizeof(*startingDate))];
-		rtn+=startingReason[rand()%(sizeof(startingReason)/sizeof(*startingReason))];
-		rtn+=", you feel";
-		rtn+=startigFeeling[rand()%(sizeof(startigFeeling)/sizeof(*startigFeeling))];
-		rtn+=".";
-		return(rtn);
+		startingIdea+=startingActions[rand()%(sizeof(startingActions)/sizeof(*startingActions))];//This simply gets a random value of a array
+		startingIdea+=startingAreas[rand()%(sizeof(startingAreas)/sizeof(*startingAreas))];
+		startingIdea+=startingDate[rand()%(sizeof(startingDate)/sizeof(*startingDate))];
+		startingIdea+=startingReason[rand()%(sizeof(startingReason)/sizeof(*startingReason))];
+		startingIdea+=", you feel";
+		startingIdea+=startigFeeling[rand()%(sizeof(startigFeeling)/sizeof(*startigFeeling))];
+		startingIdea+=".";
+		return(startingIdea);
 	}
 
 	std::string createStartingInventory(){
 		//This generates the main "key thing" of the story and a few other tidbits
-		std::string rtn="\nYou look within your bag to check on";
+		startingInventory="\nYou look within your bag to check on";
 		std::string startingKey[]={" the gold plated key"," the encrypted USB"," The One"};//The "key"
 		std::string startingEnegy[]={" a few rotting apples"," your trusty blaster"," nothing, you're running out of supplies and time"};//Extra stuff
 		std::string startingFeelingWords[]={" sad"," glad", " upset"," happy"," worried", " ecstatic"};//Feelings
 		std::string startingFeelingAction[]={" that it hasn't been stolen"," that you got it this far"," that it's still asleep"};//Why
-		rtn+=startingKey[rand()%(sizeof(startingKey)/sizeof(*startingKey))];
-		rtn+=" along with";
-		rtn+=startingEnegy[rand()%(sizeof(startingEnegy)/sizeof(*startingEnegy))];
-		rtn+=". You're";
-		rtn+=startingFeelingWords[rand()%(sizeof(startingFeelingWords)/sizeof(*startingFeelingWords))];
-		rtn+=startingFeelingAction[rand()%(sizeof(startingFeelingAction)/sizeof(*startingFeelingAction))];
-		rtn+=".";
-		return(rtn);
+		startingInventory+=startingKey[rand()%(sizeof(startingKey)/sizeof(*startingKey))];
+		startingInventory+=" along with";
+		startingInventory+=startingEnegy[rand()%(sizeof(startingEnegy)/sizeof(*startingEnegy))];
+		startingInventory+=". You're";
+		startingInventory+=startingFeelingWords[rand()%(sizeof(startingFeelingWords)/sizeof(*startingFeelingWords))];
+		startingInventory+=startingFeelingAction[rand()%(sizeof(startingFeelingAction)/sizeof(*startingFeelingAction))];
+		startingInventory+=".";
+		return(startingInventory);
 	}
 
 	std::string createStartingCliffhanger(){//Maybe expand this?
 		//This creates a movie-esque "cliffhanger" for the story
-		std::string rtn="\nYou are";
+		startingCliff="\nYou are";
 		std::string startingCliffhanger[]={" are the last of your kind, the last of the"," on your way to change history for"};////Generic "dramatic" statement
 		std::string startingRace[]={" the bee people"," the dragons"," the last 3 fans of Lawbreakers"," the resistance"};//The group you're part of
-		rtn+=startingCliffhanger[rand()%(sizeof(startingCliffhanger)/sizeof(*startingCliffhanger))];
-		rtn+=startingRace[rand()%(sizeof(startingRace)/sizeof(*startingRace))];
-		rtn+=".";
-		return(rtn);
+		startingCliff+=startingCliffhanger[rand()%(sizeof(startingCliffhanger)/sizeof(*startingCliffhanger))];
+		startingCliff+=startingRace[rand()%(sizeof(startingRace)/sizeof(*startingRace))];
+		startingCliff+=".";
+		return(startingCliff);
 	}
 };
 
 int main(){
 	/*
 	TODO:
-	Have methods create objects
 	Have a window created to put the words
-	Have image system be based on method-created objects
 	Create a series of images that can be combined
 	Create a way to combine images based on the generated stories
 	*/
+	HANDLE hConsole;//Used to handle colors
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
 	srand(time(NULL));//Generates random numbers
-	std::cout<<createStartingIdea();
-	std::cout<<createStartingInventory();
-	std::cout<<createStartingCliffhanger();
+	int kolor=rand()%126;//Color number
+	SetConsoleTextAttribute(hConsole, kolor);
+	Starting start;
+	std::cout<<start.createStartingIdea()<<std::endl;
+	std::cout<<start.createStartingInventory()<<std::endl;
+	std::cout<<start.createStartingCliffhanger()<<std::endl;
+
 	return(0);
 }
