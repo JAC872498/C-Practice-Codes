@@ -1,7 +1,4 @@
 /*
-TODO: look into having this be its own repository?
-*/
-/*
 Something to make ideas for you
 Randomly creates scenarios for stories/games/etc
 Might have an added feature to display a little graphic about the story
@@ -67,12 +64,6 @@ public:
 };
 
 int main(){
-	/*
-	TODO:
-	Stylize text outputs
-	Create a series of images that can be combined
-	Create a way to combine images based on the generated stories
-	*/
 	HANDLE hConsole;//Used to handle colors
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
