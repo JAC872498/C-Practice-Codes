@@ -1,2 +1,2 @@
 # C-Practice-Codes
-Coding solution for a mix of c++ problems
+Coding solution for a mix of C++ problems
