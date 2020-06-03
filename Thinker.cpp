@@ -64,12 +64,15 @@ public:
 };
 
 int main(){
+<<<<<<< HEAD
 	/*
 	TODO:
 	Have a window created to put the words
 	Create a series of images that can be combined
 	Create a way to combine images based on the generated stories
 	*/
+=======
+>>>>>>> eea5ed8aace85649a665644c357b5c8218632020
 	HANDLE hConsole;//Used to handle colors
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
