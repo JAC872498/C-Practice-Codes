@@ -11,7 +11,8 @@ Create sliders/real time variable changes
 */
 
 int main(){
-
+	int torpSpeed;
+	int torpRange;
 	stc::cout<<"Hello, World!";
 	return(0);
 }
