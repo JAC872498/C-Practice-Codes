@@ -1,4 +1,6 @@
 #include <iostream>
+#include<graphics.h>
+#include<isotream.h>
 
 /*
 TODOs:
