@@ -1,9 +1,11 @@
 #include <iostream>
-#include<graphics.h>
-#include<isotream.h>
+#include <graphics.h>
+#include <isotream.h>
 
 /*
 TODOs:
+Create seperate class for ships and torps
+
 Create graphics
 Create animations
 Create on/off homing
@@ -21,5 +23,6 @@ int main(){
 	int targetSpeed;
 	int targetHeading;
 	stc::cout<<"Hello, World!";
-	return(0);
+	return(2);
 }
+
