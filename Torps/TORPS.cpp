@@ -1,6 +1,6 @@
 #include <iostream>
 #include <graphics.h>
-#include <isotream.h>
+#include <iostream>
 
 /*
 TODOs:
@@ -22,7 +22,6 @@ int main(){
 
 	int targetSpeed;
 	int targetHeading;
-	stc::cout<<"Hello, World!";
+	std::cout<<"Hello, World!";
 	return(2);
 }
-
