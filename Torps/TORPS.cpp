@@ -4,7 +4,7 @@
 
 /*
 TODOs:
-Create seperate class for ships and torps
+Create separate class for ships and torps
 
 Create graphics
 Create animations
